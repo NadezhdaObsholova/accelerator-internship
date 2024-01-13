@@ -5,13 +5,125 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Междунарожная стажировка. Профессиональный опыт. Обучение за рубежом ">
   <title>Internship programs</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon-32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-180.png">
+
   <link rel="stylesheet" href="sass/style.scss">
+  <link rel="preload" href="fonts/Manrope-Light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fontsManrope-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Manrope-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body>
-  <div data-test="slider">slider</div>
-  <div data-test="about">about</div>
+  <header class="header">
+    <div class="header__holder" data-test="slider">
+      <div class="header__logo"></div>
+      <div class="header__nav-wrapper"></div>
+      <div class="header__slider swiper" data-swiper="hero-slider">
+        <ul class="hero__slider-list swiper-wrapper">
+          <li class="hero__slider-item swiper-slide">
+            <div class="hero__slider-img">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/hero/1-desktop.webp, img/hero/1-desktop@2x.webp 2x"
+                  width="1440" type="image/webp">
+                <source media="(min-width: 768px)" srcset="img/hero/1-tablet.webp, img/hero/1-tablet@2x.webp 2x"
+                  width="768" type="image/webp">
+                <img width="320" height="568" srcset="img/hero/1-mobile.webp, img/hero/1-mobile@2x.webp 2x"
+                  src="img/hero/1-mobile.jpg" alt="">
+              </picture>
+            </div>
+            <div class="hero__slider-overlay"></div>
+            <div class="header__info-wrapper">
+              <div class="header__info-title">
+                <h2>Глобальный профессиональный<br>опыт обучения за рубежом</h2>
+              </div>
+              <div class="header__info-holder">
+                <div class="header__info-text">Погрузитесь в академическую программу, проходя практику в разных городах,
+                  ощущая настоящий студенческий стиль жизни!</div>
+                  <a class="header__info-button btn" href="">
+                    <p>подробнее</p>
+                    <div>
+                      <svg width="10" height="10">
+                        <use href="__spritemap#sprite-btn-arrow"></use>
+                      </svg>
+                    </div>
+                  </a>
+              </div>
+            </div>
+          </li>
+          <li class="hero__slider-item swiper-slide">
+            <div class="hero__slider-img">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/hero/2-desktop.webp, img/hero/2-desktop@2x.webp 2x"
+                  width="1440" type="image/webp">
+                <source media="(min-width: 768px)" srcset="img/hero/2-tablet.webp, img/hero/2-tablet@2x.webp 2x"
+                  width="768" type="image/webp">
+                <img width="320" height="568" srcset="img/hero/2-mobile.webp, img/hero/2-mobile@2x.webp 2x"
+                  src="img/hero/2-mobile.jpg" alt="">
+              </picture>
+            </div>
+            <div class="hero__slider-overlay"></div>
+            <div class="header__info-wrapper">
+              <div class="header__info-title">
+                <h2>Волонтёрские программы –<br>внесите свой вклад в общество</h2>
+              </div>
+              <div class="header__info-holder">
+                <div class="header__info-text">Возможности для преподавания, органического сельского хозяйства,
+                  устойчивого образа жизни и другое.</div>
+                  <a class="header__info-button btn" href="">
+                    <p>подробнее</p>
+                    <div>
+                      <svg width="10" height="10">
+                        <use href="__spritemap#sprite-btn-arrow"></use>
+                      </svg>
+                    </div>
+                  </a>
+              </div>
+            </div>
+          </li>
+          <li class="hero__slider-item swiper-slide">
+            <div class="hero__slider-img">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/hero/3-desktop.webp, img/hero/3-desktop@2x.webp 2x"
+                  width="1440" type="image/webp">
+                <source media="(min-width: 768px)" srcset="img/hero/3-tablet.webp, img/hero/3-tablet@2x.webp 2x"
+                  width="768" type="image/webp">
+                <img width="320" height="568" srcset="img/hero/3-mobile.webp, img/hero/3-mobile@2x.webp 2x"
+                  src="img/hero/3-mobile.jpg" alt="">
+              </picture>
+            </div>
+            <div class="hero__slider-overlay"></div>
+            <div class="header__info-wrapper">
+              <div class="header__info-title">
+                <h2>Программы стажировок<br>в крупнейших компаниях мира</h2>
+              </div>
+              <div class="header__info-holder">
+                <div class="header__info-text">Получите незаменимый опыт работы в ведущих мировых компаниях и
+                  государственных организациях.</div>
+                <a class="header__info-button btn" href="">
+                  <p>подробнее</p>
+                  <div>
+                    <svg width="10" height="10">
+                      <use href="__spritemap#sprite-btn-arrow"></use>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="hero__pagination swiper-pagination" data-pagination="hero-pagination">
+          <div class="hero__pagination-bullet"></div>
+          <div class="hero__pagination-bullet"></div>
+          <div class="hero__pagination-bullet"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--  <div data-test="about">about</div>
   <div data-test="programs">programs</div>
   <div data-test="grant">grant</div>
   <div data-test="news">news</div>
@@ -20,6 +132,7 @@
   <div data-test="contacts">contacts</div>
   <div data-test="form">form</div>
   <div data-test="footer">footer</div>
+  -->
   <script type="module" src="js/main.js"></script>
 </body>
 

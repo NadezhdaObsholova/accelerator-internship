@@ -1,0 +1,35 @@
+.btn {
+  display: flex;
+  align-items: center;
+  gap: size(30px);
+  padding: size(4px);
+  padding-left: size(30px);
+  border: size(1px) solid $color-additional;
+  border-radius: size(30px);
+}
+
+.btn p {
+  font-size: size(14px);
+  line-height: size(14px);
+  font-weight: 500;
+  letter-spacing: size(0.28px);
+  text-transform: uppercase;
+  margin: 0;
+  color: $color-additional;
+}
+
+.btn div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: size(46px);
+  height: size(46px);
+  background-color: $color-additional;
+  border-radius: 50%;
+}
+
+.btn svg {
+  width: size(10px);
+  height: size(10px);
+  color: $color-default-white;
+}
