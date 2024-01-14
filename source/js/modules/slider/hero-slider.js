@@ -15,7 +15,11 @@ const initHeroSlider = () => {
         el: heroPagination,
         clickable: true,
       },
-
+/*
+      autoplay: {
+        delay: 3000,
+      },
+*/
       loop: true,
       breakpoints: {
         1440: {

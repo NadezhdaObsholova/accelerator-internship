@@ -82,7 +82,7 @@
 .swiper-horizontal > .swiper-pagination-bullets {
   display: flex;
   gap: size(12px);
-  top: size(419px);
+  top: size(420px);
   left: size(100px);
   width: auto;
   max-height: max-content;
@@ -112,6 +112,13 @@
   background-color: red;
 }
 
-.swiper-pagination-bullet-active {
+.swiper-pagination-bullet {
   background-color: $color-default-white;
+  border: size(1px) solid $color-additional;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $color-additional;
+  opacity: 1;
 }
