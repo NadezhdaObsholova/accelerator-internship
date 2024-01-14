@@ -19,6 +19,7 @@
 
 <body>
   <header class="header">
+    <h1 class="visually-hidden">Сайт проекта "Стажировка за рубежом"</h1>
     <div class="header__holder" data-test="slider">
       <nav class="header__nav  container">
         <div class="header__logo">
@@ -27,22 +28,17 @@
           </svg>
         </div>
         <div class="header__menu-holder">
-          <button class="header__menu-toggle btn" type="button">
+          <div class="header__menu-toggle btn">
             <p>меню</p>
-            <div></div>
-            <!--
-            <div class="header__menu-toggle header__menu-toggle--open">
-              <svg width="20" height="20">
+            <div>
+              <svg  class="header__menu-open" width="20" height="20">
                 <use href="__spritemap#sprite-menu-open"></use>
               </svg>
-            </div>
-            <div class="header__menu-toggle header__menu-toggle--close visually-hidden">
-              <svg width="20" height="20">
+              <svg class="header__menu-close visually-hidden" width="20" height="20">
                 <use href="__spritemap#sprite-menu-close"></use>
               </svg>
             </div>
-          -->
-          </button>
+        </div>
         </div>
       </nav>
       <div class="header__slider hero swiper" data-swiper="hero-slider">

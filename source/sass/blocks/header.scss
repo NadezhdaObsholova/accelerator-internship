@@ -45,22 +45,8 @@
   color: $color-default-white;
 }
 .header__menu-toggle--close div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: $color-default-white;
  }
-
- .header__menu-toggle div::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: size(20px);
-  height: size(20px);
-  top: calc(50% - size(10px));
-  right: size(18px);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-image: url('../../img/menu-open.svg');
- }
-
- .header__menu-toggle--close div::after {
-  background-image: url('../../img/menu-close.svg');
-}
