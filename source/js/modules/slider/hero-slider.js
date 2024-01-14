@@ -1,6 +1,7 @@
 
 import Swiper from '../../vendor/swiper';
 
+
 const initHeroSlider = () => {
 
   const heroSlider = document.querySelector('[data-swiper="hero-slider"]');
@@ -8,7 +9,7 @@ const initHeroSlider = () => {
 
   if (heroSlider) {
     // eslint-disable-next-line
-    new Swiper(heroSlider, {
+     new Swiper(heroSlider, {
 
       pagination: {
         el: heroPagination,

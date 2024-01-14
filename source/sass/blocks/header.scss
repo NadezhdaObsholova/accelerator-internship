@@ -1,0 +1,66 @@
+.header__holder {
+  position: relative;
+}
+
+.header__nav {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding-top: size(60px);
+  z-index: 2;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: size(52px);
+  height: size(52px);
+  background-color: $color-default-white;
+  border-radius: 50%;
+}
+
+.header__logo svg{
+  width: size(30px);
+  height: size(30px);
+}
+
+.header__menu-toggle {
+  position: relative;
+  background-color: $color-default-white;
+}
+
+.header__menu-toggle svg {
+  width: size(20px);
+  height: size(20px);
+  color: $color-default-white;
+}
+
+.header__menu-toggle--close {
+  background-color: $color-additional;
+  color: $color-default-white;
+}
+
+.header__menu-toggle--close p{
+  color: $color-default-white;
+}
+.header__menu-toggle--close div{
+  background-color: $color-default-white;
+ }
+
+ .header__menu-toggle div::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: size(20px);
+  height: size(20px);
+  top: calc(50% - size(10px));
+  right: size(18px);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url('../../img/menu-open.svg');
+ }
+
+ .header__menu-toggle--close div::after {
+  background-image: url('../../img/menu-close.svg');
+}

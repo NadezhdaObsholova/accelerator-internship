@@ -20,9 +20,32 @@
 <body>
   <header class="header">
     <div class="header__holder" data-test="slider">
-      <div class="header__logo"></div>
-      <div class="header__nav-wrapper"></div>
-      <div class="header__slider swiper" data-swiper="hero-slider">
+      <nav class="header__nav  container">
+        <div class="header__logo">
+          <svg width="30" height="30">
+            <use href="__spritemap#sprite-logo"></use>
+          </svg>
+        </div>
+        <div class="header__menu-holder">
+          <button class="header__menu-toggle btn" type="button">
+            <p>меню</p>
+            <div></div>
+            <!--
+            <div class="header__menu-toggle header__menu-toggle--open">
+              <svg width="20" height="20">
+                <use href="__spritemap#sprite-menu-open"></use>
+              </svg>
+            </div>
+            <div class="header__menu-toggle header__menu-toggle--close visually-hidden">
+              <svg width="20" height="20">
+                <use href="__spritemap#sprite-menu-close"></use>
+              </svg>
+            </div>
+          -->
+          </button>
+        </div>
+      </nav>
+      <div class="header__slider hero swiper" data-swiper="hero-slider">
         <ul class="hero__slider-list swiper-wrapper">
           <li class="hero__slider-item swiper-slide">
             <div class="hero__slider-img">
@@ -36,21 +59,21 @@
               </picture>
             </div>
             <div class="hero__slider-overlay"></div>
-            <div class="header__info-wrapper">
-              <div class="header__info-title">
+            <div class="hero__info-wrapper">
+              <div class="hero__info-title">
                 <h2>Глобальный профессиональный<br>опыт обучения за рубежом</h2>
               </div>
-              <div class="header__info-holder">
+              <div class="hero__info-holder">
                 <div class="header__info-text">Погрузитесь в академическую программу, проходя практику в разных городах,
                   ощущая настоящий студенческий стиль жизни!</div>
-                  <a class="header__info-button btn" href="">
-                    <p>подробнее</p>
-                    <div>
-                      <svg width="10" height="10">
-                        <use href="__spritemap#sprite-btn-arrow"></use>
-                      </svg>
-                    </div>
-                  </a>
+                <a class="hero__info-button btn" href="">
+                  <p>подробнее</p>
+                  <div>
+                    <svg width="10" height="10">
+                      <use href="__spritemap#sprite-btn-arrow"></use>
+                    </svg>
+                  </div>
+                </a>
               </div>
             </div>
           </li>
@@ -66,21 +89,21 @@
               </picture>
             </div>
             <div class="hero__slider-overlay"></div>
-            <div class="header__info-wrapper">
-              <div class="header__info-title">
+            <div class="hero__info-wrapper">
+              <div class="hero__info-title">
                 <h2>Волонтёрские программы –<br>внесите свой вклад в общество</h2>
               </div>
-              <div class="header__info-holder">
-                <div class="header__info-text">Возможности для преподавания, органического сельского хозяйства,
+              <div class="hero__info-holder">
+                <div class="hero__info-text">Возможности для преподавания, органического сельского хозяйства,
                   устойчивого образа жизни и другое.</div>
-                  <a class="header__info-button btn" href="">
-                    <p>подробнее</p>
-                    <div>
-                      <svg width="10" height="10">
-                        <use href="__spritemap#sprite-btn-arrow"></use>
-                      </svg>
-                    </div>
-                  </a>
+                <a class="hero__info-button btn" href="">
+                  <p>подробнее</p>
+                  <div>
+                    <svg width="10" height="10">
+                      <use href="__spritemap#sprite-btn-arrow"></use>
+                    </svg>
+                  </div>
+                </a>
               </div>
             </div>
           </li>
@@ -96,14 +119,14 @@
               </picture>
             </div>
             <div class="hero__slider-overlay"></div>
-            <div class="header__info-wrapper">
-              <div class="header__info-title">
+            <div class="hero__info-wrapper">
+              <div class="hero__info-title">
                 <h2>Программы стажировок<br>в крупнейших компаниях мира</h2>
               </div>
-              <div class="header__info-holder">
-                <div class="header__info-text">Получите незаменимый опыт работы в ведущих мировых компаниях и
+              <div class="hero__info-holder">
+                <div class="hero__info-text">Получите незаменимый опыт работы в ведущих мировых компаниях и
                   государственных организациях.</div>
-                <a class="header__info-button btn" href="">
+                <a class="hero__info-button btn" href="">
                   <p>подробнее</p>
                   <div>
                     <svg width="10" height="10">
@@ -133,6 +156,7 @@
   <div data-test="form">form</div>
   <div data-test="footer">footer</div>
   -->
+
   <script type="module" src="js/main.js"></script>
 </body>
 

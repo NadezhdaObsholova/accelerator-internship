@@ -38,7 +38,7 @@
   }
 }
 
-.header__info-wrapper {
+.hero__info-wrapper {
   grid-column: 1/2;
   grid-row: 1/2;
   padding-top: size(456px);
@@ -46,14 +46,15 @@
   padding-bottom: size(50px);
 }
 
-.header__info-title {
+.hero__info-title {
   padding: size(40px) size(50px) size(30px) size(50px);
   background-color: $color-default-white;
   border-radius: 0 size(30px) size(30px) 0;
   max-width: size(968px);
 }
 
-.header__info-holder {
+.hero__info-holder {
+  position: relative;
   display: flex;
   gap: size(30px);
   align-items: center;
@@ -62,19 +63,45 @@
   background-color: $color-default-white;
   border-radius: 0 0 size(30px) size(30px);
   max-width: size(772px);
+}
 
+.hero__info-holder::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: size(26px);
+  height: size(26px);
+  top: size(-1px);
+  right: size(-25px);
+  background-image: url('../../img/hero/angle.svg');
+  background-size: 100%;
+  transform: rotate(90deg);
+  background-repeat: no-repeat;
 }
 
 .hero__pagination {
   display: flex;
   gap: size(12px);
+  display: flex;
+  top: size(419px);
+  left: size(100px);
   padding: size(14px) size(20px);
   background-color: $color-default-white;
   border-radius: size(20px) size(20px) 0 0;
-  top: size(419px);
-  left: size(100px);
 }
 
+.hero__pagination::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: size(21px);
+  height: size(21px);
+  bottom: size(-1px);
+  right: size(-19px);
+  background-image: url('../../img/hero/angle.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
 
 .hero__pagination-bullet {
   width: size(10px);

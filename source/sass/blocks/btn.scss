@@ -6,6 +6,8 @@
   padding-left: size(30px);
   border: size(1px) solid $color-additional;
   border-radius: size(30px);
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .btn p {
@@ -33,3 +35,4 @@
   height: size(10px);
   color: $color-default-white;
 }
+
