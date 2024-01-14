@@ -37,10 +37,19 @@ html {
 }
 
 body {
+  position: relative;
   width: 100%;
   height: 100%;
 
   background-color: $color-default-white;
+}
+
+.body__overlay {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ z-index: 2;
+ background-color: $color-overlay;
 }
 
 a {

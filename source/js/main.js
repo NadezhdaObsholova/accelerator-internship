@@ -1,11 +1,5 @@
-// https://swiperjs.com/get-started#installation
-//import Swiper from './vendor/swiper';
-//import {Navigation, Pagination} from "swiper/modules";
-// import 'swiper/css';
-
-
 import { initHeroSlider } from './modules/slider/hero-slider';
-
+import { burgerMenu } from './modules/burger-menu';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -19,6 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   initHeroSlider();
+  burgerMenu();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

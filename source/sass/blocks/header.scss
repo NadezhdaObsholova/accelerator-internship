@@ -39,6 +39,8 @@
 }
 
 .header__menu-toggle--close {
+  gap: 0;
+  justify-content: space-between;
   background-color: $color-additional;
   color: $color-default-white;
 }

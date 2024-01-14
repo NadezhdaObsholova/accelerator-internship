@@ -16,7 +16,8 @@
   <link rel="preload" href="fonts/Manrope-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="body">
+  <div class="body__overlay visually-hidden" data-overlay="body-overlay"></div>
   <header class="header">
     <h1 class="visually-hidden">Сайт проекта "Стажировка за рубежом"</h1>
     <div class="header__holder" data-test="slider">
@@ -27,17 +28,45 @@
           </svg>
         </div>
         <div class="header__menu-holder">
-          <div class="header__menu-toggle btn">
+          <div class="header__menu-toggle btn"  data-toggle="menu__toggle">
             <p>меню</p>
             <div>
-              <svg  class="header__menu-open" width="20" height="20">
+              <svg class="header__menu-open" width="20" height="20" data-open="toggle-open">
                 <use href="__spritemap#sprite-menu-open"></use>
               </svg>
-              <svg class="header__menu-close visually-hidden" width="20" height="20">
+              <svg class="header__menu-close visually-hidden" width="20" height="20"  data-close="toggle-close">
                 <use href="__spritemap#sprite-menu-close"></use>
               </svg>
             </div>
-        </div>
+          </div>
+          <div class="header__nav-holder visually-hidden" data-tabs="parent" data-menu="header-menu">
+            <div class="header__nav-controls" data-tabs="controls">
+              <a class="header__nav-item" href="#about">О проекте</a>
+              <div class="header__nav-item" data-tabs="control" data-index="0">Программы</div>
+              <a class="header__nav-item" href="#grant">Как проехать</a>
+              <a class="header__nav-item" href="#reviews">Отзывы</a>
+              <div class="header__nav-item" data-tabs="control" data-index="1">Новости</div>
+              <a class="header__nav-item" href="#contacts">Контакты</a>
+            </div>
+            <div class="header__nav-content" data-tabs="content">
+              <div class="header__nav-info" data-tabs="element">
+                <ul class="header__nav-list" data-accordion="parent">
+                  <li data-accordion="element">Стажировка</li>
+                  <li data-accordion="element">Волонтерство</li>
+                  <li data-accordion="element">Учёба</li>
+                  <li data-accordion="element">Религия</li>
+                </ul>
+              </div>
+              <div class="header__nav-info" data-tabs="element">
+                <ul class="header__nav-list" data-accordion="parent">
+                  <li data-accordion="element">Интервью с участницей программы стажировки</li>
+                  <li data-accordion="element">Путешествуем  по миру</li>
+                  <li data-accordion="element">Новая программа волонтёрства</li>
+                  <li data-accordion="element">Построй свою карьеру</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </nav>
       <div class="header__slider hero swiper" data-swiper="hero-slider">
@@ -139,13 +168,14 @@
       </div>
     </div>
   </header>
-  <!--  <div data-test="about">about</div>
+  <!--
+  <div id="about" data-test="about">about</div>
   <div data-test="programs">programs</div>
-  <div data-test="grant">grant</div>
+  <div id="grant" data-test="grant">grant</div>
   <div data-test="news">news</div>
-  <div data-test="FAQ">FAQ</div>
-  <div data-test="reviews">reviews</div>
-  <div data-test="contacts">contacts</div>
+  <div id="FAQ" data-test="FAQ">FAQ</div>
+  <div id="reviews" data-test="reviews">reviews</div>
+  <div id="contacts" data-test="contacts">contacts</div>
   <div data-test="form">form</div>
   <div data-test="footer">footer</div>
   -->

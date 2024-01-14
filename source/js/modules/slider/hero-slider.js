@@ -15,11 +15,12 @@ const initHeroSlider = () => {
         el: heroPagination,
         clickable: true,
       },
-/*
+      /*
       autoplay: {
         delay: 3000,
       },
-*/
+*/ 
+      autoHeight: true,
       loop: true,
       breakpoints: {
         1440: {
@@ -28,9 +29,9 @@ const initHeroSlider = () => {
 
         768: {
           allowTouchMove: true,
+          autoplay: false,
         },
       },
-
     });
   }
 };
