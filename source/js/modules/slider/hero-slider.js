@@ -1,5 +1,5 @@
 
-import Swiper from '../../vendor/swiper';
+import Swiper from 'swiper/bundle';
 
 
 const initHeroSlider = () => {
@@ -17,6 +17,16 @@ const initHeroSlider = () => {
       },
 
       loop: true,
+      breakpoints: {
+        1440: {
+          allowTouchMove: false,
+        },
+
+        768: {
+          allowTouchMove: true,
+        },
+      },
+
     });
   }
 };
