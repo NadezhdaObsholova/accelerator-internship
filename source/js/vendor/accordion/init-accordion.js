@@ -1,5 +1,4 @@
-// import {Accordions} from './accordions';
-import {Accordions} from '../../vendor/accordion/accordions';
+import {Accordions} from './accordions';
 let accordions;
 
 const initAccordions = () => {
