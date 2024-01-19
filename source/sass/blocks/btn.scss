@@ -8,6 +8,46 @@
   border-radius: size(30px);
   background-color: transparent;
   cursor: pointer;
+
+  @include vp-767 {
+    padding-left: size(19px);
+    gap: size(20px);
+  }
+
+  transition: $trans-default;
+
+  @include hover-focus {
+    background-color: $color-additional;
+    p {
+      color: $color-default-white;
+    }
+    div {
+      background-color: $color-default-white;
+    }
+
+    svg {
+      color: $color-additional;
+      transform: rotate(45deg);
+    }
+  }
+
+  @include active {
+    p,
+    svg {
+      opacity: 0.7;
+    }
+  }
+}
+
+.btn.is-disabled {
+  pointer-events: none;
+  border-color: $color-disabled;
+  p {
+    color:   $color-disabled;
+  }
+  div {
+    background-color:   $color-disabled;
+  }
 }
 
 .btn p {
@@ -18,6 +58,12 @@
   text-transform: uppercase;
   margin: 0;
   color: $color-additional;
+
+  @include vp-767 {
+    font-size: size(12px);
+    line-height: size(12px);
+    letter-spacing: size(0.24px);
+  }
 }
 
 .btn div {
@@ -28,6 +74,11 @@
   height: size(46px);
   background-color: $color-additional;
   border-radius: 50%;
+
+  @include vp-767 {
+    width: size(34px);
+    height: size(34px);
+  }
 }
 
 .btn svg {

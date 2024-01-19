@@ -22,7 +22,7 @@
     <h1 class="visually-hidden">Сайт проекта "Стажировка за рубежом"</h1>
     <div class="header__holder" data-test="slider">
       <nav class="header__nav  container">
-        <div class="header__logo">
+        <div class="header__logo" data-logo="header-logo">
           <svg width="30" height="30">
             <use href="__spritemap#sprite-logo"></use>
           </svg>
@@ -42,7 +42,7 @@
 
           <ul class="header__nav-list visually-hidden" data-accordion="parent" data-menu="header-menu">
             <li class="header__nav-item">
-              <a href="#about">О проекте</a>
+              <a href="#about" data-menu_item="menu_item">О проекте</a>
             </li>
             <li class="header__nav-item" data-accordion="element">
               <a href="#programs" data-accordion="button">Программы
@@ -51,34 +51,52 @@
                 </svg>
               </a>
               <ul class="header__nav-list" data-accordion="content">
-                <li>Стажировка</li>
-                <li>Волонтерство</li>
-                <li>Учёба</li>
-                <li>Религия</li>
+                <li>
+                  <a data-menu_item="menu_item">Стажировка</a>
+                </li>
+                <li>
+                  <a data-menu_item="menu_item">Волонтерство</a>
+                </li>
+                <li>
+                  <a data-menu_item="menu_item">Учёба</a>
+                </li>
+                <li>
+                  <a data-menu_item="menu_item">Религия</a>
+                </li>
               </ul>
             </li>
             <li class="header__nav-item">
-              <a href="#grant">Как проехать</a>
+              <a href="#grant" data-menu_item="menu_item">Как проехать</a>
             </li>
             <li class="header__nav-item">
-              <a href="#reviews">Отзывы</a>
+              <a href="#reviews" data-menu_item="menu_item">Отзывы</a>
             </li>
             <li class="header__nav-item" data-accordion="element">
               <a href="#programs" data-accordion="button">Новости
-              <svg width="12" height="12">
-                <use href="__spritemap#sprite-arrow-menu"></use>
-              </svg>
-            </a>
+                <svg width="12" height="12">
+                  <use href="__spritemap#sprite-arrow-menu"></use>
+                </svg>
+              </a>
               <ul class="header__nav-list" data-accordion="content">
-                <li>Общее</li>
-                <li>Волонтерство</li>
-                <li>Стажировки</li>
-                <li>Карьера</li>
-                <li>Путешествия</li>
+                <li>
+                  <a data-menu_item="menu_item">Общее</a>
+                </li>
+                <li>
+                  <a data-menu_item="menu_item">Волонтерство</a>
+                </li>
+                <li>
+                  <a data-menu_item="menu_item">Стажировки</a>
+                </li>
+                <li>
+                  <a data-menu_item="menu_item">Карьера</a>
+                </li>
+                <li>
+                  <a data-menu_item="menu_item">Путешествия</a>
+                </li>
               </ul>
             </li>
             <li class="header__nav-item">
-              <a href="##contacts">Контакты</a>
+              <a href="##contacts" data-menu_item="menu_item">Контакты</a>
             </li>
           </ul>
         </div>
@@ -98,20 +116,23 @@
             </div>
             <div class="hero__slider-overlay"></div>
             <div class="hero__info-wrapper">
+              <div class="hero__info-pagination"></div>
               <div class="hero__info-title">
                 <h2>Глобальный профессиональный<br>опыт обучения за рубежом</h2>
               </div>
               <div class="hero__info-holder">
                 <div class="header__info-text">Погрузитесь в академическую программу, проходя практику в разных городах,
                   ощущая настоящий студенческий стиль жизни!</div>
-                <a class="hero__info-button btn" href="">
-                  <p>подробнее</p>
-                  <div>
-                    <svg width="10" height="10">
-                      <use href="__spritemap#sprite-btn-arrow"></use>
-                    </svg>
-                  </div>
-                </a>
+                <div class="hero__button-wrapper">
+                  <a class="hero__info-button btn" href="">
+                    <p>подробнее</p>
+                    <div>
+                      <svg width="10" height="10">
+                        <use href="__spritemap#sprite-btn-arrow"></use>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </li>
@@ -128,20 +149,23 @@
             </div>
             <div class="hero__slider-overlay"></div>
             <div class="hero__info-wrapper">
+              <div class="hero__info-pagination"></div>
               <div class="hero__info-title">
                 <h2>Волонтёрские программы –<br>внесите свой вклад в общество</h2>
               </div>
               <div class="hero__info-holder">
                 <div class="hero__info-text">Возможности для преподавания, органического сельского хозяйства,
                   устойчивого образа жизни и другое.</div>
-                <a class="hero__info-button btn" href="">
-                  <p>подробнее</p>
-                  <div>
-                    <svg width="10" height="10">
-                      <use href="__spritemap#sprite-btn-arrow"></use>
-                    </svg>
-                  </div>
-                </a>
+                <div class="hero__button-wrapper">
+                  <a class="hero__info-button btn" href="">
+                    <p>подробнее</p>
+                    <div>
+                      <svg width="10" height="10">
+                        <use href="__spritemap#sprite-btn-arrow"></use>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </li>
@@ -158,26 +182,29 @@
             </div>
             <div class="hero__slider-overlay"></div>
             <div class="hero__info-wrapper">
+              <div class="hero__info-pagination"></div>
               <div class="hero__info-title">
                 <h2>Программы стажировок<br>в крупнейших компаниях мира</h2>
               </div>
               <div class="hero__info-holder">
                 <div class="hero__info-text">Получите незаменимый опыт работы в ведущих мировых компаниях и
                   государственных организациях.</div>
-                <a class="hero__info-button btn" href="">
-                  <p>подробнее</p>
-                  <div>
-                    <svg width="10" height="10">
-                      <use href="__spritemap#sprite-btn-arrow"></use>
-                    </svg>
-                  </div>
-                </a>
+                <div class="hero__button-wrapper">
+                  <a class="hero__info-button btn" href="">
+                    <p>подробнее</p>
+                    <div>
+                      <svg width="10" height="10">
+                        <use href="__spritemap#sprite-btn-arrow"></use>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </li>
+
         </ul>
         <div class="hero__pagination swiper-pagination" data-pagination="hero-pagination">
-
         </div>
       </div>
     </div>
