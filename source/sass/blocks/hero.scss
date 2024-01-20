@@ -75,7 +75,7 @@
   }
 }
 
-.header__info-text {
+.hero__info-text {
   @include vp-1439 {
     line-height: size(20px);
   }
@@ -91,14 +91,18 @@
 
 .hero__button-wrapper {
   position: relative;
-  padding: size(10px) size(15px);
-  margin-top: size(-1px);
+  padding: 0;
+  margin: 0;
   background-color: $color-default-white;
   border-radius: 0 0 size(14px) size(14px);
+  @include vp-767 {
+    padding: size(10px) size(15px);
+    margin-top: size(-1px);
+  }
 }
 
 .hero__button-wrapper::after,
-.header__info-text::after {
+.hero__info-text::after {
   @include vp-767 {
   content: "";
   position: absolute;

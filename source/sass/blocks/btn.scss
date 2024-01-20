@@ -7,6 +7,7 @@
   border: size(1px) solid $color-additional;
   border-radius: size(30px);
   background-color: transparent;
+  width: max-content;
   cursor: pointer;
 
   @include vp-767 {
