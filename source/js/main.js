@@ -1,7 +1,9 @@
 import { initHeroSlider } from './modules/slider/hero-slider';
+import { initProgramsSlider } from './modules/slider/programs-slider';
 import { burgerMenu } from './modules/burger-menu';
 import { scrollPage } from './modules/scroll-page';
 import { initAccordions } from './vendor/accordion/init-accordion';
+import { paginationWidth } from './modules/slider/pagination-width';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -17,8 +19,8 @@ window.addEventListener('DOMContentLoaded', () => {
   initHeroSlider();
   burgerMenu();
   scrollPage();
-
-
+  initProgramsSlider();
+  paginationWidth();
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
 

@@ -3,6 +3,7 @@
   max-width: size(1440px);
   margin: 0 auto;
   padding: 0 size(100px);
+  overflow: hidden;
 
   @include vp-1439 {
     padding: 0 size(45px);

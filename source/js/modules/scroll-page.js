@@ -5,7 +5,7 @@ export const scrollPage = () => {
     const currentScroll = window.scrollY || document.documentElement.scrollTop;
 
     if (currentScroll > lastScrollTop) {
-      document.querySelector('.header__nav').style.transform = 'translateY(-100%)';
+      document.querySelector('.header__nav').style.transform = 'translateY(-101%)';
     } else {
       document.querySelector('.header__nav').style.transform = 'translateY(0)';
     }
