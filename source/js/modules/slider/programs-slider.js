@@ -23,22 +23,23 @@ const initProgramsSlider = () => {
         clickable: true,
       },
 
-      loop: true,
+
+      loop: false,
 
       breakpoints: {
         1440: {
-          initialSlide: 0,
-          slidesPerView: 3,
+          allowTouchMove: false,
+          slidesPerView: 'auto',
           spaceBetween: 32,
         },
 
         768: {
-         // initialSlide: 3,
+          allowTouchMove: true,
+          slidesPerView: 'auto',
           spaceBetween: 30,
         },
 
         320: {
-          initialSlide: 3,
           slidesPerView: 1,
         },
       },
