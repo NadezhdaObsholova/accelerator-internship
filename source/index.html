@@ -278,19 +278,19 @@
 
       <section class="programs" data-test="programs">
         <div class="programs__header-holder">
-        <h2>Программы</h2>
-        <a class="programs__button btn" href="">
-          <p>все программы</p>
-          <div>
-            <svg width="10" height="10">
-              <use href="__spritemap#sprite-btn-arrow"></use>
-            </svg>
-          </div>
-        </a>
-      </div>
+          <h2>Программы</h2>
+          <a class="programs__button btn" href="">
+            <p>все программы</p>
+            <div>
+              <svg width="10" height="10">
+                <use href="__spritemap#sprite-btn-arrow"></use>
+              </svg>
+            </div>
+          </a>
+        </div>
         <div class="programs__slider swiper" data-swiper="programs-slider">
           <ul class="programs__slider-list swiper-wrapper">
-            <li class="programs__slider-item swiper-slide">
+            <li class="programs__slider-item swiper-slide" data-slider="data-slider">
               <div class="programs__slider-img">
                 <picture>
                   <source media="(min-width: 1440px)"
@@ -322,15 +322,15 @@
                 </div>
               </div>
             </li>
-            <li class="programs__slider-item swiper-slide">
+            <li class="programs__slider-item swiper-slide" data-slider="data-slider">
               <div class="programs__slider-img">
                 <picture>
                   <source media="(min-width: 1440px)"
-                    srcset="img/programs/volunteering-desktop.webp, img/programs/volunteering-desktop@2x.webp 2x" width="392"
-                    type="image/webp">
+                    srcset="img/programs/volunteering-desktop.webp, img/programs/volunteering-desktop@2x.webp 2x"
+                    width="392" type="image/webp">
                   <source media="(min-width: 768px)"
-                    srcset="img/programs/volunteering-tablet.webp, img/programs/volunteering-tablet@2x.webp 2x" width="324"
-                    type="image/webp">
+                    srcset="img/programs/volunteering-tablet.webp, img/programs/volunteering-tablet@2x.webp 2x"
+                    width="324" type="image/webp">
                   <img width="290" height="400"
                     srcset="img/programs/volunteering-mobile.webp, img/programs/volunteering-mobile@2x.webp 2x"
                     src="img/programs/volunteering-mobile.jpg" alt="">
@@ -354,7 +354,7 @@
                 </div>
               </div>
             </li>
-            <li class="programs__slider-item swiper-slide">
+            <li class="programs__slider-item swiper-slide" data-slider="data-slider">
               <div class="programs__slider-img">
                 <picture>
                   <source media="(min-width: 1440px)"
@@ -386,15 +386,15 @@
                 </div>
               </div>
             </li>
-            <li class="programs__slider-item swiper-slide">
+            <li class="programs__slider-item swiper-slide" data-slider="data-slider">
               <div class="programs__slider-img">
                 <picture>
                   <source media="(min-width: 1440px)"
-                    srcset="img/programs/volunteering-desktop.webp, img/programs/volunteering-desktop@2x.webp 2x" width="392"
-                    type="image/webp">
+                    srcset="img/programs/volunteering-desktop.webp, img/programs/volunteering-desktop@2x.webp 2x"
+                    width="392" type="image/webp">
                   <source media="(min-width: 768px)"
-                    srcset="img/programs/volunteering-tablet.webp, img/programs/volunteering-tablet@2x.webp 2x" width="324"
-                    type="image/webp">
+                    srcset="img/programs/volunteering-tablet.webp, img/programs/volunteering-tablet@2x.webp 2x"
+                    width="324" type="image/webp">
                   <img width="290" height="400"
                     srcset="img/programs/volunteering-mobile.webp, img/programs/volunteering-mobile@2x.webp 2x"
                     src="img/programs/volunteering-mobile.jpg" alt="">
@@ -418,29 +418,89 @@
                 </div>
               </div>
             </li>
-
-
-
+            <li class="programs__slider-item swiper-slide" data-slider="data-slider">
+              <div class="programs__slider-img">
+                <picture>
+                  <source media="(min-width: 1440px)"
+                    srcset="img/programs/studying-desktop.webp, img/programs/studying-desktop@2x.webp 2x" width="392"
+                    type="image/webp">
+                  <source media="(min-width: 768px)"
+                    srcset="img/programs/studying-tablet.webp, img/programs/studying-tablet@2x.webp 2x" width="324"
+                    type="image/webp">
+                  <img width="290" height="400"
+                    srcset="img/programs/studying-mobile.webp, img/programs/studying-mobile@2x.webp 2x"
+                    src="img/programs/studying-mobile.jpg" alt="">
+                </picture>
+              </div>
+              <div class="programs__slider-overlay"></div>
+              <div class="programs__info-wrapper">
+                <div class="programs__info-title">
+                  <h3>Учёба</h3>
+                </div>
+                <div class="programs__info-holder">
+                  <div class="programs__info-text">Получите образование и измените своё будущее.
+                  </div>
+                  <a class="programs__info-button btn" href="">
+                    <div>
+                      <svg width="10" height="10">
+                        <use href="__spritemap#sprite-btn-arrow"></use>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="programs__slider-item swiper-slide" data-slider="data-slider">
+              <div class="programs__slider-img">
+                <picture>
+                  <source media="(min-width: 1440px)"
+                    srcset="img/programs/volunteering-desktop.webp, img/programs/volunteering-desktop@2x.webp 2x"
+                    width="392" type="image/webp">
+                  <source media="(min-width: 768px)"
+                    srcset="img/programs/volunteering-tablet.webp, img/programs/volunteering-tablet@2x.webp 2x"
+                    width="324" type="image/webp">
+                  <img width="290" height="400"
+                    srcset="img/programs/volunteering-mobile.webp, img/programs/volunteering-mobile@2x.webp 2x"
+                    src="img/programs/volunteering-mobile.jpg" alt="">
+                </picture>
+              </div>
+              <div class="programs__slider-overlay"></div>
+              <div class="programs__info-wrapper">
+                <div class="programs__info-title">
+                  <h3>Волонтёрство</h3>
+                </div>
+                <div class="programs__info-holder">
+                  <div class="programs__info-text">Помогайте другим и развивайте свои лидерские качества.
+                  </div>
+                  <a class="programs__info-button btn" href="">
+                    <div>
+                      <svg width="10" height="10">
+                        <use href="__spritemap#sprite-btn-arrow"></use>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
           </ul>
-          <div class="programs__pagination-wrapper">
-            <div class="programs__pagination swiper-pagination" data-pagination="programs-pagination">
+          <div class="programs__scrollbar-holder">
+            <div class="programs__scrollbar swiper-scrollbar" data-scroll="data-scroll">
             </div>
           </div>
-        </div>
-        <div class="programs__slider-controls">
-          <button class="programs__button" data-button="programs-button-prev" type="button"
-            aria-label="предыдущий слайд">
-            <svg width="10" height="10">
-              <use href="__spritemap#sprite-arrow-prev"></use>
-            </svg>
-          </button>
-          <button class="programs__button programs__button--next" data-button="programs-button-next" type="button"
-            aria-label="следующий слайд">
-            <svg width="10" height="10">
-              <use href="__spritemap#sprite-arrow-next"></use>
-            </svg>
-          </button>
-        </div>
+          <div class="programs__slider-controls">
+            <button class="programs__button" data-button="programs-button-prev" type="button"
+              aria-label="предыдущий слайд">
+              <svg width="10" height="10">
+                <use href="__spritemap#sprite-arrow-prev"></use>
+              </svg>
+            </button>
+            <button class="programs__button programs__button--next" data-button="programs-button-next" type="button"
+              aria-label="следующий слайд">
+              <svg width="10" height="10">
+                <use href="__spritemap#sprite-arrow-next"></use>
+              </svg>
+            </button>
+          </div>
 
       </section>
 

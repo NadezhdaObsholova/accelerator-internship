@@ -1,6 +1,13 @@
 .programs {
   position: relative;
-  padding-top: size(120px);
+  margin-top: size(120px);
+
+  @include vp-767 {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: size(60px) 0;
+  }
+
 }
 
 .programs__header-holder {
@@ -12,6 +19,13 @@
   @include vp-1439 {
     padding-right: size(45px);
     padding-left: size(45px);
+  }
+
+  @include vp-767 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    flex-direction: column;
+    height: size(527px);
   }
 }
 
@@ -29,36 +43,32 @@
   }
 }
 
-/////
-/// Слайдер
-/// Обертка
 .programs__slider {
   padding-top: size(40px);
   width: size(1240px);
   overflow: hidden;
 
   @include vp-1439 {
-    // margin-right: 0;
     width: size(723px);
     margin-left: size(45px);
   }
 
   @include vp-767 {
-    // margin-right: 0;
+    grid-column: 1/2;
+    grid-row: 1/2;
     width: size(290px);
     margin-left: size(15px);
+    padding-top: size(55px);
+
   }
 }
 
-///список слайдов
 .programs__slider-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-
-///сам слайд
 .programs__slider-item {
   display: grid;
   grid-template-columns: 1fr;
@@ -66,30 +76,6 @@
   border-radius: size(12px);
   width: size(392px);
   overflow: hidden;
-
-  @include vp-1439 {
-    width: 324px;
-    height: size(420px);
-  }
-
-  @include vp-767 {
-    width: size(290px);
-    height: size(400px);
-  }
-}
-
-////оверлей картинки
-.programs__slider-overlay {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  background-color: $color-overlay;
-}
-
-///обертка картинки
-.programs__slider-img {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  min-height: 420px;
 
   @include vp-1439 {
     width: size(324px);
@@ -102,7 +88,29 @@
   }
 }
 
-////сама картинка
+.programs__slider-overlay {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background-color: $color-overlay;
+}
+
+.programs__slider-img {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  min-height: size(420px);
+
+  @include vp-1439 {
+    width: size(324px);
+    height: size(420px);
+  }
+
+  @include vp-767 {
+    width: size(290px);
+    height: size(400px);
+    min-height: size(400px);
+  }
+}
+
 .programs__slider-img img {
   min-width: size(392px);
   min-height: 100%;
@@ -115,12 +123,11 @@
 
   @include vp-767 {
     min-width: size(290px);
+    min-height: auto;
+    height: auto;
   }
 
 }
-
-////оберктка текста
-///
 
 .programs__info-wrapper {
   display: flex;
@@ -142,7 +149,6 @@
   }
 }
 
-////заголовок текста
 .programs__info-title {
   position: relative;
   padding: size(18px);
@@ -199,8 +205,6 @@
   }
 }
 
-/////оберктка текста и кнопки
-
 .programs__info-holder {
   display: flex;
   gap: size(30px);
@@ -228,18 +232,22 @@
   }
 }
 
-/////кнопки переключения слайдов
 .programs__slider-controls {
   position: absolute;
   z-index: 5;
   bottom: 0;
-  right: size(100px);
+  right: 0;
   display: flex;
   width: max-content;
   gap: size(10px);
 
   @include vp-1439 {
     right: size(45px);
+  }
+
+  @include vp-767 {
+    right: 0;
+    top: 0;
   }
 
   .programs__button {
@@ -265,14 +273,10 @@
   }
 }
 
-////наружная обертка пагинации чтобы обрезать до кнопок
-.programs__pagination-wrapper {
+.programs__scrollbar-holder {
   position: relative;
   width: size(1134px);
-  height: size(2px);
-  margin-top: size(50px);
-  margin-bottom: size(10px);
-  background-color: $color-additional-2;
+  height: size(50px);
   overflow: hidden;
 
   @include vp-1439 {
@@ -284,42 +288,17 @@
   }
 }
 
-////буллеты пагинации
-.programs {
-  .swiper-pagination-bullet {
-    height: size(2px);
-    margin: 0;
-    margin-left: -4px;
-    border-radius: 0;
-    background-color: transparent;
-    border: none;
-    opacity: 1;
+.swiper-scrollbar {
+  background-color: $color-additional-2;
+}
 
-    @include vp-767 {
-      width: size(8px);
-      height: size(8px);
-    }
-  }
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  bottom: size(10px);
+  height: size(2px);
+  width: size(1134px);
+  margin-left: -11px;
+}
 
-  .swiper-pagination-bullet-active {
-    background-color: $color-additional;
-    opacity: 1;
-    margin: 0;
-  }
-
-  ////внутренняя обертка пагинации
-  .swiper-pagination-bullets.swiper-pagination-horizontal {
-    left: 0;
-    display: flex;
-    gap: 32px;
-    flex-wrap: nowrap;
-    width: max-content;
-    padding: 0;
-    top: 0;
-    //background-color: $color-additional-2;
-  }
-
-  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 0;
-  }
+.swiper-scrollbar-drag {
+  background-color: $color-additional;
 }

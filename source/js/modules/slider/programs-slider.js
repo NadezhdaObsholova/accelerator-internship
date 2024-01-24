@@ -5,24 +5,27 @@ import Swiper from 'swiper/bundle';
 const initProgramsSlider = () => {
 
   const programsSlider = document.querySelector('[data-swiper="programs-slider"]');
-  const programsPagination = document.querySelector('[data-pagination="programs-pagination"]');
   const buttonNext = document.querySelector('[data-button="programs-button-next"]');
   const buttonPrev = document.querySelector('[data-button="programs-button-prev"]');
+  const scrollBar = document.querySelector('[data-scroll="data-scroll"]');
+  const programsSliderElement = document.querySelector('[data-slider="data-slider"]');
+  const width = programsSliderElement.offsetWidth;
+
 
   if (programsSlider) {
     // eslint-disable-next-line
-     new Swiper(programsSlider, {
+    new Swiper(programsSlider, {
 
       navigation: {
         nextEl: buttonNext,
         prevEl: buttonPrev,
       },
 
-      pagination: {
-        el: programsPagination,
-        clickable: true,
+      scrollbar: {
+        el: scrollBar,
+        draggable: true,
+        dragSize: width,
       },
-
 
       loop: false,
 
