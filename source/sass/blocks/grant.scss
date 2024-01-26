@@ -69,8 +69,7 @@
   overflow: hidden;
 }
 
-.grant__img,
-img {
+.grant__img {
   width: size(498px);
   height: size(363px);
   border-radius: size(16px);
@@ -84,6 +83,21 @@ img {
   @include vp-767 {
     width: size(290px);
     height: size(200px);
+  }
+
+  img {
+    width: size(498px);
+    height: size(363px);
+
+    @include vp-1439 {
+      width: size(678px);
+      height: size(375px);
+    }
+
+    @include vp-767 {
+      width: size(290px);
+      height: size(200px);
+    }
   }
 }
 

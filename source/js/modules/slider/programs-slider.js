@@ -7,8 +7,8 @@ const initProgramsSlider = () => {
   const programsSlider = document.querySelector('[data-swiper="programs-slider"]');
   const buttonNext = document.querySelector('[data-button="programs-button-next"]');
   const buttonPrev = document.querySelector('[data-button="programs-button-prev"]');
-  const scrollBar = document.querySelector('[data-scroll="data-scroll"]');
-  const programsSliderElement = document.querySelector('[data-slider="data-slider"]');
+  const scrollBar = document.querySelector('[data-scroll="programs-scroll"]');
+  const programsSliderElement = document.querySelector('[data-slider="programs-slider"]');
   const width = programsSliderElement.offsetWidth;
 
 

@@ -8,6 +8,78 @@
     margin: size(60px) 0;
   }
 
+  .programs__slider-controls {
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    width: max-content;
+    gap: size(10px);
+
+    @include vp-1439 {
+      right: size(45px);
+    }
+
+    @include vp-767 {
+      right: 0;
+      top: 0;
+    }
+
+    .programs__button {
+      border: none;
+      width: size(22px);
+      height: size(22px);
+      cursor: pointer;
+
+      svg {
+        width: size(10px);
+        height: size(10px);
+        color: $color-additional;
+      }
+    }
+
+    .programs__button:disabled {
+      background-color: transparent;
+      pointer-events: none;
+
+      svg {
+        color: $color-disabled;
+      }
+    }
+  }
+
+  .programs__scrollbar-holder {
+    position: relative;
+    width: size(1134px);
+    height: size(50px);
+    overflow: hidden;
+
+    @include vp-1439 {
+      width: size(560px);
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  .swiper-scrollbar {
+    background-color: $color-additional-2;
+  }
+
+  .swiper-scrollbar.swiper-scrollbar-horizontal {
+    bottom: size(10px);
+    height: size(2px);
+    width: size(1134px);
+    margin-left: -11px;
+  }
+
+  .swiper-scrollbar-drag {
+    background-color: $color-additional;
+  }
+
+
 }
 
 .programs__header-holder {
@@ -232,73 +304,3 @@
   }
 }
 
-.programs__slider-controls {
-  position: absolute;
-  z-index: 5;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  width: max-content;
-  gap: size(10px);
-
-  @include vp-1439 {
-    right: size(45px);
-  }
-
-  @include vp-767 {
-    right: 0;
-    top: 0;
-  }
-
-  .programs__button {
-    border: none;
-    width: size(22px);
-    height: size(22px);
-    cursor: pointer;
-
-    svg {
-      width: size(10px);
-      height: size(10px);
-      color: $color-additional;
-    }
-  }
-
-  .programs__button:disabled {
-    background-color: transparent;
-    pointer-events: none;
-
-    svg {
-      color: $color-disabled;
-    }
-  }
-}
-
-.programs__scrollbar-holder {
-  position: relative;
-  width: size(1134px);
-  height: size(50px);
-  overflow: hidden;
-
-  @include vp-1439 {
-    width: size(560px);
-  }
-
-  @include vp-767 {
-    display: none;
-  }
-}
-
-.swiper-scrollbar {
-  background-color: $color-additional-2;
-}
-
-.swiper-scrollbar.swiper-scrollbar-horizontal {
-  bottom: size(10px);
-  height: size(2px);
-  width: size(1134px);
-  margin-left: -11px;
-}
-
-.swiper-scrollbar-drag {
-  background-color: $color-additional;
-}
