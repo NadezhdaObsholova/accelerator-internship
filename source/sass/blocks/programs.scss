@@ -106,8 +106,8 @@
   padding: 0;
 
   @include hover-focus {
-    background-color: $color-additional;
-    border: size(1px) solid $color-additional;
+    background-color: $color-default-white;
+    border: size(1px) solid $color-default-white;
 
     div {
       background-color: $color-default-white;
