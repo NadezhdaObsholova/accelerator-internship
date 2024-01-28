@@ -555,50 +555,30 @@
       </section>
 
       <section class="news" data-test="news">
-        <div class="news__wrapper container">
-        <h2>Новости и материалы</h2>
-          <ul class="news__filter-list">
-            <li class="news__filter-item is-active">
-              Общее
-            </li>
-            <li class="news__filter-item">
-              Волонтёрство
-            </li>
-            <li class="news__filter-item">
-              Стажировки
-            </li>
-            <li class="news__filter-item">
-              Карьера
-            </li>
-            <li class="news__filter-item">
-              Путешествия
-            </li>
-          </ul>
-
         <div class="news__slider swiper" data-swiper="news-slider">
-
           <ul class="news__slider-list swiper-wrapper">
-            <li class="news__slider-item news__slider-item--first swiper-slide" data-slider="news-slider">
+            <li class="news__slider-item swiper-slide" data-slider="news-slider">
               <div class="news__slider-img">
                 <picture>
                   <source media="(min-width: 1440px)" srcset="img/news/1-desktop.webp, img/news/1-desktop@2x.webp 2x"
                     width="604" type="image/webp">
+                  <source media="(min-width: 768px)" srcset="img/news/1-tablet.webp, img/news/1-tablet@2x.webp 2x"
+                    width="324" type="image/webp">
                   <img width="290" height="330" srcset="img/news/1-mobile.webp, img/news/1-mobile@2x.webp 2x"
                     src="img/news/1-mobile.jpg" alt="">
                 </picture>
               </div>
+              <div class="news__slider-overlay"></div>
               <div class="news__info-wrapper">
                 <div class="news__data">
                   <p>23/03/2023</p>
                 </div>
-                <div class="news__title">
-                  <h3>Интервью с участницей программы стажировки</h3>
-                </div>
                 <div class="news__info-holder">
-                  <div class="news__info-text">
-                    <p>Саша рассказывает, как попала в программу и как прошла 6-месячная
-                      стажировка в ISOFound
-                    </p>
+                  <div class="news__info-title">
+                    <h3>Интервью с участницейпрограммы стажировки</h3>
+                  </div>
+                  <div class="news__info-text">Саша рассказывает, как попала в программу и как прошла 6-месячная
+                    стажировка в ISOFound
                   </div>
                   <a class="news__info-button btn" href="">
                     <div>
@@ -615,21 +595,22 @@
                 <picture>
                   <source media="(min-width: 1440px)" srcset="img/news/2-desktop.webp, img/news/2-desktop@2x.webp 2x"
                     width="604" type="image/webp">
+                  <source media="(min-width: 768px)" srcset="img/news/2-tablet.webp, img/news/2-tablet@2x.webp 2x"
+                    width="324" type="image/webp">
                   <img width="290" height="330" srcset="img/news/2-mobile.webp, img/news/2-mobile@2x.webp 2x"
                     src="img/news/2-mobile.jpg" alt="">
                 </picture>
               </div>
+              <div class="news__slider-overlay"></div>
               <div class="news__info-wrapper">
                 <div class="news__data">
                   <p>20/03/2023</p>
                 </div>
-                <div class="news__title">
-                  <h3>Путешествуем по миру</h3>
-                </div>
                 <div class="news__info-holder">
-                  <div class="news__info-text">
-                    <p> Какие места посещают наши студенты весной</p>
+                  <div class="news__info-title">
+                    <h3>Путешествуем по миру</h3>
                   </div>
+                  <div class="news__info-text">Какие места посещают наши студенты весной</div>
                   <a class="news__info-button btn" href="">
                     <div>
                       <svg width="10" height="10">
@@ -645,20 +626,22 @@
                 <picture>
                   <source media="(min-width: 1440px)" srcset="img/news/3-desktop.webp, img/news/3-desktop@2x.webp 2x"
                     width="604" type="image/webp">
+                  <source media="(min-width: 768px)" srcset="img/news/3-tablet.webp, img/news/3-tablet@2x.webp 2x"
+                    width="324" type="image/webp">
                   <img width="290" height="330" srcset="img/news/3-mobile.webp, img/news/3-mobile@2x.webp 2x"
                     src="img/news/1-mobile.jpg" alt="">
                 </picture>
               </div>
+              <div class="news__slider-overlay"></div>
               <div class="news__info-wrapper">
                 <div class="news__data">
                   <p>17/03/2023</p>
                 </div>
-                <div class="news__title">
-                  <h3>Новая программа волонтёрства</h3>
-                </div>
                 <div class="news__info-holder">
-                  <div class="news__info-text">
-                    <p>Программа помощи детям длительностью 4 месяца</p>
+                  <div class="news__info-title">
+                    <h3>Новая программа волонтёрства</h3>
+                  </div>
+                  <div class="news__info-text">Программа помощи детям длительностью 4 месяца
                   </div>
                   <a class="news__info-button btn" href="">
                     <div>
@@ -675,20 +658,55 @@
                 <picture>
                   <source media="(min-width: 1440px)" srcset="img/news/4-desktop.webp, img/news/4-desktop@2x.webp 2x"
                     width="604" type="image/webp">
+                  <source media="(min-width: 768px)" srcset="img/news/4-tablet.webp, img/news/4-tablet@2x.webp 2x"
+                    width="324" type="image/webp">
                   <img width="290" height="330" srcset="img/news/4-mobile.webp, img/news/4-mobile@2x.webp 2x"
                     src="img/news/1-mobile.jpg" alt="">
                 </picture>
               </div>
+              <div class="news__slider-overlay"></div>
               <div class="news__info-wrapper">
                 <div class="news__data">
                   <p>10/03/2023</p>
                 </div>
-                <div class="news__title">
-                  <h3>Построй свою карьеру</h3>
+                <div class="news__info-holder">
+                  <div class="news__info-title">
+                    <h3>Построй свою карьеру</h3>
+                  </div>
+                  <div class="news__info-text">Ведущие компании готовы трудоустроить выпускников стажировки
+                  </div>
+                  <a class="news__info-button btn" href="">
+                    <div>
+                      <svg width="10" height="10">
+                        <use href="__spritemap#sprite-btn-arrow"></use>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="news__slider-item swiper-slide" data-slider="news-slider">
+              <div class="news__slider-img">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/news/1-desktop.webp, img/news/1-desktop@2x.webp 2x"
+                    width="604" type="image/webp">
+                  <source media="(min-width: 768px)" srcset="img/news/1-tablet.webp, img/news/1-tablet@2x.webp 2x"
+                    width="324" type="image/webp">
+                  <img width="290" height="330" srcset="img/news/1-mobile.webp, img/news/1-mobile@2x.webp 2x"
+                    src="img/news/1-mobile.jpg" alt="">
+                </picture>
+              </div>
+              <div class="news__slider-overlay"></div>
+              <div class="news__info-wrapper">
+                <div class="news__data">
+                  <p>23/03/2023</p>
                 </div>
                 <div class="news__info-holder">
-                  <div class="news__info-text">
-                    <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                  <div class="news__info-title">
+                    <h3>Интервью с участницейпрограммы стажировки</h3>
+                  </div>
+                  <div class="news__info-text">Саша рассказывает, как попала в программу и как прошла 6-месячная
+                    стажировка в ISOFound
                   </div>
                   <a class="news__info-button btn" href="">
                     <div>
@@ -705,21 +723,22 @@
                 <picture>
                   <source media="(min-width: 1440px)" srcset="img/news/2-desktop.webp, img/news/2-desktop@2x.webp 2x"
                     width="604" type="image/webp">
+                  <source media="(min-width: 768px)" srcset="img/news/2-tablet.webp, img/news/2-tablet@2x.webp 2x"
+                    width="324" type="image/webp">
                   <img width="290" height="330" srcset="img/news/2-mobile.webp, img/news/2-mobile@2x.webp 2x"
                     src="img/news/2-mobile.jpg" alt="">
                 </picture>
               </div>
+              <div class="news__slider-overlay"></div>
               <div class="news__info-wrapper">
                 <div class="news__data">
                   <p>20/03/2023</p>
                 </div>
-                <div class="news__title">
-                  <h3>Путешествуем по миру</h3>
-                </div>
                 <div class="news__info-holder">
-                  <div class="news__info-text">
-                    <p>Какие места посещают наши студенты весной</p>
+                  <div class="news__info-title">
+                    <h3>Путешествуем по миру</h3>
                   </div>
+                  <div class="news__info-text">Какие места посещают наши студенты весной</div>
                   <a class="news__info-button btn" href="">
                     <div>
                       <svg width="10" height="10">
@@ -735,20 +754,22 @@
                 <picture>
                   <source media="(min-width: 1440px)" srcset="img/news/3-desktop.webp, img/news/3-desktop@2x.webp 2x"
                     width="604" type="image/webp">
+                  <source media="(min-width: 768px)" srcset="img/news/3-tablet.webp, img/news/3-tablet@2x.webp 2x"
+                    width="324" type="image/webp">
                   <img width="290" height="330" srcset="img/news/3-mobile.webp, img/news/3-mobile@2x.webp 2x"
                     src="img/news/1-mobile.jpg" alt="">
                 </picture>
               </div>
+              <div class="news__slider-overlay"></div>
               <div class="news__info-wrapper">
                 <div class="news__data">
                   <p>17/03/2023</p>
                 </div>
-                <div class="news__title">
-                  <h3>Новая программа волонтёрства</h3>
-                </div>
                 <div class="news__info-holder">
-                  <div class="news__info-text">
-                    <p>Программа помощи детям длительностью 4 месяца</p>
+                  <div class="news__info-title">
+                    <h3>Новая программа волонтёрства</h3>
+                  </div>
+                  <div class="news__info-text">Программа помощи детям длительностью 4 месяца
                   </div>
                   <a class="news__info-button btn" href="">
                     <div>
@@ -765,20 +786,55 @@
                 <picture>
                   <source media="(min-width: 1440px)" srcset="img/news/4-desktop.webp, img/news/4-desktop@2x.webp 2x"
                     width="604" type="image/webp">
+                  <source media="(min-width: 768px)" srcset="img/news/4-tablet.webp, img/news/4-tablet@2x.webp 2x"
+                    width="324" type="image/webp">
                   <img width="290" height="330" srcset="img/news/4-mobile.webp, img/news/4-mobile@2x.webp 2x"
                     src="img/news/1-mobile.jpg" alt="">
                 </picture>
               </div>
+              <div class="news__slider-overlay"></div>
               <div class="news__info-wrapper">
                 <div class="news__data">
                   <p>10/03/2023</p>
                 </div>
-                <div class="news__title">
-                  <h3>Построй свою карьеру</h3>
+                <div class="news__info-holder">
+                  <div class="news__info-title">
+                    <h3>Построй свою карьеру</h3>
+                  </div>
+                  <div class="news__info-text">Ведущие компании готовы трудоустроить выпускников стажировки
+                  </div>
+                  <a class="news__info-button btn" href="">
+                    <div>
+                      <svg width="10" height="10">
+                        <use href="__spritemap#sprite-btn-arrow"></use>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="news__slider-item swiper-slide" data-slider="news-slider">
+              <div class="news__slider-img">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/news/1-desktop.webp, img/news/1-desktop@2x.webp 2x"
+                    width="604" type="image/webp">
+                  <source media="(min-width: 768px)" srcset="img/news/1-tablet.webp, img/news/1-tablet@2x.webp 2x"
+                    width="324" type="image/webp">
+                  <img width="290" height="330" srcset="img/news/1-mobile.webp, img/news/1-mobile@2x.webp 2x"
+                    src="img/news/1-mobile.jpg" alt="">
+                </picture>
+              </div>
+              <div class="news__slider-overlay"></div>
+              <div class="news__info-wrapper">
+                <div class="news__data">
+                  <p>23/03/2023</p>
                 </div>
                 <div class="news__info-holder">
-                  <div class="news__info-text">
-                    <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                  <div class="news__info-title">
+                    <h3>Интервью с участницейпрограммы стажировки</h3>
+                  </div>
+                  <div class="news__info-text">Саша рассказывает, как попала в программу и как прошла 6-месячная
+                    стажировка в ISOFound
                   </div>
                   <a class="news__info-button btn" href="">
                     <div>
@@ -795,171 +851,22 @@
                 <picture>
                   <source media="(min-width: 1440px)" srcset="img/news/2-desktop.webp, img/news/2-desktop@2x.webp 2x"
                     width="604" type="image/webp">
+                  <source media="(min-width: 768px)" srcset="img/news/2-tablet.webp, img/news/2-tablet@2x.webp 2x"
+                    width="324" type="image/webp">
                   <img width="290" height="330" srcset="img/news/2-mobile.webp, img/news/2-mobile@2x.webp 2x"
                     src="img/news/2-mobile.jpg" alt="">
                 </picture>
               </div>
+              <div class="news__slider-overlay"></div>
               <div class="news__info-wrapper">
                 <div class="news__data">
                   <p>20/03/2023</p>
                 </div>
-                <div class="news__title">
-                  <h3>Путешествуем по миру</h3>
-                </div>
                 <div class="news__info-holder">
-                  <div class="news__info-text">
-                    <p> Какие места посещают наши студенты весной</p>
+                  <div class="news__info-title">
+                    <h3>Путешествуем по миру</h3>
                   </div>
-                  <a class="news__info-button btn" href="">
-                    <div>
-                      <svg width="10" height="10">
-                        <use href="__spritemap#sprite-btn-arrow"></use>
-                      </svg>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li class="news__slider-item swiper-slide" data-slider="news-slider">
-              <div class="news__slider-img">
-                <picture>
-                  <source media="(min-width: 1440px)" srcset="img/news/3-desktop.webp, img/news/3-desktop@2x.webp 2x"
-                    width="604" type="image/webp">
-                  <img width="290" height="330" srcset="img/news/3-mobile.webp, img/news/3-mobile@2x.webp 2x"
-                    src="img/news/1-mobile.jpg" alt="">
-                </picture>
-              </div>
-              <div class="news__info-wrapper">
-                <div class="news__data">
-                  <p>17/03/2023</p>
-                </div>
-                <div class="news__title">
-                  <h3>Новая программа волонтёрства</h3>
-                </div>
-                <div class="news__info-holder">
-                  <div class="news__info-text">
-                    <p>Программа помощи детям длительностью 4 месяца</p>
-                  </div>
-                  <a class="news__info-button btn" href="">
-                    <div>
-                      <svg width="10" height="10">
-                        <use href="__spritemap#sprite-btn-arrow"></use>
-                      </svg>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li class="news__slider-item swiper-slide" data-slider="news-slider">
-              <div class="news__slider-img">
-                <picture>
-                  <source media="(min-width: 1440px)" srcset="img/news/3-desktop.webp, img/news/3-desktop@2x.webp 2x"
-                    width="604" type="image/webp">
-                  <img width="290" height="330" srcset="img/news/3-mobile.webp, img/news/3-mobile@2x.webp 2x"
-                    src="img/news/1-mobile.jpg" alt="">
-                </picture>
-              </div>
-              <div class="news__info-wrapper">
-                <div class="news__data">
-                  <p>17/03/2023</p>
-                </div>
-                <div class="news__title">
-                  <h3>Новая программа волонтёрства</h3>
-                </div>
-                <div class="news__info-holder">
-                  <div class="news__info-text">
-                    <p>Программа помощи детям длительностью 4 месяца</p>
-                  </div>
-                  <a class="news__info-button btn" href="">
-                    <div>
-                      <svg width="10" height="10">
-                        <use href="__spritemap#sprite-btn-arrow"></use>
-                      </svg>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li class="news__slider-item swiper-slide" data-slider="news-slider">
-              <div class="news__slider-img">
-                <picture>
-                  <source media="(min-width: 1440px)" srcset="img/news/3-desktop.webp, img/news/3-desktop@2x.webp 2x"
-                    width="604" type="image/webp">
-                  <img width="290" height="330" srcset="img/news/3-mobile.webp, img/news/3-mobile@2x.webp 2x"
-                    src="img/news/1-mobile.jpg" alt="">
-                </picture>
-              </div>
-              <div class="news__info-wrapper">
-                <div class="news__data">
-                  <p>17/03/2023</p>
-                </div>
-                <div class="news__title">
-                  <h3>Новая программа волонтёрства</h3>
-                </div>
-                <div class="news__info-holder">
-                  <div class="news__info-text">
-                    <p>Программа помощи детям длительностью 4 месяца</p>
-                  </div>
-                  <a class="news__info-button btn" href="">
-                    <div>
-                      <svg width="10" height="10">
-                        <use href="__spritemap#sprite-btn-arrow"></use>
-                      </svg>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li class="news__slider-item swiper-slide" data-slider="news-slider">
-              <div class="news__slider-img">
-                <picture>
-                  <source media="(min-width: 1440px)" srcset="img/news/3-desktop.webp, img/news/3-desktop@2x.webp 2x"
-                    width="604" type="image/webp">
-                  <img width="290" height="330" srcset="img/news/3-mobile.webp, img/news/3-mobile@2x.webp 2x"
-                    src="img/news/1-mobile.jpg" alt="">
-                </picture>
-              </div>
-              <div class="news__info-wrapper">
-                <div class="news__data">
-                  <p>17/03/2023</p>
-                </div>
-                <div class="news__title">
-                  <h3>Новая программа волонтёрства</h3>
-                </div>
-                <div class="news__info-holder">
-                  <div class="news__info-text">
-                    <p>Программа помощи детям длительностью 4 месяца</p>
-                  </div>
-                  <a class="news__info-button btn" href="">
-                    <div>
-                      <svg width="10" height="10">
-                        <use href="__spritemap#sprite-btn-arrow"></use>
-                      </svg>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li class="news__slider-item swiper-slide" data-slider="news-slider">
-              <div class="news__slider-img">
-                <picture>
-                  <source media="(min-width: 1440px)" srcset="img/news/3-desktop.webp, img/news/3-desktop@2x.webp 2x"
-                    width="604" type="image/webp">
-                  <img width="290" height="330" srcset="img/news/3-mobile.webp, img/news/3-mobile@2x.webp 2x"
-                    src="img/news/1-mobile.jpg" alt="">
-                </picture>
-              </div>
-              <div class="news__info-wrapper">
-                <div class="news__data">
-                  <p>17/03/2023</p>
-                </div>
-                <div class="news__title">
-                  <h3>Новая программа волонтёрства</h3>
-                </div>
-                <div class="news__info-holder">
-                  <div class="news__info-text">
-                    <p>Программа помощи детям длительностью 4 месяца</p>
-                  </div>
+                  <div class="news__info-text">Какие места посещают наши студенты весной</div>
                   <a class="news__info-button btn" href="">
                     <div>
                       <svg width="10" height="10">
@@ -971,14 +878,16 @@
               </div>
             </li>
           </ul>
-
+          <div class="news__scrollbar-holder">
+            <div class="news__scrollbar swiper-scrollbar" data-scroll="news-scroll">
+            </div>
+          </div>
           <div class="news__slider-controls">
             <button class="news__button" data-button="news-button-prev" type="button" aria-label="предыдущий слайд">
               <svg width="10" height="10">
                 <use href="__spritemap#sprite-arrow-prev"></use>
               </svg>
             </button>
-            <div class="news__pagination swiper-pagination" data-pagination="news-pagination"></div>
             <button class="news__button news__button--next" data-button="news-button-next" type="button"
               aria-label="следующий слайд">
               <svg width="10" height="10">
@@ -987,12 +896,11 @@
             </button>
           </div>
         </div>
-      </div>
       </section>
 
-      <section class="faq" id="FAQ" data-test="FAQ">
+      <section class="faq container" id="FAQ" data-test="FAQ">
         <h2>Вопросы и ответы</h2>
-        <ul class="faq__info-list container" data-accordion="parent">
+        <ul class="faq__info-list" data-accordion="parent">
           <li data-accordion="element">
             <div class="faq__info-item" tabindex="0" data-accordion="button">
               <h3>Кто организатор? Какие сроки у программы?</h3>

@@ -78,8 +78,6 @@
   .swiper-scrollbar-drag {
     background-color: $color-additional;
   }
-
-
 }
 
 .programs__header-holder {
@@ -107,8 +105,7 @@
 
   @include hover-focus {
     background-color: $color-default-white;
-    border: size(1px) solid $color-default-white;
-
+  
     div {
       background-color: $color-default-white;
     }
@@ -181,25 +178,27 @@
     height: size(400px);
     min-height: size(400px);
   }
+
+  img {
+    min-width: size(392px);
+    min-height: 100%;
+    width: 100%;
+
+    @include vp-1439 {
+      min-width: size(324px);
+      height: 100%;
+    }
+
+    @include vp-767 {
+      min-width: size(290px);
+      min-height: auto;
+      height: auto;
+    }
+
+  }
 }
 
-.programs__slider-img img {
-  min-width: size(392px);
-  min-height: 100%;
-  width: 100%;
 
-  @include vp-1439 {
-    min-width: size(324px);
-    height: 100%;
-  }
-
-  @include vp-767 {
-    min-width: size(290px);
-    min-height: auto;
-    height: auto;
-  }
-
-}
 
 .programs__info-wrapper {
   display: flex;
@@ -289,6 +288,7 @@
 
   @include vp-1439 {
     max-width: size(263px);
+
     div {
       font-size: size(14px);
       line-height: size(18px);
@@ -297,10 +297,10 @@
 
   @include vp-767 {
     max-width: size(270px);
+
     div {
       font-size: size(12px);
       line-height: size(14px);
     }
   }
 }
-

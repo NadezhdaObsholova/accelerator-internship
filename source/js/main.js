@@ -4,7 +4,7 @@ import { burgerMenu } from './modules/burger-menu';
 import { scrollPage } from './modules/scroll-page';
 import { initAccordions } from './vendor/accordion/init-accordion';
 import { initReviewsSlider } from './modules/slider/reviews-slider';
-
+import { initNewsSlider } from './modules/slider/news-slider';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -22,6 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
   scrollPage();
   initProgramsSlider();
   initReviewsSlider();
+  initNewsSlider();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
