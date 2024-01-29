@@ -105,7 +105,7 @@
 
   @include hover-focus {
     background-color: $color-default-white;
-  
+
     div {
       background-color: $color-default-white;
     }
@@ -222,8 +222,7 @@
 
 .programs__info-title {
   position: relative;
-  padding: size(18px);
-  padding-bottom: size(6px);
+  padding: size(18px) size(12px) size(6px) size(18px);
   background-color: $color-default-white;
   border-radius: size(12px) size(12px) 0 0;
   max-width: size(194px);
@@ -232,7 +231,6 @@
     max-width: size(173px);
     padding-left: size(18px);
     padding-top: size(18px);
-
   }
 
   @include vp-767 {
@@ -288,19 +286,25 @@
 
   @include vp-1439 {
     max-width: size(263px);
-
-    div {
-      font-size: size(14px);
-      line-height: size(18px);
-    }
   }
 
   @include vp-767 {
     max-width: size(270px);
+  }
+}
 
-    div {
-      font-size: size(12px);
-      line-height: size(14px);
-    }
+
+.programs__info-text {
+  p {
+    font-size: size(14px);
+    line-height: size(18px);
+    margin: 0;
+  }
+}
+
+@include vp-767 {
+  p {
+    font-size: size(12px);
+    line-height: size(14px);
   }
 }

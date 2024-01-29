@@ -8,26 +8,15 @@
   position: relative;
   padding: size(40px) 0 size(72px) 0;
   width: 100%;
-  outline: 1px solid red;
-  /*
+  overflow: hidden;
+
   @include vp-1439 {
-    height: size(862px);
+    padding: size(40px) 0 size(72px) 0;
   }
 
   @include vp-767 {
-    height: size(664px);
+    padding: size(24px) 0 size(46px) 0;
   }
-  /*
-
-  @include vp-767 {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    width: size(290px);
-    margin-left: size(15px);
-    padding-top: size(55px);
-
-  }
-  */
 }
 
 .news__slider-list {
@@ -203,7 +192,6 @@
   }
 }
 
-
 .news__data::after,
 .news__title::after,
 .news__info-holder::after {
@@ -294,7 +282,10 @@
   flex-grow: 1;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
   bottom: 0;
+
+
 }
 
 .news {
@@ -305,6 +296,12 @@
     bottom: 0;
     width: calc(100% - size(44px));
     margin-left: size(22px);
+
+    @include vp-767 {
+      position: relative;
+      margin-left: -50%;
+      max-width: size(152px);
+    }
   }
 
   .swiper-pagination-bullet {
@@ -313,6 +310,14 @@
     align-items: center;
     width: size(32px);
     height: size(32px);
+
+    @include vp-767 {
+      min-width: size(26px);
+      min-height: size(26px);
+      max-width: size(26px);
+      max-height: size(26px);
+    }
+
 
     @include hover-focus {
       border: size(1px) solid $color-additional;
@@ -332,6 +337,10 @@
     opacity: 1;
   }
 
+  .swiper-pagination-bullet-active-main {
+    font-size: size(14px);
+  }
+
   span {
     color: $color-additional;
     line-height: size(20px);
@@ -340,30 +349,80 @@
   }
 }
 
-.news__filter-list {
-  display: flex;
-  gap: size(30px);
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  padding-top: size(40px);
+@include vp-767 {
+  .news__slider-item:nth-child(1n) {
+    min-height: size(330px);
+    max-height: size(330px);
 
-  @include vp-1439 {
-    gap: size(10px);
-    padding: 0 size(45px);
+    .news__slider-img {
+      min-height: size(330px);
+      max-height: size(330px);
+
+      img {
+        min-height: size(330px);
+        max-height: size(330px);
+      }
+    }
+  }
+
+  .news__slider-item:nth-child(2n) {
+    min-height: size(240px);
+    max-height: size(240px);
+
+    .news__slider-img {
+      min-height: size(240px);
+      max-height: size(240px);
+
+      img {
+        min-height: size(240px);
+        max-height: size(240px);
+      }
+    }
   }
 }
 
-.news__filter-item {
+.news__sorter-list {
+  display: flex;
+  gap: size(30px);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: size(24px);
+
+
+  @include vp-1439 {
+   gap: size(12px);
+  }
+
+  @include vp-767 {
+    gap: size(10px);
+    width: size(305px);
+    margin-left: size(15px);
+    overflow-x: auto;
+   }
+}
+
+.news__sorter-item {
+  padding: size(12px) size(24px) size(10px) size(24px);
+  border-radius: size(20px);
+  max-width: min-content;
   font-size: size(14px);
   font-weight: 500;
   line-height: size(14px);
   letter-spacing: size(0.28px);
   text-transform: uppercase;
   color: $color-additional;
-  padding: size(12px) size(24px) size(10px) size(24px);
-  border-radius: size(20px);
+
+  @include vp-1439 {
+    padding: size(12px) size(19px) size(10px) size(19px);
+  }
+
+  @include vp-767 {
+
+    font-size: size(12px);
+    line-height: size(12px);
+    letter-spacing: size(0.24px);
+  }
 
   @include hover-focus {
     background-color: $color-additional;
@@ -372,42 +431,11 @@
 
   @include active {
     background-color: $color-additional-active;
+    color: $color-default-white;
   }
 
 }
 
-.news__filter-item.is-active {
+.news__sorter-item.is-active {
   border: 1px solid $color-additional;
-}
-
-@include vp-767 {
-  .news__slider-item:nth-child(1n) {
-    min-height: 330px;
-    max-height: 330px;
-
-    .news__slider-img {
-      min-height: 330px;
-      max-height: 330px;
-
-      img {
-        min-height: 330px;
-        max-height: 330px;
-      }
-    }
-  }
-
-  .news__slider-item:nth-child(2n) {
-    min-height: 240px;
-    max-height: 240px;
-
-    .news__slider-img {
-      min-height: 240px;
-      max-height: 240px;
-
-      img {
-        min-height: 240px;
-        max-height: 240px;
-      }
-    }
-  }
 }

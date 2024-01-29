@@ -6,7 +6,6 @@ import { initAccordions } from './vendor/accordion/init-accordion';
 import { initReviewsSlider } from './modules/slider/reviews-slider';
 import { initNewsSlider } from './modules/slider/news-slider';
 
-
 window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
