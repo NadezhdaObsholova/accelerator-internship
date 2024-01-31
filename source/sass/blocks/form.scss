@@ -1,0 +1,98 @@
+.form__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: size(120px) 0;
+}
+
+.form__body {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  z-index: 1;
+  min-width: size(498px);
+  max-width: size(498px);
+  height: 100%;
+  border-radius: size(16px);
+  background-color: $color-additional;
+  padding: size(74px) size(70px) size(40px);
+
+  h2 {
+    color: $color-default-white;
+    font-size: size(32px);
+    line-height: size(36px);
+  }
+
+  p,
+  .form__input-item,
+  .form__select,
+  .form__custom-toggle {
+    color: $color-default-white;
+  }
+}
+
+.form__bcg {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  border-radius: size(16px);
+
+  img {
+    width: size(1240px);
+    height: size(803px);
+
+    @include vp-1439 {
+      width: size(678px);
+      height: size(780px);
+    }
+
+    @include vp-767 {
+      width: size(320px);
+      height: size(753px);
+    }
+  }
+}
+
+.form__button {
+  border-color: transparent;
+  border-color: $color-default-white;
+
+  div {
+    background-color: $color-default-white;
+  }
+
+  svg {
+    color: $color-additional;
+  }
+
+  @include hover-focus {
+    background-color: $color-default-white;
+    p {
+      color: $color-additional;
+    }
+    div {
+      background-color: $color-additional;
+    }
+
+    svg {
+      color: $color-default-white;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.form__button:disabled {
+  pointer-events: none;
+  border-color: $color-disabled;
+  p {
+    color: $color-disabled;
+  }
+  div {
+    background-color: $color-disabled;
+  }
+}
+
+
+
+.form__input-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

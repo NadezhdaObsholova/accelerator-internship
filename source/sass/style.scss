@@ -2,8 +2,11 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "variables";
 @import "vendor/accordion/data-accordion";
 @import "vendor/mixins";
+@import "vendor/custom-select";
+@import "vendor/custom-toggle";
 //@import "vendor/accordion/accordion";
 // Swiper 11.0.5
 @import 'swiper/css/bundle';
@@ -11,7 +14,7 @@
 // Global
 // ---------------------------------
 
-@import "variables";
+
 @import "mixins";
 @import "function";
 @import "global/fonts";
@@ -27,4 +30,6 @@
 @import "blocks/faq";
 @import "blocks/reviews";
 @import "blocks/news";
+@import "blocks/contacts";
+@import "blocks/form";
 

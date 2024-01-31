@@ -5,6 +5,8 @@ import { scrollPage } from './modules/scroll-page';
 import { initAccordions } from './vendor/accordion/init-accordion';
 import { initReviewsSlider } from './modules/slider/reviews-slider';
 import { initNewsSlider } from './modules/slider/news-slider';
+import { Form } from './vendor/form/form';
+import { CustomSelect } from './vendor/select/custom-select';
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -27,9 +29,11 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
 
   window.addEventListener('load', () => {
-  // const form = new Form();
-  //  window.form = form;
-  //  form.init();
+    const select = new CustomSelect();
+    select.init();
+    const form = new Form();
+    form.init();
+    window.form = form;
     initAccordions();
   });
 

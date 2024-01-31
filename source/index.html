@@ -17,95 +17,93 @@
 </head>
 
 <body class="body">
+  <div class="body__overlay visually-hidden" data-overlay="body-overlay"></div>
   <div class="wrapper">
-    <div data-test="slider">
-      <div class="body__overlay visually-hidden" data-overlay="body-overlay"></div>
-      <header class="header">
-        <h1 class="visually-hidden">Сайт проекта "Стажировка за рубежом"</h1>
-        <div class="header__holder">
-          <nav class="header__nav  container">
-            <div class="header__logo" data-logo="header-logo">
-              <svg width="30" height="30">
-                <use href="__spritemap#sprite-logo"></use>
+    <header class="header">
+      <nav class="header__nav  container">
+        <div class="header__logo" data-logo="header-logo">
+          <svg width="30" height="30">
+            <use href="__spritemap#sprite-logo"></use>
+          </svg>
+        </div>
+        <div class="header__menu-holder">
+          <div class="header__menu-toggle btn" data-toggle="menu__toggle">
+            <p>меню</p>
+            <div>
+              <svg class="header__menu-open" width="20" height="20" data-open="toggle-open">
+                <use href="__spritemap#sprite-menu-open"></use>
+              </svg>
+              <svg class="header__menu-close visually-hidden" width="20" height="20" data-close="toggle-close">
+                <use href="__spritemap#sprite-menu-close"></use>
               </svg>
             </div>
-            <div class="header__menu-holder">
-              <div class="header__menu-toggle btn" data-toggle="menu__toggle">
-                <p>меню</p>
-                <div>
-                  <svg class="header__menu-open" width="20" height="20" data-open="toggle-open">
-                    <use href="__spritemap#sprite-menu-open"></use>
-                  </svg>
-                  <svg class="header__menu-close visually-hidden" width="20" height="20" data-close="toggle-close">
-                    <use href="__spritemap#sprite-menu-close"></use>
-                  </svg>
-                </div>
-              </div>
-              <ul class="header__nav-list visually-hidden" data-accordion="parent" data-menu="header-menu">
-                <li class="header__nav-item">
-                  <a href="#about" data-menu_item="menu_item">О проекте</a>
+          </div>
+          <ul class="header__nav-list visually-hidden" data-accordion="parent" data-menu="header-menu">
+            <li class="header__nav-item">
+              <a href="#about" data-menu_item="menu_item">О проекте</a>
+            </li>
+            <li class="header__nav-item" data-accordion="element">
+              <a href="#programs" data-accordion="button">Программы
+                <svg width="12" height="12">
+                  <use href="__spritemap#sprite-arrow-menu"></use>
+                </svg>
+              </a>
+              <ul class="header__nav-list" data-accordion="content">
+                <li>
+                  <a data-menu_item="menu_item" href="#internship">Стажировка</a>
                 </li>
-                <li class="header__nav-item" data-accordion="element">
-                  <a href="#programs" data-accordion="button">Программы
-                    <svg width="12" height="12">
-                      <use href="__spritemap#sprite-arrow-menu"></use>
-                    </svg>
-                  </a>
-                  <ul class="header__nav-list" data-accordion="content">
-                    <li>
-                      <a data-menu_item="menu_item" href="#internship">Стажировка</a>
-                    </li>
-                    <li>
-                      <a data-menu_item="menu_item" href="#volunteering">Волонтерство</a>
-                    </li>
-                    <li>
-                      <a data-menu_item="menu_item" href="#studying">Учёба</a>
-                    </li>
-                    <li>
-                      <a data-menu_item="menu_item" href="#programs">Религия</a>
-                    </li>
-                  </ul>
+                <li>
+                  <a data-menu_item="menu_item" href="#volunteering">Волонтерство</a>
                 </li>
-                <li class="header__nav-item">
-                  <a href="#grant" data-menu_item="menu_item">Как поехать</a>
+                <li>
+                  <a data-menu_item="menu_item" href="#studying">Учёба</a>
                 </li>
-                <li class="header__nav-item">
-                  <a href="#reviews" data-menu_item="menu_item">Отзывы</a>
-                </li>
-                <li class="header__nav-item" data-accordion="element">
-                  <a href="#programs" data-accordion="button">Новости
-                    <svg width="12" height="12">
-                      <use href="__spritemap#sprite-arrow-menu"></use>
-                    </svg>
-                  </a>
-                  <ul class="header__nav-list" data-accordion="content">
-                    <li>
-                      <a data-menu_item="menu_item" href="#news">Общее</a>
-                    </li>
-                    <li>
-                      <a data-menu_item="menu_item" href="#volunteering-news">Волонтерство</a>
-                    </li>
-                    <li>
-                      <a data-menu_item="menu_item" href="#internship-news">Стажировки</a>
-                    </li>
-                    <li>
-                      <a data-menu_item="menu_item" href="#career-news">Карьера</a>
-                    </li>
-                    <li>
-                      <a data-menu_item="menu_item" href="#travels-news">Путешествия</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="header__nav-item">
-                  <a href="#contacts" data-menu_item="menu_item">Контакты</a>
+                <li>
+                  <a data-menu_item="menu_item" href="#programs">Религия</a>
                 </li>
               </ul>
-            </div>
-          </nav>
+            </li>
+            <li class="header__nav-item">
+              <a href="#grant" data-menu_item="menu_item">Как поехать</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#reviews" data-menu_item="menu_item">Отзывы</a>
+            </li>
+            <li class="header__nav-item" data-accordion="element">
+              <a href="#programs" data-accordion="button">Новости
+                <svg width="12" height="12">
+                  <use href="__spritemap#sprite-arrow-menu"></use>
+                </svg>
+              </a>
+              <ul class="header__nav-list" data-accordion="content">
+                <li>
+                  <a data-menu_item="menu_item" href="#news">Общее</a>
+                </li>
+                <li>
+                  <a data-menu_item="menu_item" href="#volunteering-news">Волонтерство</a>
+                </li>
+                <li>
+                  <a data-menu_item="menu_item" href="#internship-news">Стажировки</a>
+                </li>
+                <li>
+                  <a data-menu_item="menu_item" href="#career-news">Карьера</a>
+                </li>
+                <li>
+                  <a data-menu_item="menu_item" href="#travels-news">Путешествия</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__nav-item">
+              <a href="#contacts" data-menu_item="menu_item">Контакты</a>
+            </li>
+          </ul>
         </div>
-      </header>
+      </nav>
+    </header>
 
-      <section class="header__slider hero">
+    <main>
+      <h1 class="visually-hidden">Сайт проекта "Стажировка за рубежом"</h1>
+      <section class="hero" data-test="slider">
         <div class="swiper" data-swiper="hero-slider">
           <ul class="hero__slider-list swiper-wrapper">
             <li class="hero__slider-item swiper-slide">
@@ -212,9 +210,6 @@
           <div class="hero__pagination swiper-pagination" data-pagination="hero-pagination"></div>
         </div>
       </section>
-
-    </div>
-    <main>
 
       <section class="about container" id="about" data-test="about">
         <div class="about__description-wrapper">
@@ -349,7 +344,7 @@
                 </div>
                 <div class="programs__info-holder">
                   <div class="programs__info-text">
-                  <p>Помогайте другим и развивайте свои лидерские качества.</p>
+                    <p>Помогайте другим и развивайте свои лидерские качества.</p>
                   </div>
                   <a class="programs__info-button btn" href="">
                     <div>
@@ -382,7 +377,7 @@
                 </div>
                 <div class="programs__info-holder">
                   <div class="programs__info-text">
-                  <p>Получите образование и измените своё будущее.</p>
+                    <p>Получите образование и измените своё будущее.</p>
                   </div>
                   <a class="programs__info-button btn" href="">
                     <div>
@@ -415,7 +410,7 @@
                 </div>
                 <div class="programs__info-holder">
                   <div class="programs__info-text">
-                  <p>Помогайте другим и развивайте свои лидерские качества.</p>
+                    <p>Помогайте другим и развивайте свои лидерские качества.</p>
                   </div>
                   <a class="programs__info-button btn" href="">
                     <div>
@@ -448,7 +443,7 @@
                 </div>
                 <div class="programs__info-holder">
                   <div class="programs__info-text">
-                  <p>Получите образование и измените своё будущее.</p>
+                    <p>Получите образование и измените своё будущее.</p>
                   </div>
                   <a class="programs__info-button btn" href="">
                     <div>
@@ -481,7 +476,7 @@
                 </div>
                 <div class="programs__info-holder">
                   <div class="programs__info-text">
-                  <p>Помогайте другим и развивайте свои лидерские качества.</p>
+                    <p>Помогайте другим и развивайте свои лидерские качества.</p>
                   </div>
                   <a class="programs__info-button btn" href="">
                     <div>
@@ -828,6 +823,38 @@
                   <div class="news__slider-img">
                     <picture>
                       <source media="(min-width: 1440px)"
+                        srcset="img/news/1-desktop.webp, img/news/1-desktop@2x.webp 2x" width="604" type="image/webp">
+                      <img width="290" height="330" srcset="img/news/1-mobile.webp, img/news/1-mobile@2x.webp 2x"
+                        src="img/news/1-mobile.jpg" alt="">
+                    </picture>
+                  </div>
+                  <div class="news__info-wrapper">
+                    <div class="news__data">
+                      <p>23/03/2023</p>
+                    </div>
+                    <div class="news__title">
+                      <h3>Интервью с участницей программы стажировки</h3>
+                    </div>
+                    <div class="news__info-holder">
+                      <div class="news__info-text">
+                        <p>Саша рассказывает, как попала в программу и как прошла 6-месячная
+                          стажировка в ISOFound
+                        </p>
+                      </div>
+                      <a class="news__info-button btn" href="">
+                        <div>
+                          <svg width="10" height="10">
+                            <use href="__spritemap#sprite-btn-arrow"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="news__slider-item swiper-slide" data-slider="news-slider">
+                  <div class="news__slider-img">
+                    <picture>
+                      <source media="(min-width: 1440px)"
                         srcset="img/news/2-desktop.webp, img/news/2-desktop@2x.webp 2x" width="604" type="image/webp">
                       <img width="290" height="330" srcset="img/news/2-mobile.webp, img/news/2-mobile@2x.webp 2x"
                         src="img/news/2-mobile.jpg" alt="">
@@ -960,7 +987,8 @@
           </li>
         </ul>
       </section>
-      <div id="reviews" data-test="reviews">
+
+      <section id="reviews" data-test="reviews">
         <div class="reviews__wrapper">
           <h2>Отзывы</h2>
 
@@ -1192,10 +1220,114 @@
           </div>
 
         </div>
-      </div>
-      <div id="contacts" data-test="contacts">contacts</div>
-      <div data-test="form">form</div>
+      </section>
+
+      <section class="contacts" id="contacts" data-test="contacts">
+        <div class="contacts__info-holder">
+          <h2>Контакты</h2>
+          <div class="contacts__info-content">
+            <div class="contacts__address">
+              <h3>центральный офис</h3>
+              <p>г. Новосибирск, ул. Щетинкина 68, <br>культурный центр</p>
+            </div>
+            <div class="contacts__phone">
+              <h3>Телефон</h3>
+              <a href="tel:+796387687676">+7 963 876 876 76</a>
+            </div>
+            <div class="contacts__address">
+              <h3>Email</h3>
+              <a href="mailto:Info@stazh.ru">Info@stazh.ru</a>
+            </div>
+          </div>
+        </div>
+        <div class="contacts__map">
+          <picture>
+            <source media="(min-width: 1440px)"
+              srcset="img/contacts/map-desktop.webp, img/contacts/map-desktop@2x.webp 2x" width="1240" height="500"
+              type="image/webp">
+            <source media="(min-width: 768px)" srcset="img/contacts/map-tablet.webp, img/contacts/map-tablet@2x.webp 2x"
+              width="678" height="500" type="image/webp">
+            <img width="290" height="240" srcset="img/contacts/map-mobile.webp, img/contacts/map-mobile@2x.webp 2x"
+              src="img/contacts/map-mobile.png" alt="офис на карте города">
+          </picture>
+        </div>
+      </section>
+
+      <section class="form" data-test="form">
+        <div class="form__wrapper container" data-form-validate="data-form-validate">
+          <form class="form__body" action="https://echo.htmlacademy.ru/" autocomplete="off" method="post">
+            <h2>Напишите нам</h2>
+            <p>Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+            <ul class="form__input-list">
+              <li class="form__input-item" data-validate-type="text" data-on-input-validate="data-on-input-validate"
+                data-required="data-required">
+                <label>Имя
+                  <input type="text" name="Имя" required>
+                </label>
+              </li>
+              <li class="form__input-item" data-validate-type="phone" data-on-input-validate="data-on-input-validate"
+                data-required="data-required">
+                <label>Телефон
+                  <input type="tel" name="Телефон" required>
+                </label>
+              </li>
+              <li class="form__input-item form__input--textarea" data-validate-type="text"
+                data-on-input-validate="data-on-input-validate" data-required="data-required">
+                <label for="textarea">Ваше сообщение</label>
+                <textarea id="textarea" name="Сообщение" required></textarea>
+              </li>
+              <li class="form__select custom-select" data-select="data-select" data-validate-type="select"
+                data-name="Город" data-message-base="Поле обязательно к заполнению">
+                <p class="form__select-header">Выберите город</p>
+                <button class="form__select-button custom-select__button" type="button"
+                  aria-label="Выберите одну из опций">
+                  <span class="custom-select__text"></span>
+                  <span class="form__select-icon custom-select__icon"></span>
+                </button>
+                <ul class="form__select-list custom-select__list">
+                  <li class="form__select-item custom-select__item" tabindex="0" data-select-value="Санкт-Петербург">
+                    Санкт-Петербург</li>
+                  <li class="form__select-item custom-select__item" tabindex="0" data-select-value="Санкт-Петербург">
+                    Санкт-Петербург</li>
+                  <li class="form__select-item custom-select__item" tabindex="0" data-select-value="Санкт-Петербург">
+                    Санкт-Петербург</li>
+                  <li class="form__select-item custom-select__item" tabindex="0" data-select-value="Санкт-Петербург">
+                    Санкт-Петербург</li>
+                </ul>
+              </li>
+              <li class="form__custom-toggle custom-toggle custom-toggle--checkbox" data-validate-type="checkbox"
+                data-message-base="Поле обязательно к заполнению">
+                <label>
+                  <input type="checkbox" value="Принято" name="Пользовательское соглашение">
+                  <p class="custom-toggle__icon form__custom-toggle-icon" tabindex="0"></p>
+                  <p class="custom-toggle__label form__toggle-label">Я согласен на обработку моих персональных данных</p>
+                </label>
+              </li>
+            </ul>
+            <button class="form__button btn" type="submit">
+              <p>отправить</p>
+              <div>
+                <svg width="10" height="10">
+                  <use href="__spritemap#sprite-btn-arrow"></use>
+                </svg>
+              </div>
+            </button>
+          </form>
+          <div class="form__bcg">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/form/form-desktop.webp, img/form/form-desktop@2x.webp 2x"
+                width="1240" height="803" type="image/webp">
+              <source media="(min-width: 768px)" srcset="img/form/form-tablet.webp, img/form/form-tablet@2x.webp 2x"
+                width="678" height="780" type="image/webp">
+              <img width="320" height="753" srcset="img/form/form-mobile.webp, img/form/form-mobile@2x.webp 2x"
+                src="img/form/form-mobile.jpg" alt="">
+            </picture>
+          </div>
+        </div>
+
+      </section>
     </main>
+
     <div data-test="footer">footer</div>
 
   </div>
