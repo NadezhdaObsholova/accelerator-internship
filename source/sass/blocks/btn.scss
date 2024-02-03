@@ -3,12 +3,24 @@
   align-items: center;
   gap: size(30px);
   padding: size(3px);
-  padding-left: size(29px);
+  padding-left: size(30px);
   border: size(1px) solid $color-additional;
   border-radius: size(30px);
   background-color: transparent;
   width: max-content;
+  font-weight: 500;
+  letter-spacing: size(0.28px);
+
   cursor: pointer;
+
+
+  @include vp-1439 {
+    p {
+      font-size: size(14px);
+      line-height: size(14px);
+    }
+  }
+
 
   @include vp-767 {
     padding-left: size(19px);

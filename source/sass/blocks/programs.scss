@@ -8,6 +8,18 @@
     margin: size(60px) 0;
   }
 
+  h2 {
+    padding-top: size(4px);
+
+    @include vp-1439 {
+      padding-top: size(1px);
+    }
+    @include vp-767 {
+      padding-top: size(3px);
+    }
+  }
+
+
   .programs__slider-controls {
     position: absolute;
     z-index: 5;
@@ -52,7 +64,7 @@
   .programs__scrollbar-holder {
     position: relative;
     width: size(1134px);
-    height: size(50px);
+    height: size(62px);
     overflow: hidden;
 
     @include vp-1439 {
@@ -96,12 +108,21 @@
     grid-row: 1/2;
     flex-direction: column;
     height: size(527px);
+    padding-right: size(15px);
+    padding-left: size(15px);
   }
 }
 
 .programs__info-button {
   border: none;
   padding: 0;
+  width: size(30px);
+  max-height: size(30px);
+
+  div {
+    width: size(30px);
+    max-height: size(30px);
+  }
 
   @include hover-focus {
     background-color: $color-default-white;
@@ -113,13 +134,14 @@
 }
 
 .programs__slider {
-  padding-top: size(40px);
+  padding-top: size(46px);
   width: size(1240px);
   overflow: hidden;
 
   @include vp-1439 {
     width: size(723px);
     margin-left: size(45px);
+    padding-top: size(40px);
   }
 
   @include vp-767 {
@@ -222,19 +244,19 @@
 
 .programs__info-title {
   position: relative;
-  padding: size(18px) size(12px) size(6px) size(18px);
+  padding: size(13px) size(18px) size(3px) size(18px);
   background-color: $color-default-white;
   border-radius: size(12px) size(12px) 0 0;
   max-width: size(194px);
 
   @include vp-1439 {
     max-width: size(173px);
-    padding-left: size(18px);
-    padding-top: size(18px);
+    padding: size(13px) size(18px) size(1px);
   }
 
   @include vp-767 {
     max-width: size(146px);
+    padding: size(18px) size(18px) size(6px) size(18px);
   }
 
   h3 {
@@ -268,28 +290,34 @@
   background-repeat: no-repeat;
 
   @include vp-767 {
+
     width: size(13px);
     height: size(13px);
-    right: size(-12px);
+    right: size(-13px);
   }
 }
 
 .programs__info-holder {
   display: flex;
-  gap: size(30px);
+  gap: size(20px);
   align-items: center;
   margin-top: size(-1px);
-  padding: size(12px) size(18px) size(15px) size(18px);
+  padding: size(11px) size(18px) size(14px);
   background-color: $color-default-white;
   border-radius: 0 size(12px) size(12px) size(12px);
   max-width: size(321px);
+  min-height: size(79px);
 
   @include vp-1439 {
     max-width: size(263px);
+    min-height: size(77px);
+    gap: size(16px);
+    padding: size(7px) size(18px) size(10px);
   }
 
   @include vp-767 {
     max-width: size(270px);
+    min-height: size(69px);
   }
 }
 
@@ -299,12 +327,14 @@
     font-size: size(14px);
     line-height: size(18px);
     margin: 0;
-  }
-}
 
-@include vp-767 {
-  p {
-    font-size: size(12px);
-    line-height: size(14px);
+    @include vp-1439 {
+      line-height: size(20px);
+    }
+
+    @include vp-767 {
+      font-size: size(12px);
+      line-height: size(14px);
+    }
   }
 }

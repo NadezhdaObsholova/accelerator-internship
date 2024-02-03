@@ -2,21 +2,47 @@
   background-color: $color-additional;
   color: $color-default-white;
   margin: size(120px) 0;
-  padding: size(120px) 0;
+  padding-top: size(124px);
+  padding-bottom: size(120px);
 
   @include vp-1439 {
     margin: size(100px) 0;
-    padding: size(100px) 0;
+    padding-top: size(98px);
+    padding-bottom: size(100px);
   }
 
   @include vp-767 {
     margin: size(60px) 0;
-    padding: size(67px) 0;
+    padding-top: size(69px);
+    padding-bottom: size(67px);
   }
 
   h2,
   h3 {
     color: $color-default-white;
+  }
+
+  h3 {
+    margin-top: size(4px);
+  }
+
+  p {
+    margin-top: size(29px);
+    margin-bottom: size(33px);
+
+    @include vp-1439 {
+      max-width: size(498px);
+      margin-top: size(28px);
+      margin-bottom: size(36px);
+    }
+
+    @include vp-767 {
+
+      margin-top: size(13px);
+      margin-bottom: size(25px);
+
+    }
+
   }
 }
 
@@ -28,7 +54,13 @@
   @include vp-1439 {
     display: flex;
     flex-direction: column;
-    gap: size(40px);
+    gap: size(41px);
+  }
+
+
+  @include vp-767 {
+
+    gap: size(31px);
   }
 }
 
@@ -86,19 +118,24 @@
   flex-direction: column;
   align-items: flex-end;
   gap: size(23px);
-  padding-top: size(61px);
+  padding-top: size(55px);
 
   @include vp-1439 {
     display: grid;
     grid-template-columns: size(305px) size(305px);
     justify-content: space-between;
-    gap: size(25px);
+    column-gap: size(23px);
+    row-gap: size(25px);
+    padding-top: size(42px);
+    margin-left: size(20px);
   }
 
   @include vp-767 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    padding-top: size(26px);
+    gap: size(15px);
   }
 }
 
@@ -106,23 +143,23 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding: size(25px) size(25px);
+  padding: size(22px) size(70px)  size(22px) size(24px);
   width: size(478px);
   border: size(1px) solid $color-default-white;
   border-radius: size(16px);
 
   @include vp-1439 {
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     gap: size(12px);
     width: size(305px);
     height: 100%;
-    padding: size(30px) size(10px) size(20px)size(30px);
+    padding: size(25px) size(25px)size(25px) size(24px);
   }
 
   @include vp-767 {
     width: size(275px);
-    padding: size(20px);
+    padding: size(18px) size(24px);
   }
 
   p {
@@ -131,8 +168,10 @@
 
     @include vp-1439 {
       line-height: size(20px);
+    }
+
+    @include vp-767 {
       font-size: size(14px);
-      line-height: size(20px);
     }
   }
 }
@@ -143,8 +182,8 @@
   justify-content: center;
   align-items: center;
   background-color: $color-additional;
-  top: size(-22px);
-  left: size(-22px);
+  top: size(-18px);
+  left: size(-21px);
   width: size(42px);
   height: size(42px);
   font-size: size(22px);
@@ -152,4 +191,12 @@
   line-height: size(22px);
   letter-spacing: size(0.22px);
   text-transform: uppercase;
+
+  @include vp-767 {
+    line-height: size(18px);
+    font-size: size(18px);
+    line-height: size(20px);
+    top: size(-13px);
+    left: size(-18px);
+  }
 }

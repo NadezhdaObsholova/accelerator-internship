@@ -2,6 +2,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  h2 {
+   padding-top: size(4px);
+
+    @include vp-1439 {
+      padding-top: 0;
+      margin-top: size(-1px);
+    }
+
+    @include vp-767 {
+      padding-top: size(3px);
+    }
+  }
 }
 
 .news__slider {
@@ -11,11 +24,11 @@
   overflow: hidden;
 
   @include vp-1439 {
-    padding: size(40px) 0 size(72px) 0;
+    padding: size(30px) 0 size(42px) 0;
   }
 
   @include vp-767 {
-    padding: size(24px) 0 size(46px) 0;
+    padding: size(24px) 0 size(50px) 0;
   }
 }
 
@@ -86,7 +99,7 @@
     }
 
     @include vp-767 {
-      width: size(290px);
+      min-width: size(290px);
     }
   }
 }
@@ -115,6 +128,11 @@
   width: max-content;
   padding: size(12px) size(12px) size(7px) 0;
 
+  @include vp-1439 {
+  padding-top: size(10px);
+  padding-bottom: size(6px);
+  }
+
   p {
     margin: 0;
     font-size: size(12px);
@@ -133,6 +151,7 @@
 
   @include vp-1439 {
     width: size(207px);
+    padding-top: size(5px);
   }
 
   @include vp-767 {
@@ -153,6 +172,8 @@
     @include vp-767 {
       font-size: size(16px);
       line-height: size(18px);
+      padding-bottom: size(4px);
+      padding-top: size(5px);
     }
   }
 }
@@ -168,10 +189,14 @@
 
   @include vp-1439 {
     width: size(240px);
+    padding-top: size(8px);
+    padding-bottom: size(10px);
   }
 
   @include vp-767 {
     width: size(263px);
+    gap: size(16px);
+    padding: size(13px) size(10px) size(9px) 0;
   }
 }
 
@@ -200,7 +225,7 @@
   display: block;
   width: size(20px);
   height: size(20px);
-  bottom: size(-1px);
+  bottom: 0;
   right: size(-19px);
   background-image: url('../../img/news/angle.svg');
   background-size: 100%;
@@ -209,8 +234,27 @@
   @include vp-767 {
     width: size(13px);
     height: size(13px);
-    right: size(-12px);
+    right: size(-13px);
   }
+}
+.news__data::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: size(20px);
+  height: size(20px);
+  top: size(-19px);
+  left: 0;
+  background-image: url('../../img/news/angle.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  @include vp-767 {
+    width: size(13px);
+    height: size(13px);
+    top: size(-12px);
+  }
+
 }
 
 .news__slider-item--first {
@@ -226,6 +270,10 @@
     @include vp-1439 {
       width: size(207px);
     }
+
+    @include vp-767 {
+      width: size(200px);
+    }
   }
 
   .news__info-holder {
@@ -233,6 +281,10 @@
 
     @include vp-1439 {
       width: size(240px);
+    }
+
+    @include vp-767 {
+      width: size(263px);
     }
   }
 }
@@ -387,17 +439,19 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-top: size(24px);
+  padding-top: size(46px);
 
 
   @include vp-1439 {
    gap: size(12px);
+   padding-top: size(31px);
   }
 
   @include vp-767 {
     gap: size(10px);
     width: size(305px);
     margin-left: size(15px);
+    padding-top: size(27px);
     overflow-x: auto;
     &::-webkit-scrollbar {
       display: none;
@@ -416,9 +470,10 @@
   letter-spacing: size(0.28px);
   text-transform: uppercase;
   color: $color-additional;
+  opacity: 0.6;
 
   @include vp-1439 {
-    padding: size(12px) size(19px) size(10px) size(19px);
+    padding: size(11px) size(19px) size(11px) size(19px);
   }
 
   @include vp-767 {
@@ -426,6 +481,7 @@
     font-size: size(12px);
     line-height: size(12px);
     letter-spacing: size(0.24px);
+    padding: size(8px) size(13px) size(7px) size(14px);
   }
 
   @include hover-focus {
@@ -442,4 +498,5 @@
 
 .news__sorter-item.is-active {
   border: 1px solid $color-additional;
+  opacity: 1;
 }
