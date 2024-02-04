@@ -29,7 +29,6 @@ const initHeroSlider = () => {
 
         768: {
           allowTouchMove: true,
-          autoplay: false,
         },
       },
     });

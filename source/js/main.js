@@ -7,6 +7,8 @@ import { initReviewsSlider } from './modules/slider/reviews-slider';
 import { initNewsSlider } from './modules/slider/news-slider';
 import { Form } from './vendor/form/form';
 import { CustomSelect } from './vendor/select/custom-select';
+import { initModals } from './vendor/modals/init-modals';
+
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -35,6 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
     window.form = form;
     initAccordions();
+    initModals();
   });
 
 });

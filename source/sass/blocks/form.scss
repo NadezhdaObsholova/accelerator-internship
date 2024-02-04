@@ -1,295 +1,298 @@
-.form__wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  margin: size(120px) 0;
-  min-height: size(803px);
-  background-color: $color-additional-dark-background;
-
-  @include vp-1439 {
-  min-height: size(780px);
-  margin: size(100px) 0;
-  }
-  @include vp-767 {
-    min-height: size(753px);
-    padding: 0;
-    margin: size(60px) 0;
-  }
-}
-
-.form__body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  grid-column: 1/2;
-  grid-row: 1/2;
-  z-index: 1;
-  min-width: size(498px);
-  max-width: size(498px);
-  height: 100%;
-  border-radius: size(16px);
-  background-color: $color-additional;
-  padding: size(82px) size(74px) size(40px);
-
-  @include vp-1439 {
-    padding: size(50px) size(45px);
-    min-width: size(442px);
-    max-width: size(442px);
-  }
-
-  @include vp-767 {
-    display: block;
-    padding: size(51px) size(15px);
-    min-width: size(290px);
-    max-width: size(290px);
-    margin: 0 size(15px);
-    padding-bottom: size(38px);
-  }
-
-  h2 {
-    color: $color-default-white;
-    font-size: size(32px);
-    line-height: size(36px);
-    margin-bottom: size(25px);
+.form {
+  .form__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: size(120px) 0;
+    min-height: size(803px);
+    background-color: $color-additional-dark-background;
 
     @include vp-1439 {
-      font-size: size(28px);
-      line-height: size(28px);
+      min-height: size(780px);
+      margin: size(100px) 0;
     }
 
     @include vp-767 {
-      font-size: size(18px);
-      line-height: size(22px);
-      margin-bottom: size(17px);
+      min-height: size(753px);
+      padding: 0;
+      margin: size(60px) 0;
     }
   }
 
-  p,
-  .form__input-item,
-  .form__select,
-  .form__custom-toggle {
-    color: $color-default-white;
-    opacity: 0.9;
-    margin: 0;
-
-    @include vp-1439 {
-      line-height: size(20px);
-    }
-
-    @include vp-767 {
-      font-size: size(14px);
-      line-height: size(20px);
-    }
-  }
-}
-
-.form__select {
-  display: flex;
-  flex-direction: column;
-  gap: size(12px);
-  width: 100%;
-  padding: 0;
-
-  p {
-    font-size: size(14px);
-      line-height: size(14px);
-
-    @include vp-767 {
-      font-size: size(12px);
-      line-height: size(14px);
-    }
-  }
-}
-
-.form__bcg {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  border-radius: size(16px);
-  height: 100%;
-  overflow: hidden;
-  background-color: $color-default-white;
-
-  img {
-    width: size(1240px);
+  .form__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    z-index: 1;
+    min-width: size(498px);
+    max-width: size(498px);
     height: 100%;
+    border-radius: size(16px);
+    background-color: $color-additional;
+    padding: size(82px) size(74px) size(40px);
 
     @include vp-1439 {
-      width: size(678px);
+      padding: size(50px) size(45px);
+      min-width: size(442px);
+      max-width: size(442px);
     }
 
     @include vp-767 {
-      width: size(320px);
-     }
+      display: block;
+      padding: size(51px) size(15px);
+      min-width: size(290px);
+      max-width: size(290px);
+      margin: 0 size(15px);
+      padding-bottom: size(38px);
+    }
+
+    h2 {
+      color: $color-default-white;
+      font-size: size(32px);
+      line-height: size(36px);
+      margin-bottom: size(25px);
+
+      @include vp-1439 {
+        font-size: size(28px);
+        line-height: size(28px);
+      }
+
+      @include vp-767 {
+        font-size: size(18px);
+        line-height: size(22px);
+        margin-bottom: size(17px);
+      }
+    }
+
+    p,
+    .form__input-item,
+    .form__select,
+    .form__custom-toggle {
+      color: $color-default-white;
+      opacity: 0.9;
+      margin: 0;
+
+      @include vp-1439 {
+        line-height: size(20px);
+      }
+
+      @include vp-767 {
+        font-size: size(14px);
+        line-height: size(20px);
+      }
+    }
   }
-}
 
-.form__button {
-  border-color: transparent;
-  border-color: $color-default-white;
-  width: 100%;
-  justify-content: space-between;
-  margin-top: size(40px);
-
-  @include vp-767 {
-    margin-top: size(30px);
-   }
-
-  div {
-    background-color: $color-default-white;
-  }
-
-  svg {
-    color: $color-additional;
-  }
-
-  @include hover-focus {
-    background-color: $color-default-white;
+  .form__select {
+    display: flex;
+    flex-direction: column;
+    gap: size(12px);
+    width: 100%;
+    padding: 0;
 
     p {
+      font-size: size(14px);
+      line-height: size(14px);
+
+      @include vp-767 {
+        font-size: size(12px);
+        line-height: size(14px);
+      }
+    }
+  }
+
+  .form__bcg {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border-radius: size(16px);
+    height: 100%;
+    overflow: hidden;
+    background-color: $color-default-white;
+
+    img {
+      width: size(1240px);
+      height: 100%;
+
+      @include vp-1439 {
+        width: size(678px);
+      }
+
+      @include vp-767 {
+        width: size(320px);
+      }
+    }
+  }
+
+  .form__button {
+    border-color: transparent;
+    border-color: $color-default-white;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: size(40px);
+
+    @include vp-767 {
+      margin-top: size(30px);
+    }
+
+    div {
+      background-color: $color-default-white;
+    }
+
+    svg {
       color: $color-additional;
+    }
+
+    @include hover-focus {
+      background-color: $color-default-white;
+
+      p {
+        color: $color-additional;
+        margin: 0;
+      }
+
+      div {
+        background-color: $color-additional;
+      }
+
+      svg {
+        color: $color-default-white;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  .form__custom-toggle {
+    padding: 0;
+    margin-bottom: size(32px);
+    width: 100%;
+
+    p {
+      @include vp-767 {
+        font-size: size(12px);
+        line-height: size(14px);
+      }
+    }
+  }
+
+  .form__button:disabled {
+    pointer-events: none;
+    border-color: $color-disabled;
+
+    p {
+      color: $color-disabled;
       margin: 0;
     }
 
     div {
-      background-color: $color-additional;
-    }
-
-    svg {
-      color: $color-default-white;
-      transform: rotate(45deg);
+      background-color: $color-disabled;
     }
   }
-}
 
-.form__custom-toggle {
-  padding: 0;
-  margin-bottom: size(32px);
-  width: 100%;
-
-  p{
-    @include vp-767 {
-      font-size: size(12px);
-      line-height: size(14px);
-    }
-  }
-}
-
-.form__button:disabled {
-  pointer-events: none;
-  border-color: $color-disabled;
-
-  p {
-    color: $color-disabled;
+  .form__input-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
     margin: 0;
+    padding: 0;
+    flex-shrink: 1;
+    gap: size(16px);
+    margin-top: size(26px);
+
+    @include vp-767 {
+      gap: size(21px);
+    }
   }
 
-  div {
-    background-color: $color-disabled;
+  .form__input-item {
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: size(8px);
+      font-size: size(14px);
+      line-height: size(18px);
+      opacity: 0.8;
+
+      @include vp-767 {
+        font-size: size(12px);
+        line-height: size(14px);
+        gap: size(11px);
+      }
+    }
+
+    input,
+    textarea {
+      background-color: transparent;
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: size(8px);
+      color: $color-default-white;
+      padding: size(16px) size(25px);
+
+      &:hover,
+      &:focus,
+      &:active {
+        border: 1px solid $color-default-white;
+        outline: none;
+      }
+
+      &:disabled {
+        background-color: rgba(255, 255, 255, 0.2);
+        opacity: 0.4;
+        border: 1px solid rgba(169, 175, 183, 0.5);
+      }
+    }
+
+    input {
+      height: size(50px);
+    }
+
+    textarea {
+      height: size(98px);
+    }
   }
-}
 
-.form__input-list {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  flex-shrink: 1;
-  gap: size(16px);
-  margin-top: size(26px);
-
-  @include vp-767 {
-    gap: size(21px);
-  }
-}
-
-.form__input-item {
-  label {
+  .form__input--textarea {
     display: flex;
     flex-direction: column;
     gap: size(8px);
     font-size: size(14px);
     line-height: size(18px);
     opacity: 0.8;
+  }
+
+  .form__input-item.is-invalid {
+
+    input,
+    textarea {
+      border: 1px solid $color-error;
+      background-color: rgba(255, 94, 102, 0.2);
+    }
+  }
+
+  .form__select-icon {
+    margin-right: size(9px);
+    width: size(15px);
+    height: size(8px);
+    background-color: $color-default-white;
+    opacity: 1;
+  }
+
+  .form__toggle-label {
+    font-size: size(12px);
+    line-height: size(12px);
+    opacity: 0.9;
+    margin: 0;
+  }
+
+
+
+  .custom-toggle--checkbox .custom-toggle__icon {
+    margin: 0;
+    top: size(-5px);
 
     @include vp-767 {
-      font-size: size(12px);
-      line-height: size(14px);
-      gap: size(11px);
+      top: size(2px);
     }
-  }
-
-  input,
-  textarea {
-    background-color: transparent;
-    width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: size(8px);
-    color: $color-default-white;
-    padding: size(16px) size(25px);
-
-    &:hover,
-    &:focus,
-    &:active {
-      border: 1px solid $color-default-white;
-      outline: none;
-    }
-
-    &:disabled {
-      background-color: rgba(255, 255, 255, 0.2);
-      opacity: 0.4;
-      border: 1px solid rgba(169, 175, 183, 0.5);
-    }
-  }
-
-  input {
-    height: size(50px);
-  }
-
-  textarea {
-    height: size(98px);
-  }
-}
-
-.form__input--textarea {
-  display: flex;
-  flex-direction: column;
-  gap: size(8px);
-  font-size: size(14px);
-  line-height: size(18px);
-  opacity: 0.8;
-}
-
-.form__input-item.is-invalid {
-
-  input,
-  textarea {
-    border: 1px solid $color-error;
-    background-color: rgba(255, 94, 102, 0.2);
-  }
-}
-
-.form__select-icon {
-  margin-right: size(9px);
-  width: size(15px);
-  height: size(8px);
-  background-color: $color-default-white;
-  opacity: 1;
-}
-
-.form__toggle-label {
-  font-size: size(12px);
-  line-height: size(12px);
-  opacity: 0.9;
-  margin: 0;
-}
-
-
-
-.custom-toggle--checkbox .custom-toggle__icon {
-  margin: 0;
-  top: size(-5px);
-
-  @include vp-767 {
-    top: size(2px);
   }
 }

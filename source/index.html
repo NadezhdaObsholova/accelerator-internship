@@ -223,7 +223,7 @@
               карьеры, предоставляя им инструменты для решения сложных проблем, с которыми сталкиваются в мире. Цель
               центра — наделить этих людей способностью инициировать значимые изменения.
             </p>
-            <a class="about__info-button btn" href="">
+            <a class="about__info-button btn" href="" data-open-modal="modal">
               <p>подробнее о проекте</p>
               <div>
                 <svg width="10" height="10">
@@ -912,12 +912,12 @@
                   грант «Стажировка» не покрывает полную стоимость программы, и поэтому предусматривается определённая
                   доля личного участия.</p>
               </div>
-              <div class="btn-svg-faq btn-svg-faq--open" >
+              <div class="btn-svg-faq btn-svg-faq--open">
                 <svg width="18" height="18">
                   <use href="__spritemap#sprite-tabs-open"></use>
                 </svg>
               </div>
-              <div class="btn-svg-faq btn-svg-faq--close" >
+              <div class="btn-svg-faq btn-svg-faq--close">
                 <svg width="18" height="1">
                   <use href="__spritemap#sprite-tabs-close"></use>
                 </svg>
@@ -932,32 +932,33 @@
                   грант «Стажировка» не покрывает полную стоимость программы, и поэтому предусматривается определённая
                   доля личного участия.</p>
               </div>
-            <div class="btn-svg-faq btn-svg-faq--open" >
-              <svg width="18" height="18">
-                <use href="__spritemap#sprite-tabs-open"></use>
-              </svg>
-            </div>
-            <div class="btn-svg-faq btn-svg-faq--close" >
-              <svg width="18" height="1">
-                <use href="__spritemap#sprite-tabs-close"></use>
-              </svg>
-            </div>
+              <div class="btn-svg-faq btn-svg-faq--open">
+                <svg width="18" height="18">
+                  <use href="__spritemap#sprite-tabs-open"></use>
+                </svg>
+              </div>
+              <div class="btn-svg-faq btn-svg-faq--close">
+                <svg width="18" height="1">
+                  <use href="__spritemap#sprite-tabs-close"></use>
+                </svg>
+              </div>
           </li>
           <li class="is-active" data-accordion="element">
             <div class="faq__info-item" tabindex="0" data-accordion="button">
               <h3>Как определяется стоимость программы?</h3>
               <div class="faq__info-content" data-accordion="content">
-                <p>Полная стоимость определяется организаторами в зависимости <br class="mobile-tablet">от направления. В
+                <p>Полная стоимость определяется организаторами в зависимости <br class="mobile-tablet">от направления.
+                  В
                   большинстве случаев
                   грант «Стажировка» не покрывает полную стоимость программы, и поэтому предусматривается определённая
                   доля личного участия.</p>
               </div>
-              <div class="btn-svg-faq btn-svg-faq--open" >
+              <div class="btn-svg-faq btn-svg-faq--open">
                 <svg width="18" height="18">
                   <use href="__spritemap#sprite-tabs-open"></use>
                 </svg>
               </div>
-              <div class="btn-svg-faq btn-svg-faq--close" >
+              <div class="btn-svg-faq btn-svg-faq--close">
                 <svg width="18" height="1">
                   <use href="__spritemap#sprite-tabs-close"></use>
                 </svg>
@@ -971,12 +972,12 @@
                   грант «Стажировка» не покрывает полную стоимость программы, и поэтому предусматривается определённая
                   доля личного участия.</p>
               </div>
-              <div class="btn-svg-faq btn-svg-faq--open" >
+              <div class="btn-svg-faq btn-svg-faq--open">
                 <svg width="18" height="18">
                   <use href="__spritemap#sprite-tabs-open"></use>
                 </svg>
               </div>
-              <div class="btn-svg-faq btn-svg-faq--close" >
+              <div class="btn-svg-faq btn-svg-faq--close">
                 <svg width="18" height="1">
                   <use href="__spritemap#sprite-tabs-close"></use>
                 </svg>
@@ -991,12 +992,12 @@
                   грант «Стажировка» не покрывает полную стоимость программы, и поэтому предусматривается определённая
                   доля личного участия.</p>
               </div>
-              <div class="btn-svg-faq btn-svg-faq--open" >
+              <div class="btn-svg-faq btn-svg-faq--open">
                 <svg width="18" height="18">
                   <use href="__spritemap#sprite-tabs-open"></use>
                 </svg>
               </div>
-              <div class="btn-svg-faq btn-svg-faq--close" >
+              <div class="btn-svg-faq btn-svg-faq--close">
                 <svg width="18" height="1">
                   <use href="__spritemap#sprite-tabs-close"></use>
                 </svg>
@@ -1407,6 +1408,74 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal modal--preload" data-modal="modal">
+      <div class="modal__holder">
+        <div class="modal__wrapper" data-form-validate="data-form-validate">
+          <form class="modal__body" action="https://echo.htmlacademy.ru/" autocomplete="off" method="post">
+            <button class="modal__close-btn" type="button" data-close-modal="data-close-modal" aria-label="Закрыть окно">
+              <svg width="18" height="18">
+                <use href="__spritemap#sprite-modal-close"></use>
+              </svg>
+            </button>
+            <h2>Напишите нам</h2>
+            <div class="modal__text">
+            <p>Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+          </div>
+            <ul class="modal__input-list">
+              <li class="modal__input-item" data-validate-type="text" data-on-input-validate="data-on-input-validate"
+                data-required="data-required">
+                <label>Имя
+                  <input type="text" name="Имя" required>
+                </label>
+              </li>
+              <li class="modal__input-item" data-validate-type="phone" data-on-input-validate="data-on-input-validate"
+                data-required="data-required">
+                <label>Телефон
+                  <input type="tel" name="Телефон" required>
+                </label>
+              </li>
+              <li class="modal__select custom-select" data-select="data-select" data-validate-type="select"
+                data-name="Город" data-message-base="Поле обязательно к заполнению">
+                <p class="modal__select-header">Выберите город</p>
+                <button class="modal__select-button custom-select__button" type="button"
+                  aria-label="Выберите одну из опций">
+                  <span class="custom-select__text"></span>
+                  <span class="modal__select-icon custom-select__icon"></span>
+                </button>
+                <ul class="modal__select-list custom-select__list">
+                  <li class="modal__select-item custom-select__item" tabindex="0" data-select-value="Санкт-Петербург">
+                    Санкт-Петербург</li>
+                  <li class="modal__select-item custom-select__item" tabindex="0" data-select-value="Санкт-Петербург">
+                    Санкт-Петербург</li>
+                  <li class="modal__select-item custom-select__item" tabindex="0" data-select-value="Санкт-Петербург">
+                    Санкт-Петербург</li>
+                  <li class="modal__select-item custom-select__item" tabindex="0" data-select-value="Санкт-Петербург">
+                    Санкт-Петербург</li>
+                </ul>
+              </li>
+              <li class="modal__custom-toggle custom-toggle custom-toggle--checkbox" data-validate-type="checkbox"
+                data-message-base="Поле обязательно к заполнению">
+                <label>
+                  <input type="checkbox" value="Принято" name="Пользовательское соглашение">
+                  <p class="custom-toggle__icon modal__custom-toggle-icon" tabindex="0"></p>
+                  <p class="custom-toggle__label modal__toggle-label">Я согласен на обработку моих персональных данных
+                  </p>
+                </label>
+              </li>
+            </ul>
+            <button class="modal__button btn" type="submit">
+              <p>отправить</p>
+              <div>
+                <svg width="10" height="10">
+                  <use href="__spritemap#sprite-btn-arrow"></use>
+                </svg>
+              </div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
 
   </div>
 
