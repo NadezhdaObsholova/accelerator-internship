@@ -40,9 +40,7 @@
 
       margin-top: size(13px);
       margin-bottom: size(25px);
-
     }
-
   }
 }
 
@@ -57,9 +55,7 @@
     gap: size(41px);
   }
 
-
   @include vp-767 {
-
     gap: size(31px);
   }
 }
@@ -76,10 +72,6 @@
   }
 }
 
-.grant__img {
-  border-radius: size(16px);
-  overflow: hidden;
-}
 
 .grant__img {
   width: size(498px);
@@ -98,18 +90,9 @@
   }
 
   img {
-    width: size(498px);
-    height: size(363px);
-
-    @include vp-1439 {
-      width: size(678px);
-      height: size(375px);
-    }
-
-    @include vp-767 {
-      width: size(290px);
-      height: size(200px);
-    }
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -143,7 +126,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding: size(22px) size(70px)  size(22px) size(24px);
+  padding: size(22px) size(70px) size(22px) size(24px);
   width: size(478px);
   border: size(1px) solid $color-default-white;
   border-radius: size(16px);

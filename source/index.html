@@ -25,7 +25,7 @@
           <img width="30" height="30" src="img/logo.svg" alt="логотип компании">
         </div>
         <div class="header__menu-holder">
-          <div class="header__menu-toggle btn" data-toggle="menu__toggle">
+          <div class="header__menu-toggle btn" data-toggle="menu__toggle" tabindex="0">
             <p>меню</p>
             <div>
               <svg class="header__menu-open" width="20" height="20" data-open="toggle-open">
@@ -38,7 +38,7 @@
           </div>
           <ul class="header__nav-list visually-hidden" data-accordion="parent" data-menu="header-menu">
             <li class="header__nav-item">
-              <a href="#about" data-menu_item="menu_item">О проекте</a>
+              <a href="#about" data-item="menu_item">О проекте</a>
             </li>
             <li class="header__nav-item" data-accordion="element">
               <a href="#programs" data-accordion="button">Программы
@@ -48,24 +48,24 @@
               </a>
               <ul class="header__nav-list" data-accordion="content">
                 <li>
-                  <a data-menu_item="menu_item" href="#internship">Стажировка</a>
+                  <a data-item="menu_item" href="#internship">Стажировка</a>
                 </li>
                 <li>
-                  <a data-menu_item="menu_item" href="#volunteering">Волонтерство</a>
+                  <a data-item="menu_item" href="#volunteering">Волонтерство</a>
                 </li>
                 <li>
-                  <a data-menu_item="menu_item" href="#studying">Учёба</a>
+                  <a data-item="menu_item" href="#studying">Учёба</a>
                 </li>
                 <li>
-                  <a data-menu_item="menu_item" href="#programs">Религия</a>
+                  <a data-item="menu_item" href="#programs">Религия</a>
                 </li>
               </ul>
             </li>
             <li class="header__nav-item">
-              <a href="#grant" data-menu_item="menu_item">Как поехать</a>
+              <a href="#grant" data-item="menu_item">Как поехать</a>
             </li>
             <li class="header__nav-item">
-              <a href="#reviews" data-menu_item="menu_item">Отзывы</a>
+              <a href="#reviews" data-item="menu_item">Отзывы</a>
             </li>
             <li class="header__nav-item" data-accordion="element">
               <a href="#programs" data-accordion="button">Новости
@@ -75,24 +75,24 @@
               </a>
               <ul class="header__nav-list" data-accordion="content">
                 <li>
-                  <a data-menu_item="menu_item" href="#news">Общее</a>
+                  <a data-item="menu_item" href="#all-news">Общее</a>
                 </li>
                 <li>
-                  <a data-menu_item="menu_item" href="#volunteering-news">Волонтерство</a>
+                  <a data-item="menu_item" href="#volunteering-news">Волонтерство</a>
                 </li>
                 <li>
-                  <a data-menu_item="menu_item" href="#internship-news">Стажировки</a>
+                  <a data-item="menu_item" href="#internship-news">Стажировки</a>
                 </li>
                 <li>
-                  <a data-menu_item="menu_item" href="#career-news">Карьера</a>
+                  <a data-item="menu_item" href="#career-news">Карьера</a>
                 </li>
                 <li>
-                  <a data-menu_item="menu_item" href="#travels-news">Путешествия</a>
+                  <a data-item="menu_item" href="#travels-news">Путешествия</a>
                 </li>
               </ul>
             </li>
             <li class="header__nav-item">
-              <a href="#contacts" data-menu_item="menu_item">Контакты</a>
+              <a href="#contacts" data-item="menu_item">Контакты</a>
             </li>
           </ul>
         </div>
@@ -126,7 +126,7 @@
                     городах,
                     ощущая настоящий студенческий стиль жизни!</div>
                   <div class="hero__button-wrapper">
-                    <a class="hero__info-button btn" href="">
+                    <a class="hero__info-button btn" href="#">
                       <p>подробнее</p>
                       <div>
                         <svg width="10" height="10">
@@ -159,7 +159,7 @@
                   <div class="hero__info-text">Возможности для преподавания, органического сельского хозяйства,
                     устойчивого образа жизни и другое.</div>
                   <div class="hero__button-wrapper">
-                    <a class="hero__info-button btn" href="">
+                    <a class="hero__info-button btn" href="#">
                       <p>подробнее</p>
                       <div>
                         <svg width="10" height="10">
@@ -192,7 +192,7 @@
                   <div class="hero__info-text">Получите незаменимый опыт работы в ведущих мировых компаниях и
                     государственных организациях.</div>
                   <div class="hero__button-wrapper">
-                    <a class="hero__info-button btn" href="">
+                    <a class="hero__info-button btn" href="#">
                       <p>подробнее</p>
                       <div>
                         <svg width="10" height="10">
@@ -223,7 +223,7 @@
               карьеры, предоставляя им инструменты для решения сложных проблем, с которыми сталкиваются в мире. Цель
               центра — наделить этих людей способностью инициировать значимые изменения.
             </p>
-            <a class="about__info-button btn" href="" data-open-modal="modal">
+            <a class="about__info-button btn" href="#" data-open-modal="modal">
               <p>подробнее о проекте</p>
               <div>
                 <svg width="10" height="10">
@@ -277,7 +277,7 @@
       <section class="programs" data-test="programs" id="programs">
         <div class="programs__header-holder">
           <h2>Программы</h2>
-          <a class="programs__button btn" href="">
+          <a class="programs__button btn" href="blank.html">
             <p>все программы</p>
             <div>
               <svg width="10" height="10">
@@ -311,7 +311,7 @@
                   <div class="programs__info-text">
                     <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
                   </div>
-                  <a class="programs__info-button btn" href="">
+                  <a class="programs__info-button btn" href="#" aria-label="открыть страницу программы">
                     <div>
                       <svg width="10" height="10">
                         <use href="__spritemap#sprite-btn-arrow"></use>
@@ -344,7 +344,7 @@
                   <div class="programs__info-text">
                     <p>Помогайте другим и развивайте свои лидерские качества.</p>
                   </div>
-                  <a class="programs__info-button btn" href="">
+                  <a class="programs__info-button btn" href="#" aria-label="открыть страницу программы">
                     <div>
                       <svg width="10" height="10">
                         <use href="__spritemap#sprite-btn-arrow"></use>
@@ -377,7 +377,7 @@
                   <div class="programs__info-text">
                     <p>Получите образование и измените своё будущее.</p>
                   </div>
-                  <a class="programs__info-button btn" href="">
+                  <a class="programs__info-button btn" href="#" aria-label="открыть страницу программы">
                     <div>
                       <svg width="10" height="10">
                         <use href="__spritemap#sprite-btn-arrow"></use>
@@ -396,7 +396,7 @@
                   <source media="(min-width: 768px)"
                     srcset="img/programs/volunteering-tablet.webp, img/programs/volunteering-tablet@2x.webp 2x"
                     width="324" type="image/webp">
-                  <img width="290" height="400"
+                  <img width="290" height="400" loading="lazy"
                     srcset="img/programs/volunteering-mobile.webp, img/programs/volunteering-mobile@2x.webp 2x"
                     src="img/programs/volunteering-mobile.jpg" alt="">
                 </picture>
@@ -410,7 +410,7 @@
                   <div class="programs__info-text">
                     <p>Помогайте другим и развивайте свои лидерские качества.</p>
                   </div>
-                  <a class="programs__info-button btn" href="">
+                  <a class="programs__info-button btn" href="#" aria-label="открыть страницу программы">
                     <div>
                       <svg width="10" height="10">
                         <use href="__spritemap#sprite-btn-arrow"></use>
@@ -429,7 +429,7 @@
                   <source media="(min-width: 768px)"
                     srcset="img/programs/studying-tablet.webp, img/programs/studying-tablet@2x.webp 2x" width="324"
                     type="image/webp">
-                  <img width="290" height="400"
+                  <img width="290" height="400" loading="lazy"
                     srcset="img/programs/studying-mobile.webp, img/programs/studying-mobile@2x.webp 2x"
                     src="img/programs/studying-mobile.jpg" alt="">
                 </picture>
@@ -443,7 +443,7 @@
                   <div class="programs__info-text">
                     <p>Получите образование и измените своё будущее.</p>
                   </div>
-                  <a class="programs__info-button btn" href="">
+                  <a class="programs__info-button btn" href="#" aria-label="открыть страницу программы">
                     <div>
                       <svg width="10" height="10">
                         <use href="__spritemap#sprite-btn-arrow"></use>
@@ -462,7 +462,7 @@
                   <source media="(min-width: 768px)"
                     srcset="img/programs/volunteering-tablet.webp, img/programs/volunteering-tablet@2x.webp 2x"
                     width="324" type="image/webp">
-                  <img width="290" height="400"
+                  <img width="290" height="400" loading="lazy"
                     srcset="img/programs/volunteering-mobile.webp, img/programs/volunteering-mobile@2x.webp 2x"
                     src="img/programs/volunteering-mobile.jpg" alt="">
                 </picture>
@@ -476,7 +476,7 @@
                   <div class="programs__info-text">
                     <p>Помогайте другим и развивайте свои лидерские качества.</p>
                   </div>
-                  <a class="programs__info-button btn" href="">
+                  <a class="programs__info-button btn" href="#" aria-label="открыть страницу программы">
                     <div>
                       <svg width="10" height="10">
                         <use href="__spritemap#sprite-btn-arrow"></use>
@@ -515,6 +515,7 @@
             <p>Свяжитесь с координатором, чтобы узнать полную информацию. Вы получите актуальные сведения о доступных
               программах
               и городах, в которых можете пройти программу.</p>
+
             <div class="grant__img">
               <picture>
                 <source media="(min-width: 1440px)"
@@ -526,6 +527,8 @@
                   src="img/grant/grant-mobile.jpg" alt="">
               </picture>
             </div>
+
+
           </div>
           <div class="grant__info">
             <h3>Чтобы получить грант на обучение, вам нужно:</h3>
@@ -553,11 +556,11 @@
         </div>
       </section>
 
-      <section class="news" data-test="news">
+      <section class="news" id="news" data-test="news">
         <div class="news__wrapper">
           <h2>Новости и материалы</h2>
           <ul class="news__sorter-list">
-            <li class="news__sorter-item is-active" id="'news">
+            <li class="news__sorter-item is-active" id="all-news">
               Общее
             </li>
             <li class="news__sorter-item" id="volunteering-news">
@@ -598,97 +601,7 @@
                           стажировка в ISOFound
                         </p>
                       </div>
-                      <a class="news__info-button btn" href="">
-                        <div>
-                          <svg width="10" height="10">
-                            <use href="__spritemap#sprite-btn-arrow"></use>
-                          </svg>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </li>
-                <li class="news__slider-item swiper-slide" data-slider="news-slider">
-                  <div class="news__slider-img">
-                    <picture>
-                      <source media="(min-width: 1440px)"
-                        srcset="img/news/2-desktop.webp, img/news/2-desktop@2x.webp 2x" width="604" type="image/webp">
-                      <img width="290" height="330" srcset="img/news/2-mobile.webp, img/news/2-mobile@2x.webp 2x"
-                        src="img/news/2-mobile.jpg" alt="">
-                    </picture>
-                  </div>
-                  <div class="news__info-wrapper">
-                    <div class="news__data">
-                      <p>20/03/2023</p>
-                    </div>
-                    <div class="news__title">
-                      <h3>Путешествуем по миру</h3>
-                    </div>
-                    <div class="news__info-holder">
-                      <div class="news__info-text">
-                        <p> Какие места посещают наши студенты весной</p>
-                      </div>
-                      <a class="news__info-button btn" href="">
-                        <div>
-                          <svg width="10" height="10">
-                            <use href="__spritemap#sprite-btn-arrow"></use>
-                          </svg>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </li>
-                <li class="news__slider-item swiper-slide" data-slider="news-slider">
-                  <div class="news__slider-img">
-                    <picture>
-                      <source media="(min-width: 1440px)"
-                        srcset="img/news/3-desktop.webp, img/news/3-desktop@2x.webp 2x" width="604" type="image/webp">
-                      <img width="290" height="330" srcset="img/news/3-mobile.webp, img/news/3-mobile@2x.webp 2x"
-                        src="img/news/1-mobile.jpg" alt="">
-                    </picture>
-                  </div>
-                  <div class="news__info-wrapper">
-                    <div class="news__data">
-                      <p>17/03/2023</p>
-                    </div>
-                    <div class="news__title">
-                      <h3>Новая программа волонтёрства</h3>
-                    </div>
-                    <div class="news__info-holder">
-                      <div class="news__info-text">
-                        <p>Программа помощи детям длительностью 4 месяца</p>
-                      </div>
-                      <a class="news__info-button btn" href="">
-                        <div>
-                          <svg width="10" height="10">
-                            <use href="__spritemap#sprite-btn-arrow"></use>
-                          </svg>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </li>
-                <li class="news__slider-item swiper-slide" data-slider="news-slider">
-                  <div class="news__slider-img">
-                    <picture>
-                      <source media="(min-width: 1440px)"
-                        srcset="img/news/4-desktop.webp, img/news/4-desktop@2x.webp 2x" width="604" type="image/webp">
-                      <img width="290" height="330" srcset="img/news/4-mobile.webp, img/news/4-mobile@2x.webp 2x"
-                        src="img/news/1-mobile.jpg" alt="">
-                    </picture>
-                  </div>
-                  <div class="news__info-wrapper">
-                    <div class="news__data">
-                      <p>10/03/2023</p>
-                    </div>
-                    <div class="news__title">
-                      <h3>Построй свою карьеру</h3>
-                    </div>
-                    <div class="news__info-holder">
-                      <div class="news__info-text">
-                        <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
-                      </div>
-                      <a class="news__info-button btn" href="">
+                      <a class="news__info-button btn" href="#" aria-label="прочитать новость">
                         <div>
                           <svg width="10" height="10">
                             <use href="__spritemap#sprite-btn-arrow"></use>
@@ -718,7 +631,7 @@
                       <div class="news__info-text">
                         <p>Какие места посещают наши студенты весной</p>
                       </div>
-                      <a class="news__info-button btn" href="">
+                      <a class="news__info-button btn" href="#" aria-label="прочитать новость">
                         <div>
                           <svg width="10" height="10">
                             <use href="__spritemap#sprite-btn-arrow"></use>
@@ -748,7 +661,7 @@
                       <div class="news__info-text">
                         <p>Программа помощи детям длительностью 4 месяца</p>
                       </div>
-                      <a class="news__info-button btn" href="">
+                      <a class="news__info-button btn" href="#" aria-label="прочитать новость">
                         <div>
                           <svg width="10" height="10">
                             <use href="__spritemap#sprite-btn-arrow"></use>
@@ -764,7 +677,7 @@
                       <source media="(min-width: 1440px)"
                         srcset="img/news/4-desktop.webp, img/news/4-desktop@2x.webp 2x" width="604" type="image/webp">
                       <img width="290" height="330" srcset="img/news/4-mobile.webp, img/news/4-mobile@2x.webp 2x"
-                        src="img/news/1-mobile.jpg" alt="">
+                        src="img/news/1-mobile.jpg" alt="" loading="lazy">
                     </picture>
                   </div>
                   <div class="news__info-wrapper">
@@ -778,7 +691,7 @@
                       <div class="news__info-text">
                         <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
                       </div>
-                      <a class="news__info-button btn" href="">
+                      <a class="news__info-button btn" href="#" aria-label="прочитать новость">
                         <div>
                           <svg width="10" height="10">
                             <use href="__spritemap#sprite-btn-arrow"></use>
@@ -794,7 +707,7 @@
                       <source media="(min-width: 1440px)"
                         srcset="img/news/2-desktop.webp, img/news/2-desktop@2x.webp 2x" width="604" type="image/webp">
                       <img width="290" height="330" srcset="img/news/2-mobile.webp, img/news/2-mobile@2x.webp 2x"
-                        src="img/news/2-mobile.jpg" alt="">
+                        src="img/news/2-mobile.jpg" alt="" loading="lazy">
                     </picture>
                   </div>
                   <div class="news__info-wrapper">
@@ -806,9 +719,99 @@
                     </div>
                     <div class="news__info-holder">
                       <div class="news__info-text">
-                        <p> Какие места посещают наши студенты весной</p>
+                        <p>Какие места посещают наши студенты весной</p>
                       </div>
-                      <a class="news__info-button btn" href="">
+                      <a class="news__info-button btn" href="#" aria-label="прочитать новость">
+                        <div>
+                          <svg width="10" height="10">
+                            <use href="__spritemap#sprite-btn-arrow"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="news__slider-item swiper-slide" data-slider="news-slider">
+                  <div class="news__slider-img">
+                    <picture>
+                      <source media="(min-width: 1440px)"
+                        srcset="img/news/3-desktop.webp, img/news/3-desktop@2x.webp 2x" width="604" type="image/webp">
+                      <img width="290" height="330" srcset="img/news/3-mobile.webp, img/news/3-mobile@2x.webp 2x"
+                        src="img/news/1-mobile.jpg" alt="" loading="lazy">
+                    </picture>
+                  </div>
+                  <div class="news__info-wrapper">
+                    <div class="news__data">
+                      <p>17/03/2023</p>
+                    </div>
+                    <div class="news__title">
+                      <h3>Новая программа волонтёрства</h3>
+                    </div>
+                    <div class="news__info-holder">
+                      <div class="news__info-text">
+                        <p>Программа помощи детям длительностью 4 месяца</p>
+                      </div>
+                      <a class="news__info-button btn" href="#" aria-label="прочитать новость">
+                        <div>
+                          <svg width="10" height="10">
+                            <use href="__spritemap#sprite-btn-arrow"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="news__slider-item swiper-slide" data-slider="news-slider">
+                  <div class="news__slider-img">
+                    <picture>
+                      <source media="(min-width: 1440px)"
+                        srcset="img/news/4-desktop.webp, img/news/4-desktop@2x.webp 2x" width="604" type="image/webp">
+                      <img width="290" height="330" srcset="img/news/4-mobile.webp, img/news/4-mobile@2x.webp 2x"
+                        src="img/news/1-mobile.jpg" alt="" loading="lazy">
+                    </picture>
+                  </div>
+                  <div class="news__info-wrapper">
+                    <div class="news__data">
+                      <p>10/03/2023</p>
+                    </div>
+                    <div class="news__title">
+                      <h3>Построй свою карьеру</h3>
+                    </div>
+                    <div class="news__info-holder">
+                      <div class="news__info-text">
+                        <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                      </div>
+                      <a class="news__info-button btn" href="#" aria-label="прочитать новость">
+                        <div>
+                          <svg width="10" height="10">
+                            <use href="__spritemap#sprite-btn-arrow"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="news__slider-item swiper-slide" data-slider="news-slider">
+                  <div class="news__slider-img">
+                    <picture>
+                      <source media="(min-width: 1440px)"
+                        srcset="img/news/2-desktop.webp, img/news/2-desktop@2x.webp 2x" width="604" type="image/webp">
+                      <img width="290" height="330" srcset="img/news/2-mobile.webp, img/news/2-mobile@2x.webp 2x"
+                        src="img/news/2-mobile.jpg" alt="" loading="lazy">
+                    </picture>
+                  </div>
+                  <div class="news__info-wrapper">
+                    <div class="news__data">
+                      <p>20/03/2023</p>
+                    </div>
+                    <div class="news__title">
+                      <h3>Путешествуем по миру</h3>
+                    </div>
+                    <div class="news__info-holder">
+                      <div class="news__info-text">
+                        <p>Какие места посещают наши студенты весной</p>
+                      </div>
+                      <a class="news__info-button btn" href="#"  aria-label="прочитать новость">
                         <div>
                           <svg width="10" height="10">
                             <use href="__spritemap#sprite-btn-arrow"></use>
@@ -824,7 +827,7 @@
                       <source media="(min-width: 1440px)"
                         srcset="img/news/1-desktop.webp, img/news/1-desktop@2x.webp 2x" width="604" type="image/webp">
                       <img width="290" height="330" srcset="img/news/1-mobile.webp, img/news/1-mobile@2x.webp 2x"
-                        src="img/news/1-mobile.jpg" alt="">
+                        src="img/news/1-mobile.jpg" alt="" loading="lazy">
                     </picture>
                   </div>
                   <div class="news__info-wrapper">
@@ -840,7 +843,7 @@
                           стажировка в ISOFound
                         </p>
                       </div>
-                      <a class="news__info-button btn" href="">
+                      <a class="news__info-button btn" href="#"  aria-label="прочитать новость">
                         <div>
                           <svg width="10" height="10">
                             <use href="__spritemap#sprite-btn-arrow"></use>
@@ -856,7 +859,7 @@
                       <source media="(min-width: 1440px)"
                         srcset="img/news/2-desktop.webp, img/news/2-desktop@2x.webp 2x" width="604" type="image/webp">
                       <img width="290" height="330" srcset="img/news/2-mobile.webp, img/news/2-mobile@2x.webp 2x"
-                        src="img/news/2-mobile.jpg" alt="">
+                        src="img/news/2-mobile.jpg" alt="" loading="lazy">
                     </picture>
                   </div>
                   <div class="news__info-wrapper">
@@ -868,9 +871,9 @@
                     </div>
                     <div class="news__info-holder">
                       <div class="news__info-text">
-                        <p> Какие места посещают наши студенты весной</p>
+                        <p>Какие места посещают наши студенты весной</p>
                       </div>
-                      <a class="news__info-button btn" href="">
+                      <a class="news__info-button btn" href="#" aria-label="прочитать новость">
                         <div>
                           <svg width="10" height="10">
                             <use href="__spritemap#sprite-btn-arrow"></use>
@@ -901,16 +904,14 @@
         </div>
       </section>
 
-      <section class="faq" id="FAQ" data-test="FAQ">
+      <section class="faq" id="faq" data-test="FAQ">
         <h2>Вопросы и ответы</h2>
         <ul class="faq__info-list container" data-accordion="parent">
           <li data-accordion="element">
             <div class="faq__info-item" tabindex="0" data-accordion="button">
               <h3>Кто организатор? Какие сроки у программы?</h3>
               <div class="faq__info-content" data-accordion="content">
-                <p>Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев
-                  грант «Стажировка» не покрывает полную стоимость программы, и поэтому предусматривается определённая
-                  доля личного участия.</p>
+                <p>Организатором программы является проект “Маса” в сотрудничестве с образовательными учреждениями. Сроки программы обмена могут варьироваться от одного семестра до года.</p>
               </div>
               <div class="btn-svg-faq btn-svg-faq--open">
                 <svg width="18" height="18">
@@ -928,9 +929,7 @@
             <div class="faq__info-item" tabindex="0" data-accordion="button">
               <h3>Что такое грант на обучение?</h3>
               <div class="faq__info-content" data-accordion="content">
-                <p>Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев
-                  грант «Стажировка» не покрывает полную стоимость программы, и поэтому предусматривается определённая
-                  доля личного участия.</p>
+                <p>Грант на обучение - это финансовая поддержка, которую предоставляет организатор программы обмена студентами для оплаты учебных расходов.</p>
               </div>
               <div class="btn-svg-faq btn-svg-faq--open">
                 <svg width="18" height="18">
@@ -942,6 +941,7 @@
                   <use href="__spritemap#sprite-tabs-close"></use>
                 </svg>
               </div>
+            </div>
           </li>
           <li class="is-active" data-accordion="element">
             <div class="faq__info-item" tabindex="0" data-accordion="button">
@@ -963,14 +963,13 @@
                   <use href="__spritemap#sprite-tabs-close"></use>
                 </svg>
               </div>
+            </div>
           </li>
           <li data-accordion="element">
             <div class="faq__info-item" tabindex="0" data-accordion="button">
               <h3>Признаётся ли учёба в рамках проекта для дальнейшего обучения?</h3>
               <div class="faq__info-content" data-accordion="content">
-                <p>Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев
-                  грант «Стажировка» не покрывает полную стоимость программы, и поэтому предусматривается определённая
-                  доля личного участия.</p>
+                <p>Студенты, участвующие в проекте, могут использовать полученные знания и навыки в своей будущей профессиональной деятельности или продолжить обучение в высших учебных заведениях.  Кроме того, многие университеты и колледжи предоставляют кредиты за участие в программе обмена студентами.</p>
               </div>
               <div class="btn-svg-faq btn-svg-faq--open">
                 <svg width="18" height="18">
@@ -988,9 +987,7 @@
             <div class="faq__info-item" tabindex="0" data-accordion="button">
               <h3>Как выглядит полный процесс регистрации на программу «Стажировка»?</h3>
               <div class="faq__info-content" data-accordion="content">
-                <p>Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев
-                  грант «Стажировка» не покрывает полную стоимость программы, и поэтому предусматривается определённая
-                  доля личного участия.</p>
+                <p>Процесс регистрации на программу обмена включает выбор университета-партнера и программы обмена, общение с координатором программы, заполнение заявления и предоставление необходимых документов, прохождение интервью, оформление визы, жилья и страховки, обучение по безопасности за границей и подписание договора об участии в программе. Подробнее можно узнать позвонив в центр.</p>
               </div>
               <div class="btn-svg-faq btn-svg-faq--open">
                 <svg width="18" height="18">
@@ -1007,7 +1004,7 @@
         </ul>
       </section>
 
-      <section id="reviews" data-test="reviews">
+      <section class="reviews" id="reviews" data-test="reviews">
         <div class="reviews__wrapper">
           <h2>Отзывы</h2>
 
@@ -1290,7 +1287,7 @@
                   <input type="tel" name="Телефон" required>
                 </label>
               </li>
-              <li class="form__input-item form__input--textarea" data-validate-type="text"
+              <li class="form__input-item form__input-item--textarea" data-validate-type="text"
                 data-on-input-validate="data-on-input-validate" data-required="data-required">
                 <label for="textarea">Ваше сообщение</label>
                 <textarea id="textarea" name="Сообщение" required></textarea>
@@ -1316,21 +1313,21 @@
               </li>
               <li class="form__custom-toggle custom-toggle custom-toggle--checkbox" data-validate-type="checkbox"
                 data-message-base="Поле обязательно к заполнению">
-                <label>
+                 <label>
                   <input type="checkbox" value="Принято" name="Пользовательское соглашение">
-                  <p class="custom-toggle__icon form__custom-toggle-icon" tabindex="0"></p>
-                  <p class="custom-toggle__label form__toggle-label">Я согласен на обработку моих персональных данных
-                  </p>
+                  <span class="custom-toggle__icon form__custom-toggle-icon" tabindex="0"></span>
+                  <span class="custom-toggle__label form__toggle-label">Я согласен на обработку моих персональных данных
+                  </span>
                 </label>
               </li>
             </ul>
             <button class="form__button btn" type="submit">
-              <p>отправить</p>
-              <div>
+              <span>отправить</span>
+              <span class="form__button-bcg">
                 <svg width="10" height="10">
                   <use href="__spritemap#sprite-btn-arrow"></use>
                 </svg>
-              </div>
+              </span>
             </button>
           </form>
           <div class="form__bcg">
@@ -1378,21 +1375,21 @@
         <div class="footer__socials">
           <ul class="footer__socials-list">
             <li class="footer__socials-item">
-              <a class="footer__socials-link" href="#" aria-label="наша страница в Вконтакте">
+              <a class="footer__socials-link" href="https://vk.com" target="_blank" rel="noopener noreferrer" aria-label="наша страница в Вконтакте">
                 <svg width="16" height="16">
                   <use href="__spritemap#sprite-vk-icon"></use>
                 </svg>
               </a>
             </li>
             <li class="footer__socials-item">
-              <a class="footer__socials-link" href="#" aria-label="наша страница в Одноклассниках">
+              <a class="footer__socials-link" href="https://ok.ru/" target="_blank" rel="noopener noreferrer" aria-label="наша страница в Одноклассниках">
                 <svg width="16" height="16">
                   <use href="__spritemap#sprite-ok-icon"></use>
                 </svg>
               </a>
             </li>
             <li class="footer__socials-item">
-              <a class="footer__socials-link" aria-label="наша страница в Реддит">
+              <a class="footer__socials-link" href="https://www.reddit.com" target="_blank" rel="noopener noreferrer" aria-label="наша страница в Реддит">
                 <svg width="16" height="16">
                   <use href="__spritemap#sprite-reddit-icon"></use>
                 </svg>
@@ -1403,7 +1400,7 @@
         <div class="footer__copyrights">
           <p class="footer__copyrights-text">Стажировка © 2023 Все права защищены</p>
           <p class="footer__policy">
-            <a href="#">Политика конфиденциальности</a>
+            <a href="blank.html">Политика конфиденциальности</a>
           </p>
         </div>
       </div>
@@ -1444,8 +1441,8 @@
                   <span class="modal__select-icon custom-select__icon"></span>
                 </button>
                 <ul class="modal__select-list custom-select__list">
-                  <li class="modal__select-item custom-select__item" tabindex="0" data-select-value="Санкт-Петербург">
-                    Санкт-Петербург</li>
+                  <li class="modal__select-item custom-select__item" tabindex="0" data-select-value="#">
+                    </li>
                   <li class="modal__select-item custom-select__item" tabindex="0" data-select-value="Санкт-Петербург">
                     Санкт-Петербург</li>
                   <li class="modal__select-item custom-select__item" tabindex="0" data-select-value="Санкт-Петербург">
@@ -1458,19 +1455,19 @@
                 data-message-base="Поле обязательно к заполнению">
                 <label>
                   <input type="checkbox" value="Принято" name="Пользовательское соглашение">
-                  <p class="custom-toggle__icon modal__custom-toggle-icon" tabindex="0"></p>
-                  <p class="custom-toggle__label modal__toggle-label">Я согласен на обработку моих персональных данных
-                  </p>
+                  <span class="custom-toggle__icon modal__custom-toggle-icon" tabindex="0"></span>
+                  <span class="custom-toggle__label modal__toggle-label">Я согласен на обработку моих персональных данных
+                  </span>
                 </label>
               </li>
             </ul>
-            <button class="modal__button btn" type="submit">
-              <p>отправить</p>
-              <div>
+            <button class="modal__button btn" type="submit" disabled>
+              <span>отправить</span>
+              <span class="modal__button-bcg">
                 <svg width="10" height="10">
                   <use href="__spritemap#sprite-btn-arrow"></use>
                 </svg>
-              </div>
+              </span>
             </button>
           </form>
         </div>

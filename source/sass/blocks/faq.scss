@@ -42,27 +42,13 @@
   align-items: start;
   column-gap: size(218px);
   color: $color-additional;
+  transition: $trans-default;
 
   @include vp-1439 {
     column-gap: 0;
     align-items: center;
   }
-
 }
-
-/*
-.faq__item:disabled {
-  opacity: 0.2;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.faq__info-item.is-disabled {
-  opacity: 0.2;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-*/
 
 .faq__info-list {
   display: flex;
@@ -75,6 +61,7 @@
   .is-active {
     background-color: $color-additional;
     padding-bottom: size(32px);
+    transition: $trans-default;
 
     @include vp-1439 {
       padding-bottom: size(25px);
@@ -135,12 +122,11 @@
     @include vp-1439 {
       padding: size(24px) size(29px);
     }
+
     @include vp-767 {
-    padding: size(19px) size(14px);
+      padding: size(19px) size(14px);
+    }
   }
-}
-
-
 }
 
 .faq__info-list .is-active {
@@ -155,12 +141,9 @@
   }
 
   @include active {
-
     background-color: $color-additional-active;
   }
 }
-
-
 
 .faq__info-list {
   h3 {
@@ -202,6 +185,7 @@
       grid-column: 1/3;
     }
   }
+
   .btn-svg-faq {
     grid-column: 2/3;
     grid-row: 1/2;
@@ -230,6 +214,7 @@
     display: none;
     background-color: $color-default-white;
     color: $color-additional;
+    transition: $trans-default;
 
     svg {
       width: size(20px);
@@ -246,7 +231,6 @@
       margin-top: 0;
     }
   }
-
 }
 
 .is-active {
@@ -262,7 +246,6 @@
     pointer-events: none;
   }
 }
-
 
 .is-active.faq__info-item {
   color: $color-default-white;

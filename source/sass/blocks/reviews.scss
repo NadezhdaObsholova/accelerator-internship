@@ -10,6 +10,7 @@
       padding-top: 0;
       margin-top: size(-1px);
     }
+
     @include vp-767 {
       padding-left: size(15px);
       padding-top: size(3px);
@@ -45,6 +46,17 @@
         width: size(10px);
         height: size(10px);
         color: $color-additional;
+      }
+
+      @include hover-focus {
+        background-color: $color-default-white;
+        border-radius: 50%;
+      }
+
+      @include active {
+        svg {
+          opacity: 0.7;
+        }
       }
     }
 
@@ -82,7 +94,6 @@
   .swiper-scrollbar.swiper-scrollbar-horizontal {
     bottom: size(10px);
     height: size(2px);
-   // width: size(1134px);
     min-width: size(1134px);
     max-width: size(1134px);
     margin-left: size(-11px);
@@ -156,7 +167,6 @@
   grid-template-columns: auto auto;
   grid-template-rows: min-content auto;
   justify-content: space-between;
-  //padding: size(50px) size(46px) size(55px) size(44px);
   padding: size(50px) size(45px) size(42px) size(50px);
   border: size(1px) solid $color-additional;
   border-radius: size(16px);
@@ -205,7 +215,6 @@
     padding-top: (12px);
     gap: size(26px);
   }
-
 
   h3 {
     font-size: size(12px);

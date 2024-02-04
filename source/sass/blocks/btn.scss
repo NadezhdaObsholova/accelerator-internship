@@ -10,9 +10,8 @@
   width: max-content;
   font-weight: 500;
   letter-spacing: size(0.28px);
-
   cursor: pointer;
-
+  transition: $trans-default;
 
   @include vp-1439 {
     p {
@@ -21,19 +20,18 @@
     }
   }
 
-
   @include vp-767 {
     padding-left: size(19px);
     gap: size(20px);
   }
 
-  transition: $trans-default;
-
   @include hover-focus {
     background-color: $color-additional;
+    
     p {
       color: $color-default-white;
     }
+
     div {
       background-color: $color-default-white;
     }

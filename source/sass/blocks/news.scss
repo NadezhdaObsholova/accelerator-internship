@@ -4,7 +4,7 @@
   align-items: center;
 
   h2 {
-   padding-top: size(4px);
+    padding-top: size(4px);
 
     @include vp-1439 {
       padding-top: 0;
@@ -50,7 +50,6 @@
     min-width: size(290px);
     height: size(590px);
   }
-
 }
 
 .news__slider-item {
@@ -59,6 +58,7 @@
   grid-template-rows: auto;
   border-radius: size(12px);
   width: size(286px);
+  height: auto;
 
   @include vp-1439 {
     width: size(324px);
@@ -91,6 +91,7 @@
     min-width: size(286px);
     min-height: 100%;
     width: 100%;
+    height: auto;
     object-fit: cover;
 
     @include vp-1439 {
@@ -129,8 +130,8 @@
   padding: size(12px) size(12px) size(7px) 0;
 
   @include vp-1439 {
-  padding-top: size(10px);
-  padding-bottom: size(6px);
+    padding-top: size(10px);
+    padding-bottom: size(6px);
   }
 
   p {
@@ -237,6 +238,7 @@
     right: size(-13px);
   }
 }
+
 .news__data::before {
   content: "";
   position: absolute;
@@ -254,7 +256,6 @@
     height: size(13px);
     top: size(-12px);
   }
-
 }
 
 .news__slider-item--first {
@@ -300,6 +301,17 @@
     height: size(10px);
     color: $color-additional;
   }
+
+  @include hover-focus {
+    background-color: $color-default-white;
+    border-radius: 50%;
+  }
+
+  @include active {
+    svg {
+      opacity: 0.7;
+    }
+  }
 }
 
 .news__button:disabled {
@@ -317,10 +329,12 @@
 
   @include hover-focus {
     background-color: $color-default-white;
-    background-color: $color-default-white;
     width: size(30px);
     height: size(30px);
   }
+
+  width: size(30px);
+  height: size(30px);
 
   div {
     width: size(30px);
@@ -336,8 +350,6 @@
   justify-content: space-between;
   align-items: center;
   bottom: 0;
-
-
 }
 
 .news {
@@ -369,7 +381,6 @@
       max-width: size(26px);
       max-height: size(26px);
     }
-
 
     @include hover-focus {
       border: size(1px) solid $color-additional;
@@ -441,10 +452,9 @@
   padding: 0;
   padding-top: size(46px);
 
-
   @include vp-1439 {
-   gap: size(12px);
-   padding-top: size(31px);
+    gap: size(12px);
+    padding-top: size(31px);
   }
 
   @include vp-767 {
@@ -453,11 +463,13 @@
     margin-left: size(15px);
     padding-top: size(27px);
     overflow-x: auto;
+
     &::-webkit-scrollbar {
       display: none;
     }
+
     scrollbar-width: none;
-   }
+  }
 }
 
 .news__sorter-item {
@@ -477,7 +489,6 @@
   }
 
   @include vp-767 {
-
     font-size: size(12px);
     line-height: size(12px);
     letter-spacing: size(0.24px);
@@ -493,7 +504,6 @@
     background-color: $color-additional-active;
     color: $color-default-white;
   }
-
 }
 
 .news__sorter-item.is-active {

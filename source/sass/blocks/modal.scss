@@ -14,13 +14,21 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 
+  .custom-toggle {
+    line-height: 12px;
+  }
+
   .custom-toggle--checkbox .custom-toggle__icon {
     margin: 0;
-    top: size(-5px);
+    top: -4px;
     border: 1px solid rgba(72, 72, 72, 0.3);
 
+    @include vp-1439 {
+      top: 0;
+    }
+
     @include vp-767 {
-      top: size(2px);
+      top: 4px;
     }
   }
 
@@ -46,77 +54,76 @@
 
 .modal__wrapper {
   position: relative;
-  min-height: size(611px);
-  width: size(510px);
+  min-height: 611px;
+  width: 510px;
 
   @include vp-767 {
-    width: size(290px);
+    width: 290px;
   }
-
 }
 
 .modal__body {
-
-  height: size(611px);
-  border-radius: size(16px);
+  height: 611px;
+  border-radius: 16px;
   background-color: $color-default-white;
-  padding: size(60px) size(80px);
+  padding: 60px 80px;
 
   @include vp-767 {
-    padding: size(40px) size(15px);
-    height: size(521px);
+    padding: 40px 15px;
+    height: 521px;
   }
 
   h2 {
     color: $color-additional;
-    font-size: size(32px);
-    line-height: size(36px);
-    margin-bottom: size(20px);
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 20px;
     text-align: center;
 
     @include vp-767 {
-      font-size: size(18px);
-      line-height: size(18px);
+      font-size: 18px;
+      line-height: 18px;
     }
   }
 }
 
 .modal__text {
+  font-size: 16px;
+  line-height: 20px;
   margin: 0 auto;
-  margin-bottom: size(15px);
-  width: size(350px);
+  margin-bottom: 15px;
+  width: 350px;
   text-align: center;
 
   @include vp-767 {
-    width: size(220px);
-    font-size: size(14px);
-    line-height: size(20px);
+    width: 220px;
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 
 .modal__select {
   display: flex;
   flex-direction: column;
-  gap: size(12px);
+  gap: 12px;
   width: 100%;
   padding: 0;
 
-
   p {
-    font-size: size(14px);
-    line-height: size(14px);
+    font-size: 14px;
+    line-height: 14px;
 
     @include vp-767 {
-      font-size: size(12px);
-      line-height: size(14px);
+      font-size: 12px;
+      line-height: 14px;
     }
   }
 }
 
 .modal__close-btn {
   position: absolute;
-  top: size(30px);
-  right: size(30px);
+  top: 30px;
+  right: 30px;
   padding: 0;
   background: transparent;
   border: none;
@@ -124,53 +131,96 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: size(18px);
-  height: size(18px);
+  width: 18px;
+  height: 18px;
   border: none;
   background-color: transparent;
 
   svg {
     color: $color-additional;
-    width: size(18px);
-    height: size(18px);
+    width: 18px;
+    height: 18px;
   }
 }
 
 .modal__button {
-  border-color: transparent;
-  border-color: $color-additional;
-  width: size(194px);
+  display: flex;
+  align-items: center;
   justify-content: space-between;
+  gap: 30px;
+  padding: 3px;
+  padding-left: 30px;
+  border: 1px solid $color-additional;
+  border-radius: 30px;
+  background-color: transparent;
+  width: max-content;
+  font-weight: 500;
+  letter-spacing: 0.28px;
+  width: 194px;
+  height: 54px;
   margin: 0 auto;
-  margin-top: size(30px);
+  margin-top: 30px;
+  cursor: pointer;
 
-  @include vp-767 {
-    margin-top: size(30px);
+  span {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+    margin: 0;
+    color: $color-additional;
   }
 
-  div {
+  .modal__button-bcg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
     background-color: $color-additional;
+    border-radius: 50%;
+
+    @include vp-767 {
+      width: 34px;
+      height: 34px;
+    }
   }
 
   svg {
-    color: $color-default-white;
+
+    width: 10px;
+    height: 10px;
+  }
+
+  @include vp-1439 {
+    span {
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+
+  @include vp-767 {
+    height: 42px;
+    margin-top: 25px;
   }
 
   @include hover-focus {
-    background-color: $color-default-white;
+    background-color: $color-additional;
 
-    p {
-      color: $color-additional;
+    span {
+      color: $color-default-white;
       margin: 0;
     }
 
-    div {
-      background-color: $color-additional;
+    .modal__button-bcg {
+      background-color: $color-default-white;
     }
 
     svg {
-      color: $color-default-white;
+      color: $color-additional;
       transform: rotate(45deg);
+
     }
   }
 }
@@ -181,8 +231,8 @@
 
   p {
     @include vp-767 {
-      font-size: size(12px);
-      line-height: size(14px);
+      font-size: 12px;
+      line-height: 14px;
     }
   }
 }
@@ -191,12 +241,12 @@
   pointer-events: none;
   border-color: $color-disabled;
 
-  p {
+  span {
     color: $color-disabled;
     margin: 0;
   }
 
-  div {
+  .modal__button-bcg {
     background-color: $color-disabled;
   }
 }
@@ -209,11 +259,11 @@
   margin: 0;
   padding: 0;
   flex-shrink: 1;
-  gap: size(20px);
+  gap: 20px;
 
   @include vp-767 {
     gap: 0;
-    height: size(271px);
+    height: 271px;
     justify-content: space-between;
   }
 }
@@ -226,29 +276,29 @@
   label {
     display: flex;
     flex-direction: column;
-    gap: size(12px);
-    font-size: size(14px);
-    line-height: size(18px);
+    gap: 12px;
+    font-size: 14px;
+    line-height: 18px;
     opacity: 0.8;
 
     @include vp-767 {
-      font-size: size(12px);
-      line-height: size(14px);
-      gap: size(11px);
+      font-size: 12px;
+      line-height: 14px;
+      gap: 11px;
     }
   }
 
   input {
     background-color: transparent;
     width: 100%;
-    height: size(50px);
+    height: 50px;
     border: 1px solid rgba(72, 72, 72, 0.3);
-    border-radius: size(8px);
+    border-radius: 8px;
     color: $color-primary;
-    padding: size(16px) size(25px);
+    padding: 16px 25px;
 
     @include vp-767 {
-      height: size(44px);
+      height: 44px;
     }
 
     &:hover,
@@ -275,18 +325,22 @@
 }
 
 .modal__select-icon {
-  margin-right: size(9px);
-  width: size(15px);
-  height: size(8px);
+  margin-right: 9px;
+  width: 15px;
+  height: 8px;
   background-color: $color-default-white;
   opacity: 1;
 }
 
 .modal__toggle-label {
-  font-size: size(12px);
-  line-height: size(12px);
+  font-size: 12px;
+  line-height: 12px;
   opacity: 0.9;
   margin: 0;
+
+  span {
+    line-height: 12px;
+  }
 }
 
 .modal.is-active {
