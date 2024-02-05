@@ -1,5 +1,6 @@
 .form {
-z-index: 50;
+  z-index: 50;
+
   .custom-toggle {
     line-height: size(12px);
   }
@@ -26,18 +27,27 @@ z-index: 50;
     height: size(12px);
     border-width: 0 size(2px) size(2px) 0;
   }
+
+  .custom-select__item {
+    font-size: size(14px);
+    line-height: size(14px);
+    padding: size(16px) size(20px) size(17px);
+  }
 }
+
 
 .form__wrapper {
   display: grid;
   grid-template-columns: 1fr;
   margin: size(120px) 0;
   min-height: size(803px);
+  padding: 0 size(100px);
   background-color: $color-additional-dark-background;
 
   @include vp-1439 {
     min-height: size(780px);
     margin: size(100px) 0;
+    padding: 0 size(45px);
   }
 
   @include vp-767 {
@@ -97,8 +107,7 @@ z-index: 50;
   }
 
   p,
-  .form__input-item,
-  .form__select {
+  .form__input-item {
     color: $color-default-white;
     opacity: 0.9;
     margin: 0;
@@ -334,6 +343,7 @@ z-index: 50;
 }
 
 .form__input-item.is-invalid {
+
   input,
   textarea {
     border: 1px solid $color-error;
