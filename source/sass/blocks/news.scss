@@ -506,7 +506,12 @@
   }
 }
 
+
 .news__sorter-item.is-active {
   border: 1px solid $color-additional;
   opacity: 1;
+
+  @include hover-focus {
+    opacity: 0.6;
+  }
 }

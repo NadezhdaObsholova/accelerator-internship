@@ -113,6 +113,17 @@
       border: size(1px) solid $color-additional;
     }
   }
+
+  @include active {
+    h3 {
+      color: $color-additional-active;
+    }
+
+    .btn-svg-faq {
+      background-color: $color-additional-active;
+      color: $color-default-white;
+    }
+  }
 }
 
 .faq__info-list {
@@ -142,6 +153,17 @@
 
   @include active {
     background-color: $color-additional-active;
+
+    h3 {
+      color: $color-default-white;
+    }
+
+    .btn-svg-faq {
+      background-color: $color-default-white;
+      color: $color-additional-active;
+    }
+
+
   }
 }
 
@@ -231,19 +253,23 @@
       margin-top: 0;
     }
   }
-}
 
-.is-active {
-  h3 {
-    color: $color-default-white;
+  .is-active {
+    h3 {
+      color: $color-default-white;
+    }
   }
 }
 
 .is-disabled {
+  pointer-events: none;
+  h3 {
+    color: $color-disabled;
+  }
   .btn-svg-faq {
-    opacity: 0.3;
     cursor: not-allowed;
     pointer-events: none;
+    background-color: $color-disabled;
   }
 }
 
