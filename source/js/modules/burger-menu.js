@@ -8,12 +8,19 @@ const burgerMenu = function () {
   const menuButtonElement = document.querySelector('[data-toggle="menu__toggle"]');
   const menuItems = document.querySelectorAll('[data-item="menu_item"]');
   const isEscapeKey = (evt) => evt.key === 'Escape';
+  const isEnterKey = (evt) => evt.key === 'Enter';
 
 
-  const onDocumentKeydown = (evt) => {
+  const onDocumentEscapeKeydown = (evt) => {
     if (isEscapeKey(evt)) {
       evt.preventDefault();
       closeMenu();
+    }
+  };
+
+  const onMenuEnterKeydown = (evt) => {
+    if (isEnterKey(evt)) {
+      openMenu();
     }
   };
 
@@ -30,7 +37,7 @@ const burgerMenu = function () {
     menuToggleOpen.classList.add('visually-hidden');
     menuToggleClose.classList.remove('visually-hidden');
     bodyOverlayElement.classList.remove('visually-hidden');
-    document.addEventListener('keydown', onDocumentKeydown);
+    document.addEventListener('keydown', onDocumentEscapeKeydown);
     document.addEventListener('click', clickOutsideNav);
   }
 
@@ -42,7 +49,7 @@ const burgerMenu = function () {
     menuToggleOpen.classList.remove('visually-hidden');
     menuToggleClose.classList.add('visually-hidden');
     bodyOverlayElement.classList.add('visually-hidden');
-    document.removeEventListener('keydown', onDocumentKeydown);
+    document.removeEventListener('keydown', onDocumentEscapeKeydown);
     document.removeEventListener('click', clickOutsideNav);
   }
 
@@ -61,6 +68,8 @@ const burgerMenu = function () {
   });
 
   document.addEventListener('click', clickOutsideNav);
+
+  document.addEventListener('keydown', onMenuEnterKeydown);
 
 };
 

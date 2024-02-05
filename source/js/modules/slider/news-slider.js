@@ -31,13 +31,13 @@ const initNewsSlider = () => {
       breakpoints: {
         1440: {
           slidesPerView: 'auto',
-          slidesPerGroup: 2,
+          slidesPerGroup: 3,
           spaceBetween: 32,
         },
         768: {
           autoHeight: false,
           slidesPerView: 2,
-          slidesPerGroup: 1,
+          slidesPerGroup: 4,
           spaceBetween: 30,
           rows: 2,
           grid: {
