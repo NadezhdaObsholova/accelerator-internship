@@ -147,16 +147,17 @@
 .footer__socials-item {
   @include hover-focus {
     svg {
-    opacity: 0.7;
+      opacity: 0.7;
     }
   }
 
   @include active {
     a {
-    background-color: $color-additional-active;
+      background-color: $color-additional-active;
     }
+
     svg {
-    opacity: 1;
+      opacity: 1;
     }
   }
 }
@@ -172,7 +173,6 @@
     grid-column: 1/2;
     grid-row: 2/3;
     gap: size(10px);
-    flex-direction: column;
     flex-direction: column-reverse;
     font-size: size(12px);
     line-height: size(12px);
@@ -202,34 +202,31 @@
   a {
     display: block;
     border-bottom: size(1px) solid$color-primary;
-
   }
 }
 
 .footer__nav-item {
-  a{
-  @include hover-focus {
-    color: $color-additional;
-
-  }
-
-  @include active {
- color: $color-additional-active;
-  }
-}
-}
-
-.footer__policy {
-  a{
+  a {
     @include hover-focus {
       color: $color-additional;
-      border-color: $color-additional;
-
     }
 
     @include active {
-   color: $color-additional-active;
-   border-color: $color-additional-active;
+      color: $color-additional-active;
+    }
+  }
+}
+
+.footer__policy {
+  a {
+    @include hover-focus {
+      color: $color-additional;
+      border-color: $color-additional;
+    }
+
+    @include active {
+      color: $color-additional-active;
+      border-color: $color-additional-active;
     }
   }
 }

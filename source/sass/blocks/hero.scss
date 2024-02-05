@@ -16,6 +16,47 @@
       line-height: size(26px);
     }
   }
+
+  .swiper-horizontal > .swiper-pagination-bullets {
+    display: flex;
+    gap: size(10px);
+    top: size(420px);
+    left: size(100px);
+    width: auto;
+    max-height: max-content;
+    padding: size(14px) size(20px);
+
+    @include vp-1439 {
+      top: size(653px);
+      left: size(45px);
+    }
+
+    @include vp-767 {
+      top: size(213px);
+      left: size(15px);
+      padding: size(10px) size(12px);
+      gap: size(4px);
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: size(10px);
+    height: size(10px);
+    border-radius: 50%;
+    background-color: $color-default-white;
+    border: size(1px) solid $color-additional;
+    opacity: 1;
+
+    @include vp-767 {
+      width: size(8px);
+      height: size(8px);
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $color-additional;
+    opacity: 1;
+  }
 }
 
 .hero__slider-list {
@@ -133,7 +174,7 @@
     height: size(13px);
     right: size(-12px);
     top: size(6px);
-    background-image: url('../../img/hero/angle.svg');
+    background-image: url("../../img/hero/angle.svg");
     background-size: 100%;
     transform: rotate(90deg);
     background-repeat: no-repeat;
@@ -173,18 +214,12 @@
 .hero__info-pagination {
   position: relative;
   width: size(118px);
-
-  @include vp-767 {
-    width: size(80px);
-  }
-}
-
-.hero__info-pagination {
   height: size(38px);
   background-color: $color-default-white;
   border-radius: size(20px) size(20px) 0 0;
 
   @include vp-767 {
+    width: size(80px);
     height: size(28px);
     min-width: size(80px);
     border-radius: size(12px) size(12px) 0 0;
@@ -199,7 +234,7 @@
   height: size(21px);
   bottom: size(-1px);
   right: size(-19px);
-  background-image: url('../../img/hero/angle.svg');
+  background-image: url("../../img/hero/angle.svg");
   background-size: 100%;
   background-repeat: no-repeat;
 
@@ -218,56 +253,12 @@
   height: size(26px);
   top: size(6px);
   right: size(-25px);
-  background-image: url('../../img/hero/angle.svg');
+  background-image: url("../../img/hero/angle.svg");
   background-size: 100%;
   transform: rotate(90deg);
   background-repeat: no-repeat;
 
   @include vp-767 {
     display: none;
-  }
-}
-
-.hero {
-  .swiper-horizontal>.swiper-pagination-bullets {
-    display: flex;
-    gap: size(10px);
-    top: size(420px);
-    left: size(100px);
-    width: auto;
-    max-height: max-content;
-    padding: size(14px) size(20px);
-
-    @include vp-1439 {
-      top: size(653px);
-      left: size(45px);
-    }
-
-    @include vp-767 {
-      top: size(213px);
-      left: size(15px);
-      padding: size(10px) size(12px);
-      gap: size(4px);
-    }
-  }
-
-  .swiper-pagination-bullet {
-    width: size(10px);
-    height: size(10px);
-    border: size(1px) solid $color-additional;
-    border-radius: 50%;
-    background-color: $color-default-white;
-    border: size(1px) solid $color-additional;
-    opacity: 1;
-
-    @include vp-767 {
-      width: size(8px);
-      height: size(8px);
-    }
-  }
-
-  .swiper-pagination-bullet-active {
-    background-color: $color-additional;
-    opacity: 1;
   }
 }

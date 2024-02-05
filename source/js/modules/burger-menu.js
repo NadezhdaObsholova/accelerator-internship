@@ -1,4 +1,3 @@
-
 const burgerMenu = function () {
   const bodyElement = document.querySelector('body');
   const bodyOverlayElement = document.querySelector('[data-overlay="body-overlay"]');
@@ -25,30 +24,31 @@ const burgerMenu = function () {
   };
 
   const clickOutsideNav = (event) => {
-    if (!menuElement.contains(event.target) && !menuButtonElement.contains(event.target)) {
-      closeMenu();
+    if (menuButtonElement.classList.contains('header__menu-toggle--is-open')) {
+      if (!menuElement.contains(event.target) && !menuButtonElement.contains(event.target)) {
+        closeMenu();
+      }
     }
   };
 
+  function toggleMenu() {
+    menuButtonElement.classList.toggle('header__menu-toggle--is-open');
+    menuElement.classList.toggle('visually-hidden');
+    bodyElement.classList.toggle('scroll-lock');
+    menuToggleOpen.classList.toggle('visually-hidden');
+    menuToggleClose.classList.toggle('visually-hidden');
+    bodyOverlayElement.classList.toggle('visually-hidden');
+  }
+
   function openMenu() {
-    menuButtonElement.classList.add('is_open');
-    menuElement.classList.remove('visually-hidden');
-    bodyElement.classList.add('scroll-lock');
-    menuToggleOpen.classList.add('visually-hidden');
-    menuToggleClose.classList.remove('visually-hidden');
-    bodyOverlayElement.classList.remove('visually-hidden');
+    toggleMenu();
     document.addEventListener('keydown', onDocumentEscapeKeydown);
     document.addEventListener('click', clickOutsideNav);
   }
 
 
   function closeMenu() {
-    menuButtonElement.classList.remove('is_open');
-    menuElement.classList.add('visually-hidden');
-    bodyElement.classList.remove('scroll-lock');
-    menuToggleOpen.classList.remove('visually-hidden');
-    menuToggleClose.classList.add('visually-hidden');
-    bodyOverlayElement.classList.add('visually-hidden');
+    toggleMenu();
     document.removeEventListener('keydown', onDocumentEscapeKeydown);
     document.removeEventListener('click', clickOutsideNav);
   }
@@ -69,7 +69,7 @@ const burgerMenu = function () {
 
   document.addEventListener('click', clickOutsideNav);
 
-  document.addEventListener('keydown', onMenuEnterKeydown);
+  menuButtonElement.addEventListener('keydown', onMenuEnterKeydown);
 
 };
 

@@ -68,6 +68,14 @@
 
   @include vp-767 {
     width: size(134px);
+    position: absolute;
+    top: size(20px);
+  }
+
+  @include hover-focus {
+    svg {
+      transform: none;
+    }
   }
 }
 
@@ -77,15 +85,8 @@
   color: $color-default-white;
 }
 
-.header__menu-toggle {
-  @include vp-767 {
-    position: absolute;
-    top: size(20px);
-  }
-}
 
 .header__menu-toggle p {
-
   @include vp-767 {
     font-size: size(14px);
     line-height: size(14px);
@@ -100,16 +101,8 @@
   }
 }
 
-.header__menu-toggle {
 
-  @include hover-focus {
-    svg {
-      transform: none;
-    }
-  }
-}
-
-.is_open {
+.header__menu-toggle--is-open {
   gap: 0;
   justify-content: space-between;
   background-color: $color-additional;
@@ -121,11 +114,11 @@
   }
 }
 
-.is_open p {
+.header__menu-toggle--is-open p {
   color: $color-default-white;
 }
 
-.is_open div {
+.header__menu-toggle--is-open div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,7 +151,7 @@
   }
 }
 
-.is_open+.header__nav-list {
+.header__menu-toggle--is-open + .header__nav-list {
   margin-top: size(4px);
   border-radius: size(16px);
   padding: size(30px) size(25px);
@@ -187,7 +180,7 @@
   }
 }
 
-.header__nav-item>.header__nav-list {
+.header__nav-item > .header__nav-list {
   gap: size(5px);
   opacity: 1;
 

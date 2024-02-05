@@ -33,7 +33,7 @@
   }
 
   .custom-select.is-invalid .custom-select__button {
-    border: 1px solid #FF5E66;
+    border: 1px solid #ff5e66;
     background: rgba(255, 94, 102, 0.2);
   }
 
@@ -126,7 +126,6 @@
   right: 30px;
   padding: 0;
   background: transparent;
-  border: none;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -153,7 +152,6 @@
   border: 1px solid $color-additional;
   border-radius: 30px;
   background-color: transparent;
-  width: max-content;
   font-weight: 500;
   letter-spacing: 0.28px;
   width: 194px;
@@ -188,7 +186,6 @@
   }
 
   svg {
-
     width: 10px;
     height: 10px;
   }
@@ -220,7 +217,6 @@
     svg {
       color: $color-additional;
       transform: rotate(45deg);
-
     }
   }
 }
@@ -317,7 +313,6 @@
 }
 
 .modal__input-item.is-invalid {
-
   input {
     border: 1px solid $color-error;
     background-color: rgba(255, 94, 102, 0.2);

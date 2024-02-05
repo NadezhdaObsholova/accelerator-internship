@@ -20,6 +20,8 @@ const initNewsSlider = () => {
         renderBullet: function (index, className) {
           return `<span class="${className}">${index + 1}</span>`;
         },
+        dynamicBullets: true,
+        dynamicMainBullets: 4,
       },
       navigation: {
         nextEl: buttonNext,
@@ -50,11 +52,6 @@ const initNewsSlider = () => {
           spaceBetween: 20,
           grid: {
             rows: 2,
-          },
-
-          pagination: {
-            dynamicBullets: true,
-            dynamicMainBullets: 4,
           },
         },
       },

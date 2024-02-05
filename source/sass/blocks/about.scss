@@ -19,7 +19,6 @@
 
   @include vp-1439 {
     flex-direction: column;
-
   }
 
   @include vp-767 {
@@ -76,7 +75,7 @@
 }
 
 @include vp-767 {
-  .about__description>p {
+  .about__description > p {
     font-size: size(14px);
     line-height: size(20px);
   }
@@ -159,12 +158,12 @@
     justify-content: flex-start;
     gap: size(12px);
     width: size(264px);
-    padding: size(30px) size(7px) size(25px)size(29px);
+    padding: size(30px) size(7px) size(25px) size(29px);
   }
 
   @include vp-767 {
     width: size(240px);
-    padding: size(19px) size(16px) size(23px)size(19px);
+    padding: size(19px) size(16px) size(23px) size(19px);
   }
 
   h4 {

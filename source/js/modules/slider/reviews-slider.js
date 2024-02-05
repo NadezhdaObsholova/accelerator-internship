@@ -10,7 +10,6 @@ const initReviewsSlider = () => {
   const scrollBar = document.querySelector('[data-scroll="reviews-scroll"]');
 
 
-
   if (reviewsSlider) {
     // eslint-disable-next-line
     new Swiper(reviewsSlider, {

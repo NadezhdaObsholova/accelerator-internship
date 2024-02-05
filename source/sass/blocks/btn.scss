@@ -27,7 +27,7 @@
 
   @include hover-focus {
     background-color: $color-additional;
-    
+
     p {
       color: $color-default-white;
     }
@@ -53,9 +53,11 @@
 .btn.is-disabled {
   pointer-events: none;
   border-color: $color-disabled;
+
   p {
     color: $color-disabled;
   }
+
   div {
     background-color: $color-disabled;
   }

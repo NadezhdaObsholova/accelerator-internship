@@ -58,75 +58,6 @@
   padding: 0;
   list-style: none;
 
-  .is-active {
-    background-color: $color-additional;
-    padding-bottom: size(32px);
-    transition: $trans-default;
-
-    @include vp-1439 {
-      padding-bottom: size(25px);
-    }
-
-    @include vp-767 {
-      padding: size(19px) size(14px);
-      padding-bottom: size(14px);
-
-      p {
-        padding-top: size(15px);
-      }
-    }
-
-    .btn-svg-faq--open {
-      display: none;
-    }
-
-    .btn-svg-faq--close {
-      display: flex;
-    }
-  }
-}
-
-.faq__info-list li {
-  padding: size(41px) size(40px) size(37px) size(40px);
-  border: 1px solid $color-additional;
-  border-radius: size(16px);
-
-  @include vp-1439 {
-    column-gap: size(100px);
-    padding: size(29px);
-    padding-bottom: size(30px);
-  }
-
-  @include vp-767 {
-    padding: size(19px) size(14px);
-    padding-top: size(20px);
-    border-radius: size(14px);
-  }
-
-  @include hover-focus {
-    background-color: $color-default-white;
-    outline: none;
-
-    .btn-svg-faq {
-      background-color: transparent;
-      color: $color-additional;
-      border: size(1px) solid $color-additional;
-    }
-  }
-
-  @include active {
-    h3 {
-      color: $color-additional-active;
-    }
-
-    .btn-svg-faq {
-      background-color: $color-additional-active;
-      color: $color-default-white;
-    }
-  }
-}
-
-.faq__info-list {
   li:nth-child(n+4) {
     padding: size(31px) size(40px) size(33px) size(39px);
 
@@ -138,36 +69,7 @@
       padding: size(19px) size(14px);
     }
   }
-}
 
-.faq__info-list .is-active {
-  @include hover-focus {
-    outline: none;
-    background-color: $color-additional;
-
-    .btn-svg-faq {
-      color: $color-default-white;
-      border: size(1px) solid $color-default-white;
-    }
-  }
-
-  @include active {
-    background-color: $color-additional-active;
-
-    h3 {
-      color: $color-default-white;
-    }
-
-    .btn-svg-faq {
-      background-color: $color-default-white;
-      color: $color-additional-active;
-    }
-
-
-  }
-}
-
-.faq__info-list {
   h3 {
     font-size: size(28px);
     line-height: size(34px);
@@ -261,11 +163,103 @@
   }
 }
 
+.faq__info-list .is-active {
+  background-color: $color-additional;
+  padding-bottom: size(32px);
+  transition: $trans-default;
+
+  @include vp-1439 {
+    padding-bottom: size(25px);
+  }
+
+  @include vp-767 {
+    padding: size(19px) size(14px);
+    padding-bottom: size(14px);
+
+    p {
+      padding-top: size(15px);
+    }
+  }
+
+  .btn-svg-faq--open {
+    display: none;
+  }
+
+  .btn-svg-faq--close {
+    display: flex;
+  }
+
+  @include hover-focus {
+    outline: none;
+    background-color: $color-additional;
+
+    .btn-svg-faq {
+      color: $color-default-white;
+      border: size(1px) solid $color-default-white;
+    }
+  }
+
+  @include active {
+    background-color: $color-additional-active;
+
+    h3 {
+      color: $color-default-white;
+    }
+
+    .btn-svg-faq {
+      background-color: $color-default-white;
+      color: $color-additional-active;
+    }
+  }
+}
+
+.faq__info-list li {
+  padding: size(41px) size(40px) size(37px) size(40px);
+  border: 1px solid $color-additional;
+  border-radius: size(16px);
+
+  @include vp-1439 {
+    column-gap: size(100px);
+    padding: size(29px);
+    padding-bottom: size(30px);
+  }
+
+  @include vp-767 {
+    padding: size(19px) size(14px);
+    padding-top: size(20px);
+    border-radius: size(14px);
+  }
+
+  @include hover-focus {
+    background-color: $color-default-white;
+    outline: none;
+
+    .btn-svg-faq {
+      background-color: transparent;
+      color: $color-additional;
+      border: size(1px) solid $color-additional;
+    }
+  }
+
+  @include active {
+    h3 {
+      color: $color-additional-active;
+    }
+
+    .btn-svg-faq {
+      background-color: $color-additional-active;
+      color: $color-default-white;
+    }
+  }
+}
+
 .is-disabled {
   pointer-events: none;
+
   h3 {
     color: $color-disabled;
   }
+
   .btn-svg-faq {
     cursor: not-allowed;
     pointer-events: none;
