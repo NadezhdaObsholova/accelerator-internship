@@ -264,10 +264,13 @@
   padding: size(13px) size(18px) size(3px) size(18px);
   background-color: $color-default-white;
   border-radius: size(12px) size(12px) 0 0;
-  max-width: size(194px);
+  min-width: size(194px);
+  max-width: size(300px);
+  width: min-content;
 
   @include vp-1439 {
-    max-width: size(173px);
+    max-width: size(240px);
+    width: min-content;
     padding: size(13px) size(18px) size(1px);
   }
 

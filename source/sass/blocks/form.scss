@@ -54,6 +54,7 @@
   grid-template-columns: 1fr;
   margin: size(120px) 0;
   min-height: size(803px);
+  height: max-content;
   padding: 0 size(100px);
   background-color: $color-additional-dark-background;
 
@@ -78,7 +79,7 @@
     z-index: 1;
     min-width: size(498px);
     max-width: size(498px);
-    height: size(803px);
+    min-height: size(803px);
     border-radius: size(16px);
     background-color: $color-additional;
     padding: size(82px) size(74px) size(40px);
@@ -87,7 +88,7 @@
       padding: size(50px) size(45px);
       min-width: size(442px);
       max-width: size(442px);
-      height: size(780px);
+      min-height: size(780px);
     }
 
     @include vp-767 {
@@ -97,7 +98,7 @@
       max-width: size(290px);
       margin: 0 size(15px);
       padding-bottom: size(38px);
-      height: size(753px);
+      min-height: size(753px);
     }
   }
 
