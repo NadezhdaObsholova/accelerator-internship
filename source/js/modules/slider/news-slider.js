@@ -39,7 +39,7 @@ const initNewsSlider = () => {
         768: {
           autoHeight: false,
           slidesPerView: 2,
-          slidesPerGroup: 4,
+          slidesPerGroup: 2,
           spaceBetween: 30,
           rows: 2,
           grid: {

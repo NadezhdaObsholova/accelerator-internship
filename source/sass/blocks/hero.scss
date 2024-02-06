@@ -74,6 +74,7 @@
 .hero__slider-img {
   grid-column: 1/2;
   grid-row: 1/2;
+  background-color: $color-additional-dark-background;
 }
 
 .hero__slider-overlay {
@@ -138,6 +139,10 @@
 }
 
 .hero__info-text {
+  p {
+    margin: 0;
+  }
+
   @include vp-1439 {
     line-height: size(20px);
   }

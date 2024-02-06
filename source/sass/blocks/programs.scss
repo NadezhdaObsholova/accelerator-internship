@@ -208,6 +208,7 @@
   grid-column: 1/2;
   grid-row: 1/2;
   min-height: size(420px);
+  background-color: $color-additional-dark-background;
 
   @include vp-1439 {
     width: size(324px);

@@ -77,6 +77,7 @@
   height: size(400px);
   border-radius: size(12px);
   overflow: hidden;
+  background-color: $color-additional-dark-background;
 
   @include vp-1439 {
     width: size(324px);
@@ -289,6 +290,39 @@
   }
 }
 
+.news__info-button {
+  border: none;
+  padding: 0;
+
+  @include hover-focus {
+    background-color: $color-default-white;
+    width: size(30px);
+    height: size(30px);
+  }
+
+  width: size(30px);
+  height: size(30px);
+
+  div {
+    width: size(30px);
+    height: size(30px);
+  }
+}
+
+.news__slider-controls {
+  position: absolute;
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0;
+
+  @include vp-767 {
+    position: relative;
+  }
+}
+
 .news__button {
   border: none;
   width: size(22px);
@@ -322,33 +356,17 @@
   }
 }
 
-.news__info-button {
-  border: none;
-  padding: 0;
-
-  @include hover-focus {
-    background-color: $color-default-white;
-    width: size(30px);
-    height: size(30px);
-  }
-
-  width: size(30px);
-  height: size(30px);
-
-  div {
-    width: size(30px);
-    height: size(30px);
+.news__button--prev,
+.news__button--next {
+  @include vp-767 {
+    position: absolute;
+    bottom: size(-50px);
+    z-index: 50;
   }
 }
 
-.news__slider-controls {
-  position: absolute;
-  display: flex;
-  flex-grow: 1;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  bottom: 0;
+.news__button--next {
+  right: 0;
 }
 
 .news {
@@ -359,6 +377,10 @@
     bottom: 0;
     width: calc(100% - size(44px));
     margin-left: size(22px);
+
+    @include vp-767 {
+      bottom: size(-50px);
+    }
   }
 
   .swiper-pagination-bullet {

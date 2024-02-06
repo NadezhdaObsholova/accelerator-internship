@@ -12,21 +12,9 @@ import { initModals } from './vendor/modals/init-modals';
 
 window.addEventListener('DOMContentLoaded', () => {
 
-  // Utils
-  // ---------------------------------
-
-  // iosVhFix();
-
-  // Modules
-  // ---------------------------------
-
   initHeroSlider();
   burgerMenu();
   scrollPage();
-
-
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
 
   window.addEventListener('load', () => {
     const select = new CustomSelect();
