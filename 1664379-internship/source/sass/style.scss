@@ -1,0 +1,38 @@
+// Vendor
+// ---------------------------------
+
+@import "vendor/normalize";
+@import "variables";
+@import "vendor/accordion/data-accordion";
+@import "vendor/mixins";
+@import "vendor/custom-select";
+@import "vendor/custom-toggle";
+
+// Swiper 11.0.5
+
+@import "swiper/css/bundle";
+
+// Global
+// ---------------------------------
+
+
+@import "mixins";
+@import "function";
+@import "global/fonts";
+@import "global/reboot";
+@import "global/utils";
+@import "global/container";
+@import "blocks/btn";
+@import "blocks/header";
+@import "blocks/hero";
+@import "blocks/about";
+@import "blocks/programs";
+@import "blocks/grant";
+@import "blocks/faq";
+@import "blocks/reviews";
+@import "blocks/news";
+@import "blocks/contacts";
+@import "blocks/form";
+@import "blocks/footer";
+@import "blocks/modal";
+

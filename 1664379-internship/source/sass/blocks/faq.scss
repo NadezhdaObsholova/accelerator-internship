@@ -1,0 +1,270 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: size(67px);
+  padding: 0 size(206px);
+  margin: size(120px) 0;
+
+  @include vp-1439 {
+    padding: 0 size(45px);
+    gap: size(41px);
+  }
+
+  @include vp-767 {
+    padding: 0 size(15px);
+    gap: size(33px);
+  }
+
+  h2 {
+    font-size: size(50px);
+    line-height: size(50px);
+    padding-top: size(3px);
+
+    @include vp-1439 {
+      font-size: size(34px);
+      line-height: size(50px);
+      margin-top: size(-4px);
+    }
+
+    @include vp-767 {
+      font-size: size(20px);
+      line-height: size(20px);
+      margin-top: size(-1px);
+    }
+  }
+}
+
+.faq__info-item {
+  display: grid;
+  grid-template-columns: 1fr size(40px);
+  grid-template-rows: 1fr min-content;
+  align-items: start;
+  column-gap: size(218px);
+  color: $color-additional;
+  transition: $trans-default;
+
+  @include vp-1439 {
+    column-gap: 0;
+    align-items: center;
+  }
+}
+
+.faq__info-list {
+  display: flex;
+  flex-direction: column;
+  gap: size(10px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li:nth-child(n+4) {
+    padding: size(31px) size(40px) size(33px) size(39px);
+
+    @include vp-1439 {
+      padding: size(24px) size(29px);
+    }
+
+    @include vp-767 {
+      padding: size(19px) size(14px);
+    }
+  }
+
+  h3 {
+    font-size: size(28px);
+    line-height: size(34px);
+
+    @include vp-1439 {
+      font-size: size(22px);
+      line-height: size(26px);
+    }
+
+    @include vp-767 {
+      font-size: size(16px);
+      line-height: size(18px);
+    }
+  }
+
+  p {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin: 0;
+    color: $color-default-white;
+    padding-top: size(11px);
+
+    @include vp-1439 {
+      line-height: size(20px);
+      padding-top: size(18px);
+    }
+
+    @include vp-767 {
+      font-size: size(14px);
+      line-height: size(20px);
+      padding-right: size(24px);
+    }
+  }
+
+  .faq__info-content {
+    @include vp-767 {
+      grid-column: 1/3;
+    }
+  }
+}
+
+.faq__btn-svg {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: size(40px);
+  height: size(40px);
+  color: $color-default-white;
+  background-color: $color-additional;
+  border-radius: 50%;
+  cursor: pointer;
+
+  svg {
+    width: size(18px);
+    height: size(18px);
+  }
+
+  @include vp-1439 {
+    margin-top: size(-1px);
+    margin-left: size(-1px);
+  }
+}
+
+.faq__btn-svg--close {
+  display: none;
+  background-color: $color-default-white;
+  color: $color-additional;
+  transition: $trans-default;
+
+  svg {
+    width: size(20px);
+    height: size(2px);
+  }
+
+  @include vp-1439 {
+    margin-top: size(-2px);
+    margin-left: size(-1px);
+  }
+
+  @include vp-767 {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+
+.faq__info-list .is-active {
+  background-color: $color-additional;
+  padding-bottom: size(32px);
+  transition: $trans-default;
+
+  h3 {
+    color: $color-default-white;
+  }
+
+  @include vp-1439 {
+    padding-bottom: size(25px);
+  }
+
+  @include vp-767 {
+    padding: size(19px) size(14px);
+    padding-bottom: size(14px);
+
+    p {
+      padding-top: size(15px);
+    }
+  }
+
+  .faq__btn-svg--open {
+    display: none;
+  }
+
+  .faq__btn-svg--close {
+    display: flex;
+  }
+
+  @include hover-focus {
+    outline: none;
+    background-color: $color-additional;
+
+    .faq__btn-svg {
+      color: $color-default-white;
+      border: size(1px) solid $color-default-white;
+    }
+  }
+
+  @include active {
+    background-color: $color-additional-active;
+
+    h3 {
+      color: $color-default-white;
+    }
+
+    .faq__btn-svg {
+      background-color: $color-default-white;
+      color: $color-additional-active;
+    }
+  }
+}
+
+.faq__info-list li {
+  padding: size(41px) size(40px) size(37px) size(40px);
+  border: 1px solid $color-additional;
+  border-radius: size(16px);
+
+  @include vp-1439 {
+    column-gap: size(100px);
+    padding: size(29px);
+    padding-bottom: size(30px);
+  }
+
+  @include vp-767 {
+    padding: size(19px) size(14px);
+    padding-top: size(20px);
+    border-radius: size(14px);
+  }
+
+  @include hover-focus {
+    background-color: $color-default-white;
+    outline: none;
+
+    .faq__btn-svg {
+      background-color: transparent;
+      color: $color-additional;
+      border: size(1px) solid $color-additional;
+    }
+  }
+
+  @include active {
+    h3 {
+      color: $color-additional-active;
+    }
+
+    .btn-svg-faq {
+      background-color: $color-additional-active;
+      color: $color-default-white;
+    }
+  }
+}
+
+.is-disabled {
+  pointer-events: none;
+
+  h3 {
+    color: $color-disabled;
+  }
+
+  .faq__btn-svg {
+    cursor: not-allowed;
+    pointer-events: none;
+    background-color: $color-disabled;
+  }
+}
+
+.is-active.faq__info-item {
+  color: $color-default-white;
+}

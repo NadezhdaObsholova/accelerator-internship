@@ -1,0 +1,378 @@
+.modal {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  pointer-events: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.modal__custom-toggle {
+  line-height: 12px;
+  padding: 0;
+  width: 100%;
+
+  p {
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+}
+
+.modal__custom-toggle .modal__custom-toggle-icon {
+  margin: 0;
+  top: -4px;
+  border: 1px solid rgba(72, 72, 72, 0.3);
+
+  @include vp-1439 {
+    top: 0;
+  }
+
+  @include vp-767 {
+    top: 4px;
+  }
+}
+
+.modal__select-button {
+  border-radius: 8px;
+  border: 1px solid rgba(72, 72, 72, 0.3);
+
+  span {
+    color: $color-default-black;
+  }
+
+  @include hover-focus {
+    border: 1px solid $color-default-black;
+  }
+}
+
+.modal__select.is-invalid .modal__select-button {
+  border: 1px solid #ff5e66;
+  background: rgba(255, 94, 102, 0.2);
+}
+
+.modal__holder {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  background-color: $color-overlay-form;
+}
+
+.modal__wrapper {
+  position: relative;
+  min-height: 611px;
+  width: 510px;
+
+  @include vp-767 {
+    width: 290px;
+  }
+
+  form {
+    height: 611px;
+    border-radius: 16px;
+    background-color: $color-default-white;
+    padding: 60px 80px;
+
+    @include vp-767 {
+      padding: 40px 15px;
+      height: 521px;
+    }
+  }
+
+  h2 {
+    color: $color-additional;
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+
+    @include vp-767 {
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+}
+
+.modal__text {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  width: 350px;
+  text-align: center;
+
+  @include vp-767 {
+    width: 220px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.modal__select {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+
+  p {
+    font-size: 14px;
+    line-height: 14px;
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+}
+
+.modal__select:focus {
+  border: 1px solid rgba(72, 72, 72, 0.3);
+}
+
+.modal__select-list {
+  border: 1px solid rgba(72, 72, 72, 0.3);
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  border: none;
+  background-color: transparent;
+
+  svg {
+    color: $color-additional;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.modal__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 3px;
+  padding-left: 30px;
+  border: 1px solid $color-additional;
+  border-radius: 30px;
+  background-color: transparent;
+  font-weight: 500;
+  letter-spacing: 0.28px;
+  width: 194px;
+  height: 54px;
+  margin: 0 auto;
+  margin-top: 30px;
+  cursor: pointer;
+
+  span {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+    margin: 0;
+    color: $color-additional;
+  }
+
+  svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  @include vp-1439 {
+    span {
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+
+  @include vp-767 {
+    height: 42px;
+    margin-top: 25px;
+  }
+
+  @include hover-focus {
+    background-color: $color-additional;
+
+    span {
+      color: $color-default-white;
+      margin: 0;
+    }
+
+    .modal__button-bcg {
+      background-color: $color-default-white;
+    }
+
+    svg {
+      color: $color-additional;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.modal__button-bcg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 46px;
+  background-color: $color-additional;
+  border-radius: 50%;
+
+  @include vp-767 {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.modal__button:disabled {
+  pointer-events: none;
+  border-color: $color-disabled;
+
+  span {
+    color: $color-disabled;
+    margin: 0;
+  }
+
+  .modal__button-bcg {
+    background-color: $color-disabled;
+  }
+}
+
+.modal__input-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  height: max-content;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 1;
+  gap: 20px;
+
+  @include vp-767 {
+    gap: 0;
+    height: 271px;
+    justify-content: space-between;
+  }
+}
+
+.modal__select-header {
+  margin: 0;
+}
+
+.modal__input-item {
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 18px;
+    opacity: 0.8;
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 14px;
+      gap: 11px;
+    }
+  }
+
+  input {
+    background-color: transparent;
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgba(72, 72, 72, 0.3);
+    border-radius: 8px;
+    color: $color-primary;
+    padding: 16px 25px;
+
+    @include vp-767 {
+      height: 44px;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      border: 1px solid #000000;
+      outline: none;
+    }
+
+    &:disabled {
+      background-color: rgba(255, 255, 255, 0.2);
+      opacity: 0.4;
+      border: 1px solid rgba(169, 175, 183, 0.5);
+    }
+  }
+}
+
+.modal__input-item.is-invalid {
+  input {
+    border: 1px solid $color-error;
+    background-color: rgba(255, 94, 102, 0.2);
+  }
+}
+
+.modal__select-icon {
+  margin-right: 9px;
+  width: 15px;
+  height: 8px;
+  background-color: $color-default-black;
+  opacity: 1;
+}
+
+.modal__toggle-label {
+  font-size: 12px;
+  line-height: 12px;
+  opacity: 0.9;
+  margin: 0;
+
+  span {
+    line-height: 12px;
+  }
+}
+
+.modal.is-active {
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  pointer-events: auto;
+}
+
+.modal__custom-toggle input:checked + .modal__custom-toggle-icon {
+  background-color: $color-additional;
+  border-color: $color-additional;
+}
+
+.modal__custom-toggle input:checked + .modal__custom-toggle-icon:hover {
+  background-color: $color-additional;
+  border-color: $color-additional;
+  opacity: 0.7;
+}
+
+.modal__custom-toggle input:checked + .modal__custom-toggle-icon::before {
+  border: none;
+  border-bottom: 1px solid $color-default-white;
+  border-right: 1px solid $color-default-white;
+}
