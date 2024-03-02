@@ -9,6 +9,7 @@ export default {
       styles: false,
       injectSVGOnDev: true,
     }),
+
     // input https://www.npmjs.com/package/html-minifier-terser options
     ViteMinifyPlugin({}),
     ViteImageOptimizer({
